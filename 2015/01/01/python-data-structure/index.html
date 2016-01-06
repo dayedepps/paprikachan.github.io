@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -51,16 +51,22 @@
 
 
 
-<meta name="description" content="ifconfig | grep inet检测你的IP地址">
+<meta name="description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
+List和Set直接的相互转化：s = set(l); l = list(s)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux Process Management 管理">
-<meta property="og:url" content="http://yoursite.com/2015/12/14/Linux-Process-Management/index.html">
+<meta property="og:title" content="Python Notes - Data Structure">
+<meta property="og:url" content="http://yoursite.com/2015/01/01/python-data-structure/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description" content="ifconfig | grep inet检测你的IP地址">
-<meta property="og:updated_time" content="2015-12-14T12:28:25.000Z">
+<meta property="og:description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
+List和Set直接的相互转化：s = set(l); l = list(s)">
+<meta property="og:updated_time" content="2015-12-29T07:49:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux Process Management 管理">
-<meta name="twitter:description" content="ifconfig | grep inet检测你的IP地址">
+<meta name="twitter:title" content="Python Notes - Data Structure">
+<meta name="twitter:description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
+List和Set直接的相互转化：s = set(l); l = list(s)">
 
 
 
@@ -72,7 +78,7 @@
   };
 </script>
 
-  <title> Linux Process Management 管理 | Paprika </title>
+  <title> Python Notes - Data Structure | Paprika </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -192,7 +198,7 @@
             
             
               
-                Linux Process Management 管理
+                Python Notes - Data Structure
               
             
           </h1>
@@ -201,11 +207,26 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-14T20:07:27+08:00" content="2015-12-14">
-              2015-12-14
+            <time itemprop="dateCreated" datetime="2015-01-01T13:48:41+08:00" content="2015-01-01">
+              2015-01-01
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -225,25 +246,57 @@
       
 
       
-        <span itemprop="articleBody"><p><code>ifconfig | grep inet</code><br>检测你的IP地址</p>
-</span>
+        <span itemprop="articleBody"><h3 id="List_2C_Set"><a href="#List_2C_Set" class="headerlink" title="List, Set"></a>List, Set</h3><p><code>List</code>里面的元素可以用index调用，添加<code>list.append(x)</code></p>
+<p><code>Set</code>里不能有相同元素，且里面的元素不可以用index调用，添加<code>set.add(x)</code>, set的作用是把其他数据结构变为<code>List</code></p>
+<p><code>List</code>和<code>Set</code>直接的相互转化：<code>s = set(l); l = list(s)</code></p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s1 = set(<span class="string">'hello'</span>)</span><br><span class="line">s1.add(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment"># Now, s1 = ('h','e','l','l','o','world') if</span></span><br><span class="line">s2 = set([<span class="string">'hello'</span>])</span><br><span class="line">s2.add(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment"># Now, s2 = ('hello','world')</span></span><br><span class="line"><span class="comment">#!!! 一定要加list， set的作用是把其他数据结构变为list</span></span><br></pre></td></tr></table></figure>
+<h4 id="List_Index"><a href="#List_Index" class="headerlink" title="List Index"></a>List Index</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">max_index = x.index(max(x))</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">max_index = np.argmax(x)</span><br></pre></td></tr></table></figure>
+<h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><p>列表有自己的sort方法，对其列表进行原址排序。注意元组不可以使用这个方法因为元组不可修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">x.sort()</span><br><span class="line"><span class="comment"># x = [1,2,3,4,5,6,7]</span></span><br></pre></td></tr></table></figure>
+<p>如果需要一个sorted的新列表：</p>
+<ul>
+<li><p><code>y = x[:]</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">y = x[:]</span><br><span class="line"><span class="comment"># 注意：y = x[:] 通过分片操作将列表x的元素全部拷贝给y，如果简单的把x赋值给y：y = x，y和x还是指向同一个列表，并没有产生新的副本。</span></span><br><span class="line">y.sort()</span><br><span class="line"><span class="comment"># y = [1,2,3,4,5,6,7]</span></span><br><span class="line"><span class="comment"># x = [4,5,1,7,3,2,6]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>sorted()</code> 返回一个有序的副本，而且类型总是列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">y = sorted(x)</span><br><span class="line"><span class="comment"># y = [1,2,3,4,5,6,7]</span></span><br><span class="line"><span class="comment"># x = [4,5,1,7,3,2,6]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>降序排序<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">x.sort(reverse = <span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># x = [7,6,5,4,3,2,1]</span></span><br></pre></td></tr></table></figure></p>
+<p>Reference: <a href="http://www.jb51.net/article/52730.htm" target="_blank" rel="external">自定义比较函数</a></p>
+<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3><p><code>Dictionary</code>使用hash function构造，在找指定元素的时候很有效率。通过<code>key</code>查找对应的<code>value</code>效率为<code>O(1)</code>。</p>
+<p><code>key</code>和<code>value</code>可以为能够hash的任何类型： <code>key::hashable</code> <code>value::hashable</code></p>
+<p>当函数需要返回很多个值的时候，将返回值存为字典形式非常的方便，还可以保存错误信息。</p>
+<pre><code>dicts[&apos;Error&apos;] = &apos;Type error.&apos;
+</code></pre><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/14/Linux-Tools-Notes/" rel="next" title="Linux Tools Notes">
-                <i class="fa fa-chevron-left"></i> Linux Tools Notes
+              <a href="/2015/01/01/python-io/" rel="next" title="Python Notes - IO">
+                <i class="fa fa-chevron-left"></i> Python Notes - IO
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/01/02/Hexo-Logs/" rel="prev" title="Developing Hexo Blog">
+                Developing Hexo Blog <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -357,7 +410,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#List_2C_Set"><span class="nav-number">1.</span> <span class="nav-text">List, Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_Index"><span class="nav-number">1.1.</span> <span class="nav-text">List Index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sort"><span class="nav-number">2.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary"><span class="nav-number">3.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy"><span class="nav-number">4.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">5.</span> <span class="nav-text">Pandas</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -847,8 +847,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/01/01/Python-Notes/" itemprop="url">
-                  Python Notes
+                <a class="post-title-link" href="/2015/01/01/python-data-structure/" itemprop="url">
+                  Python Notes - Data Structure
                 </a>
               
             
@@ -898,23 +898,133 @@
 
       
         
-          <p>###Function</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">minmax</span><span class="params">(list)</span>:</span></span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">return</span> min,max</span><br></pre></td></tr></table></figure>
-<h3 id="Using_a_string_to_call_function"><a href="#Using_a_string_to_call_function" class="headerlink" title="Using a string to call function"></a>Using a string to call function</h3><p>Using ‘add’ to call ‘def add(var1,var2)’ defined in same file.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locals()[<span class="string">'add'</span>](var1,var2)</span><br><span class="line">globals()[<span class="string">'add'</span>](var1,var2)</span><br></pre></td></tr></table></figure>
-<p>Using ‘add’ to call <code>def add(var1,var2)</code> defined in math.py module.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getattr(math, <span class="string">'add'</span>)(var1,var2)</span><br></pre></td></tr></table></figure>
-<p><a href="http://stackoverflow.com/questions/3061/calling-a-function-of-a-module-from-a-string-with-the-functions-name-in-python">Stackoverflow Link</a></p>
-<p>###Python数据结构</p>
-<p>####List，Set 和 Dictionary</p>
-<p>List里面的元素可以用index调用，添加<code>list.append(x)</code></p>
-<p>Set里不能有相同元素，且里面的元素不可以用index调用，添加<code>set.add(x)</code></p>
-<p>List和Set直接的相互转化：<code>s = set(l); l = list(s)</code></p>
+          <h3 id="List_2C_Set"><a href="#List_2C_Set" class="headerlink" title="List, Set"></a>List, Set</h3><p><code>List</code>里面的元素可以用index调用，添加<code>list.append(x)</code></p>
+<p><code>Set</code>里不能有相同元素，且里面的元素不可以用index调用，添加<code>set.add(x)</code>, set的作用是把其他数据结构变为<code>List</code></p>
+<p><code>List</code>和<code>Set</code>直接的相互转化：<code>s = set(l); l = list(s)</code></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/01/01/Python-Notes/#more" rel="contents">
+            <a class="btn" href="/2015/01/01/python-data-structure/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/01/01/python-io/" itemprop="url">
+                  Python Notes - IO
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-01-01T13:48:41+08:00" content="2015-01-01">
+              2015-01-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>使用<code>json</code>库。</p>
+<pre><code>&gt;&gt;&gt; import json
+</code></pre><p>Stream存为JSON格式，也就是<code>dictionary</code></p>
+<pre><code> &gt;&gt;&gt; stream = &apos;{&quot;haha&quot;: &quot;哈哈&quot;}&apos;
+ &gt;&gt;&gt; stream
+&apos;{&quot;haha&quot;:&quot;\xe5\x93\x88\xe5\x93\x88&quot;}&apos;
+&gt;&gt;&gt; js = json.loads(stream)  
+&gt;&gt;&gt; js
+{u&apos;haha&apos;: u&apos;\u54c8\u54c8&apos;}
+
+json.load()        # 导入一条JSON数据
+json.loads()    # 导入全部JSON数据
+</code></pre><p>python数据格式转化为JSON: <code>json.dumps()</code></p>
+<pre><code>&gt;&gt;&gt;    print json.dumps(js)  
+&apos;{&quot;haha&quot;: &quot;\\u54c8\\u54c8&quot;}&apos;
+&gt;&gt; print json.dumps(js, ensure_ascii=False)  
+{&quot;haha&quot;: &quot;哈哈&quot;}  
+</code></pre><h4 id="u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><a href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse" class="headerlink" title="使用urllib发送HTTP request,获得含有原始数据的reponse"></a>使用urllib发送HTTP request,获得含有原始数据的reponse</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json, urllib</span><br><span class="line"><span class="comment"># 如果获得的response是JSON格式，可直接用json.load()储存成Python的JSON格式</span></span><br><span class="line">response = json.loads(urllib.urlopen(url).read())</span><br></pre></td></tr></table></figure>
+<h3 id="u4E2D_u6587_u7F16_u7801"><a href="#u4E2D_u6587_u7F16_u7801" class="headerlink" title="中文编码"></a>中文编码</h3><pre><code># -* coding: utf-8 -*-
+</code></pre><h3 id="u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><a href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6" class="headerlink" title="“Unicode”数据导入文件"></a>“Unicode”数据导入文件</h3><p>导入文件类型首选为csv文件，因为csv文件可以通过Excel进行方便的数据微调。Python2的csv库目前还不支持读写“Unicode”数据。所以目前的办法是：</p>
+<p><code>把“ASCII”数据条导入csv文件，“Unicode”数据条导入txt文件。</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> codecs, csv</span><br><span class="line"><span class="comment"># 使用csv库创建csv格式的文件</span></span><br><span class="line">csvfile = open(<span class="string">"data.csv"</span>, <span class="string">"w"</span>)</span><br><span class="line">spamwriter = csv.writer(csvfile)</span><br><span class="line"><span class="comment"># 使用codecs创建支持unicode的文件</span></span><br><span class="line">txtfile = codecs.open(<span class="string">"data.txt"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用Exception</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  spamwriter.writerow([col_str1,col_str2,...])</span><br><span class="line"><span class="keyword">except</span> UnicodeEncodeError:</span><br><span class="line">  file.write(cols_str)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  i=<span class="number">1</span></span><br><span class="line">csvfile.close()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+<h4 id="u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E"><a href="#u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E" class="headerlink" title="读csv文件中含有”Unicode”的数据"></a>读csv文件中含有”Unicode”的数据</h4><p>csv文件中的部分数据：<br><img src="/pictures/oscar.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding="utf-8" cannot decode character like :</span></span><br><span class="line">file = codecs.open(<span class="string">"data.csv"</span>, <span class="string">"r"</span>, encoding=<span class="string">"ISO-8859-1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">   <span class="comment">#line.replace() not work, convert line to string</span></span><br><span class="line">   line = str(line)</span><br><span class="line">   </span><br><span class="line">   <span class="comment">#csv文件为了escape字符串里面的逗号，在字符串的前后加了引号</span></span><br><span class="line">   <span class="comment">#print line:</span></span><br><span class="line">   <span class="comment">#25th,Academy Award for Best Film Editing,"\\ Come Back, Little Sheba",\\ Warren Low\r</span></span><br><span class="line">   </span><br><span class="line">   line = line.replace(<span class="string">'\"\\'</span>,<span class="string">'\\'</span>).replace(<span class="string">'\r'</span>,<span class="string">''</span>)</span><br><span class="line">   features = line.split(<span class="string">',\\ '</span>)</span><br><span class="line">   film = features[<span class="number">1</span>]</span><br><span class="line">   artist_str = features[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> len(artist_str) == <span class="number">1</span>:</span><br><span class="line">      <span class="comment">#注意：artist_str本身就是一个含着character的list</span></span><br><span class="line">      artists = [artist_str]</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      artists = artist_str.split(<span class="string">'\\ '</span>)</span><br><span class="line">   <span class="keyword">for</span> artist <span class="keyword">in</span> artists:</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
         
       
     </div>
@@ -975,7 +1085,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1025,7 +1135,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
