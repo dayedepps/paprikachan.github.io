@@ -51,20 +51,26 @@
 
 
 
-<meta name="description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+<meta name="description" content="Default Setting最大的整数为 sys.maxint
+1sum(list)
+List, SetList里面的元素可以用index调用，添加list.append(x)
 Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
 List和Set直接的相互转化：s = set(l); l = list(s)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python Notes - Data Structure">
 <meta property="og:url" content="http://yoursite.com/2015/01/01/python-data-structure/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+<meta property="og:description" content="Default Setting最大的整数为 sys.maxint
+1sum(list)
+List, SetList里面的元素可以用index调用，添加list.append(x)
 Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
 List和Set直接的相互转化：s = set(l); l = list(s)">
-<meta property="og:updated_time" content="2015-12-29T07:49:28.000Z">
+<meta property="og:updated_time" content="2016-01-11T05:40:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Notes - Data Structure">
-<meta name="twitter:description" content="List, SetList里面的元素可以用index调用，添加list.append(x)
+<meta name="twitter:description" content="Default Setting最大的整数为 sys.maxint
+1sum(list)
+List, SetList里面的元素可以用index调用，添加list.append(x)
 Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
 List和Set直接的相互转化：s = set(l); l = list(s)">
 
@@ -246,7 +252,9 @@ List和Set直接的相互转化：s = set(l); l = list(s)">
       
 
       
-        <span itemprop="articleBody"><h3 id="List_2C_Set"><a href="#List_2C_Set" class="headerlink" title="List, Set"></a>List, Set</h3><p><code>List</code>里面的元素可以用index调用，添加<code>list.append(x)</code></p>
+        <span itemprop="articleBody"><h3 id="Default_Setting"><a href="#Default_Setting" class="headerlink" title="Default Setting"></a>Default Setting</h3><p>最大的整数为 <code>sys.maxint</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum(list)</span><br></pre></td></tr></table></figure>
+<h3 id="List_2C_Set"><a href="#List_2C_Set" class="headerlink" title="List, Set"></a>List, Set</h3><p><code>List</code>里面的元素可以用index调用，添加<code>list.append(x)</code></p>
 <p><code>Set</code>里不能有相同元素，且里面的元素不可以用index调用，添加<code>set.add(x)</code>, set的作用是把其他数据结构变为<code>List</code></p>
 <p><code>List</code>和<code>Set</code>直接的相互转化：<code>s = set(l); l = list(s)</code></p>
 <a id="more"></a>
@@ -269,7 +277,11 @@ List和Set直接的相互转化：s = set(l); l = list(s)">
 <p><code>key</code>和<code>value</code>可以为能够hash的任何类型： <code>key::hashable</code> <code>value::hashable</code></p>
 <p>当函数需要返回很多个值的时候，将返回值存为字典形式非常的方便，还可以保存错误信息。</p>
 <pre><code>dicts[&apos;Error&apos;] = &apos;Type error.&apos;
-</code></pre><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3></span>
+</code></pre><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p><a href="http://www.dcharm.com/?p=13" target="_blank" rel="external">pandas基本操作</a><br><a href="http://www.open-open.com/lib/view/open1402477162868.html" target="_blank" rel="external">pandas基础</a></p>
+<p><a href="http://stackoverflow.com/questions/13413590/how-to-drop-rows-of-pandas-dataframe-whose-value-of-certain-column-is-nan" target="_blank" rel="external">Stackoverflow: How to drop rows of Pandas dataframe whose value of certain column is NaN?</a></p>
+<p>Pandas: handler missing data</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">24</span>]: df = pd.DataFrame(np.random.randn(<span class="number">10</span>,<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">In [<span class="number">25</span>]: df.ix[::<span class="number">2</span>,<span class="number">0</span>] = np.nan; df.ix[::<span class="number">4</span>,<span class="number">1</span>] = np.nan; df.ix[::<span class="number">3</span>,<span class="number">2</span>] = np.nan;</span><br><span class="line"></span><br><span class="line">In [<span class="number">26</span>]: df</span><br><span class="line">Out[<span class="number">26</span>]:</span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span></span><br><span class="line"><span class="number">0</span>       NaN       NaN       NaN</span><br><span class="line"><span class="number">1</span>  <span class="number">2.677677</span> -<span class="number">1.466923</span> -<span class="number">0.750366</span></span><br><span class="line"><span class="number">2</span>       NaN  <span class="number">0.798002</span> -<span class="number">0.906038</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.672201</span>  <span class="number">0.964789</span>       NaN</span><br><span class="line"><span class="number">4</span>       NaN       NaN  <span class="number">0.050742</span></span><br><span class="line"><span class="number">5</span> -<span class="number">1.250970</span>  <span class="number">0.030561</span> -<span class="number">2.678622</span></span><br><span class="line"><span class="number">6</span>       NaN  <span class="number">1.036043</span>       NaN</span><br><span class="line"><span class="number">7</span>  <span class="number">0.049896</span> -<span class="number">0.308003</span>  <span class="number">0.823295</span></span><br><span class="line"><span class="number">8</span>       NaN       NaN  <span class="number">0.637482</span></span><br><span class="line"><span class="number">9</span> -<span class="number">0.310130</span>  <span class="number">0.078891</span>       NaN</span><br><span class="line"></span><br><span class="line">In [<span class="number">27</span>]: df.dropna()     <span class="comment">#drop all rows that have any NaN values</span></span><br><span class="line">Out[<span class="number">27</span>]:</span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2.677677</span> -<span class="number">1.466923</span> -<span class="number">0.750366</span></span><br><span class="line"><span class="number">5</span> -<span class="number">1.250970</span>  <span class="number">0.030561</span> -<span class="number">2.678622</span></span><br><span class="line"><span class="number">7</span>  <span class="number">0.049896</span> -<span class="number">0.308003</span>  <span class="number">0.823295</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">28</span>]: df.dropna(how=<span class="string">'all'</span>)     <span class="comment">#drop only if ALL columns are NaN</span></span><br><span class="line">Out[<span class="number">28</span>]:</span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2.677677</span> -<span class="number">1.466923</span> -<span class="number">0.750366</span></span><br><span class="line"><span class="number">2</span>       NaN  <span class="number">0.798002</span> -<span class="number">0.906038</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.672201</span>  <span class="number">0.964789</span>       NaN</span><br><span class="line"><span class="number">4</span>       NaN       NaN  <span class="number">0.050742</span></span><br><span class="line"><span class="number">5</span> -<span class="number">1.250970</span>  <span class="number">0.030561</span> -<span class="number">2.678622</span></span><br><span class="line"><span class="number">6</span>       NaN  <span class="number">1.036043</span>       NaN</span><br><span class="line"><span class="number">7</span>  <span class="number">0.049896</span> -<span class="number">0.308003</span>  <span class="number">0.823295</span></span><br><span class="line"><span class="number">8</span>       NaN       NaN  <span class="number">0.637482</span></span><br><span class="line"><span class="number">9</span> -<span class="number">0.310130</span>  <span class="number">0.078891</span>       NaN</span><br><span class="line"></span><br><span class="line">In [<span class="number">29</span>]: df.dropna(thresh=<span class="number">2</span>)   <span class="comment">#Drop row if it does not have at least two values that are **not** NaN</span></span><br><span class="line">Out[<span class="number">29</span>]:</span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2.677677</span> -<span class="number">1.466923</span> -<span class="number">0.750366</span></span><br><span class="line"><span class="number">2</span>       NaN  <span class="number">0.798002</span> -<span class="number">0.906038</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.672201</span>  <span class="number">0.964789</span>       NaN</span><br><span class="line"><span class="number">5</span> -<span class="number">1.250970</span>  <span class="number">0.030561</span> -<span class="number">2.678622</span></span><br><span class="line"><span class="number">7</span>  <span class="number">0.049896</span> -<span class="number">0.308003</span>  <span class="number">0.823295</span></span><br><span class="line"><span class="number">9</span> -<span class="number">0.310130</span>  <span class="number">0.078891</span>       NaN</span><br><span class="line"></span><br><span class="line">In [<span class="number">30</span>]: df.dropna(subset=[<span class="number">1</span>])   <span class="comment">#Drop only if NaN in specific column (as asked in the question)</span></span><br><span class="line">Out[<span class="number">30</span>]:</span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span>         <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2.677677</span> -<span class="number">1.466923</span> -<span class="number">0.750366</span></span><br><span class="line"><span class="number">2</span>       NaN  <span class="number">0.798002</span> -<span class="number">0.906038</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.672201</span>  <span class="number">0.964789</span>       NaN</span><br><span class="line"><span class="number">5</span> -<span class="number">1.250970</span>  <span class="number">0.030561</span> -<span class="number">2.678622</span></span><br><span class="line"><span class="number">6</span>       NaN  <span class="number">1.036043</span>       NaN</span><br><span class="line"><span class="number">7</span>  <span class="number">0.049896</span> -<span class="number">0.308003</span>  <span class="number">0.823295</span></span><br><span class="line"><span class="number">9</span> -<span class="number">0.310130</span>  <span class="number">0.078891</span>       NaN</span><br><span class="line"></span><br><span class="line">df.dropna(subset = [<span class="string">'column_name'</span>])</span><br><span class="line"></span><br><span class="line">pd.col.notnull()</span><br><span class="line">~pd.col.isnull()</span><br><span class="line">~np.isnan(df.col)</span><br><span class="line">np.isfinite(df.col)</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -286,16 +298,12 @@ List和Set直接的相互转化：s = set(l); l = list(s)">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/01/python-io/" rel="next" title="Python Notes - IO">
-                <i class="fa fa-chevron-left"></i> Python Notes - IO
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/02/Hexo-Logs/" rel="prev" title="Developing Hexo Blog">
-                Developing Hexo Blog <i class="fa fa-chevron-right"></i>
+              <a href="/2015/01/01/python-workflow/" rel="prev" title="Python Notes">
+                Python Notes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -364,7 +372,7 @@ List和Set直接的相互转化：s = set(l); l = list(s)">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -410,7 +418,7 @@ List和Set直接的相互转化：s = set(l); l = list(s)">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#List_2C_Set"><span class="nav-number">1.</span> <span class="nav-text">List, Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_Index"><span class="nav-number">1.1.</span> <span class="nav-text">List Index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sort"><span class="nav-number">2.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary"><span class="nav-number">3.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy"><span class="nav-number">4.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">5.</span> <span class="nav-text">Pandas</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Default_Setting"><span class="nav-number">1.</span> <span class="nav-text">Default Setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List_2C_Set"><span class="nav-number">2.</span> <span class="nav-text">List, Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_Index"><span class="nav-number">2.1.</span> <span class="nav-text">List Index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sort"><span class="nav-number">3.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary"><span class="nav-number">4.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy"><span class="nav-number">5.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">6.</span> <span class="nav-text">Pandas</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
