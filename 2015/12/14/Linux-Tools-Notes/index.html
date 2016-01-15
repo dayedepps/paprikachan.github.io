@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -51,16 +51,41 @@
 
 
 
-<meta name="description">
+<meta name="description" content="文件权限检查当前文件夹下文件权限
+ll
+In Mac:
+sudo chown -R $USER /usr/local/include
+In Linux:
+sudo chown clx:clx *
+检查版本centos
+cat /etc/issue    
+安全退出安全退出一定要用exit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Tools Notes">
 <meta property="og:url" content="http://yoursite.com/2015/12/14/Linux-Tools-Notes/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-12-14T12:03:00.000Z">
+<meta property="og:description" content="文件权限检查当前文件夹下文件权限
+ll
+In Mac:
+sudo chown -R $USER /usr/local/include
+In Linux:
+sudo chown clx:clx *
+检查版本centos
+cat /etc/issue    
+安全退出安全退出一定要用exit">
+<meta property="og:image" content="http://yoursite.com/figures/exit.png">
+<meta property="og:updated_time" content="2016-01-12T01:42:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Tools Notes">
-<meta name="twitter:description">
+<meta name="twitter:description" content="文件权限检查当前文件夹下文件权限
+ll
+In Mac:
+sudo chown -R $USER /usr/local/include
+In Linux:
+sudo chown clx:clx *
+检查版本centos
+cat /etc/issue    
+安全退出安全退出一定要用exit">
 
 
 
@@ -145,6 +170,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
@@ -225,11 +270,27 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><h3 id="u6587_u4EF6_u6743_u9650"><a href="#u6587_u4EF6_u6743_u9650" class="headerlink" title="文件权限"></a>文件权限</h3><p>检查当前文件夹下文件权限</p>
+<pre><code>ll
+</code></pre><p>In Mac:</p>
+<pre><code>sudo chown -R $USER /usr/local/include
+</code></pre><p>In Linux:</p>
+<pre><code>sudo chown clx:clx *
+</code></pre><p>检查版本centos</p>
+<pre><code>cat /etc/issue    
+</code></pre><h3 id="u5B89_u5168_u9000_u51FA"><a href="#u5B89_u5168_u9000_u51FA" class="headerlink" title="安全退出"></a>安全退出</h3><p>安全退出一定要用<code>exit</code></p>
+<p><img src="/figures/exit.png" alt=""></p>
+</span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
       
 
       
@@ -307,28 +368,28 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="Lingxi Chen" itemprop="image"/>
+          <img class="site-author-image" src="/figures/me.png" alt="Lingxi Chen" itemprop="image"/>
           <p class="site-author-name" itemprop="name">Lingxi Chen</p>
         </div>
         <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -338,6 +399,16 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="paprikachan@github.com" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
           
         </div>
 
@@ -360,7 +431,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6587_u4EF6_u6743_u9650"><span class="nav-number">1.</span> <span class="nav-text">文件权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u5168_u9000_u51FA"><span class="nav-number">2.</span> <span class="nav-text">安全退出</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
