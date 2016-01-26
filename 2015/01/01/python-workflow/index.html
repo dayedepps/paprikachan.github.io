@@ -52,24 +52,30 @@
 
 
 <meta name="description" content="Function123def minmax(list):	...	return min,max
-import 子文件夹里的model12import syssys.path.append(&quot;subdir&quot;)
-Python中导入子文件夹中的模块
-Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ define">
+os模块List files and directoriesCurrent working directory name
+os.getcwd()
+list all files under a directory
+from os import listdir
+from os.path import isf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python Notes">
 <meta property="og:url" content="http://yoursite.com/2015/01/01/python-workflow/index.html">
 <meta property="og:site_name" content="Paprika">
 <meta property="og:description" content="Function123def minmax(list):	...	return min,max
-import 子文件夹里的model12import syssys.path.append(&quot;subdir&quot;)
-Python中导入子文件夹中的模块
-Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ define">
-<meta property="og:updated_time" content="2016-01-04T06:02:35.000Z">
+os模块List files and directoriesCurrent working directory name
+os.getcwd()
+list all files under a directory
+from os import listdir
+from os.path import isf">
+<meta property="og:updated_time" content="2016-01-26T12:46:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Notes">
 <meta name="twitter:description" content="Function123def minmax(list):	...	return min,max
-import 子文件夹里的model12import syssys.path.append(&quot;subdir&quot;)
-Python中导入子文件夹中的模块
-Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ define">
+os模块List files and directoriesCurrent working directory name
+os.getcwd()
+list all files under a directory
+from os import listdir
+from os.path import isf">
 
 
 
@@ -270,7 +276,15 @@ Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ 
 
       
         <span itemprop="articleBody"><h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">minmax</span><span class="params">(list)</span>:</span></span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">return</span> min,max</span><br></pre></td></tr></table></figure>
-<h3 id="import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><a href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model" class="headerlink" title="import 子文件夹里的model"></a>import 子文件夹里的model</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path.append(<span class="string">"subdir"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="os_u6A21_u5757"><a href="#os_u6A21_u5757" class="headerlink" title="os模块"></a><code>os</code>模块</h3><h4 id="List_files_and_directories"><a href="#List_files_and_directories" class="headerlink" title="List files and directories"></a>List files and directories</h4><p><a href="http://stackoverflow.com/questions/5137497/find-current-directory-and-files-directory" target="_blank" rel="external">Current working directory name</a></p>
+<pre><code>os.getcwd()
+</code></pre><p><a href="http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python" target="_blank" rel="external">list all files under a directory</a></p>
+<pre><code>from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+</code></pre><p><a href="http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory" target="_blank" rel="external">list all sub directories under a directory</a></p>
+<pre><code>[x[0] for x in os.walk(directory)]
+</code></pre><h3 id="sys_u6A21_u5757"><a href="#sys_u6A21_u5757" class="headerlink" title="sys模块"></a><code>sys</code>模块</h3><h4 id="import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><a href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model" class="headerlink" title="import 子文件夹里的model"></a>import 子文件夹里的model</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path.append(<span class="string">"subdir"</span>)</span><br></pre></td></tr></table></figure>
 <p><a href="http://blog.csdn.net/ritsu_/article/details/12003789" target="_blank" rel="external">Python中导入子文件夹中的模块</a></p>
 <h3 id="Using_a_string_to_call_function"><a href="#Using_a_string_to_call_function" class="headerlink" title="Using a string to call function"></a>Using a string to call function</h3><p>Using ‘add’ to call ‘def add(var1,var2)’ defined in same file.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locals()[<span class="string">'add'</span>](var1,var2)</span><br><span class="line">globals()[<span class="string">'add'</span>](var1,var2)</span><br></pre></td></tr></table></figure>
@@ -300,16 +314,16 @@ Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ 
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/01/python-data-structure/" rel="next" title="Python Notes - Data Structure">
-                <i class="fa fa-chevron-left"></i> Python Notes - Data Structure
+              <a href="/2015/01/01/python-io/" rel="next" title="Python Notes - IO">
+                <i class="fa fa-chevron-left"></i> Python Notes - IO
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/01/python-io/" rel="prev" title="Python Notes - IO">
-                Python Notes - IO <i class="fa fa-chevron-right"></i>
+              <a href="/2015/01/01/python-data-structure/" rel="prev" title="Python Notes - Data Structure">
+                Python Notes - Data Structure <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -378,7 +392,7 @@ Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ 
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -434,7 +448,7 @@ Using a string to call functionUsing ‘add’ to call ‘def add(var1,var2)’ 
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><span class="nav-number">2.</span> <span class="nav-text">import 子文件夹里的model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using_a_string_to_call_function"><span class="nav-number">3.</span> <span class="nav-text">Using a string to call function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7F16_u7A0B_u6848_u4F8B"><span class="nav-number">4.</span> <span class="nav-text">编程案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><span class="nav-number">4.1.</span> <span class="nav-text">使用urllib发送HTTP request,获得含有原始数据的reponse</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><span class="nav-number">4.2.</span> <span class="nav-text">“Unicode”数据导入文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u753B_u590D_u6742_u7F51_u7EDC_u7684_u5EA6_u5206_u5E03_u53CC_u5BF9_u6570_u56FE_u50CF"><span class="nav-number">4.3.</span> <span class="nav-text">画复杂网络的度分布双对数图像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python_Re"><span class="nav-number">4.4.</span> <span class="nav-text">Python Re</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os_u6A21_u5757"><span class="nav-number">2.</span> <span class="nav-text">os模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_files_and_directories"><span class="nav-number">2.1.</span> <span class="nav-text">List files and directories</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sys_u6A21_u5757"><span class="nav-number">3.</span> <span class="nav-text">sys模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><span class="nav-number">3.1.</span> <span class="nav-text">import 子文件夹里的model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using_a_string_to_call_function"><span class="nav-number">4.</span> <span class="nav-text">Using a string to call function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7F16_u7A0B_u6848_u4F8B"><span class="nav-number">5.</span> <span class="nav-text">编程案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><span class="nav-number">5.1.</span> <span class="nav-text">使用urllib发送HTTP request,获得含有原始数据的reponse</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><span class="nav-number">5.2.</span> <span class="nav-text">“Unicode”数据导入文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u753B_u590D_u6742_u7F51_u7EDC_u7684_u5EA6_u5206_u5E03_u53CC_u5BF9_u6570_u56FE_u50CF"><span class="nav-number">5.3.</span> <span class="nav-text">画复杂网络的度分布双对数图像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python_Re"><span class="nav-number">5.4.</span> <span class="nav-text">Python Re</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

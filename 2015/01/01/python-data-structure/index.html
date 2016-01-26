@@ -67,7 +67,7 @@ Default Setting最大的整数为 sys.maxint
 List, SetList里面的元素可以用index调用，添加list.append(x)
 Set里不能有相同元素，且里面的元素不可以用index调用，添加set.add(x), set的作用是把其他数据结构变为List
 List和Se">
-<meta property="og:updated_time" content="2016-01-20T11:56:17.000Z">
+<meta property="og:updated_time" content="2016-01-26T12:51:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Notes - Data Structure">
 <meta name="twitter:description" content="Reading list:Python for Data Analysis
@@ -283,6 +283,15 @@ List和Se">
 <p><code>List</code>和<code>Set</code>直接的相互转化：<code>s = set(l); l = list(s)</code></p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s1 = set(<span class="string">'hello'</span>)</span><br><span class="line">s1.add(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment"># Now, s1 = ('h','e','l','l','o','world') if</span></span><br><span class="line">s2 = set([<span class="string">'hello'</span>])</span><br><span class="line">s2.add(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment"># Now, s2 = ('hello','world')</span></span><br><span class="line"><span class="comment">#!!! 一定要加list， set的作用是把其他数据结构变为list</span></span><br></pre></td></tr></table></figure>
+<h4 id="Set_u64CD_u4F5C"><a href="#Set_u64CD_u4F5C" class="headerlink" title="Set操作"></a><a href="http://blog.csdn.net/business122/article/details/7541486" target="_blank" rel="external">Set操作</a></h4><p>set表示无须集合，支持 <code>x in set</code>, <code>len(set)</code>,和 <code>for x in set</code>。不支持 <code>indexing</code>, <code>slicing</code>, 或其它类序列（sequence-like）的操作。  </p>
+<pre><code>x = set([1,2,3])
+y = set([3,4,5])
+</code></pre><p>Difference <code>x - y = set([1,2])</code></p>
+<p>Union <code>x | y = set([1,2,3,4,5])</code></p>
+<p>Intersection <code>x &amp; y = set([3])</code></p>
+<p>Symmetric Difference (XOR) <code>x ^ y = set([1,2,4,5])</code></p>
+<p>Superset <code>x &gt; y = Flase</code></p>
+<p>Subset <code>x &lt; y = Flase</code></p>
 <h4 id="List_Index"><a href="#List_Index" class="headerlink" title="List Index"></a>List Index</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">max_index = x.index(max(x))</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">max_index = np.argmax(x)</span><br></pre></td></tr></table></figure>
 <h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><p>列表有自己的sort方法，对其列表进行原址排序。注意元组不可以使用这个方法因为元组不可修改。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>]</span><br><span class="line">x.sort()</span><br><span class="line"><span class="comment"># x = [1,2,3,4,5,6,7]</span></span><br></pre></td></tr></table></figure>
@@ -337,12 +346,16 @@ df.to_dict(orient=&apos;records&apos;)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/01/01/python-workflow/" rel="next" title="Python Notes">
+                <i class="fa fa-chevron-left"></i> Python Notes
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/01/python-workflow/" rel="prev" title="Python Notes">
-                Python Notes <i class="fa fa-chevron-right"></i>
+              <a href="/2015/01/02/Hexo-Logs/" rel="prev" title="Developing Hexo Blog">
+                Developing Hexo Blog <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -411,7 +424,7 @@ df.to_dict(orient=&apos;records&apos;)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -467,7 +480,7 @@ df.to_dict(orient=&apos;records&apos;)
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reading_list_3A"><span class="nav-number">1.</span> <span class="nav-text">Reading list:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Default_Setting"><span class="nav-number">2.</span> <span class="nav-text">Default Setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List_2C_Set"><span class="nav-number">3.</span> <span class="nav-text">List, Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_Index"><span class="nav-number">3.1.</span> <span class="nav-text">List Index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sort"><span class="nav-number">4.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary"><span class="nav-number">5.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy"><span class="nav-number">6.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">7.</span> <span class="nav-text">Pandas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pandas_3A_handler_missing_data"><span class="nav-number">7.1.</span> <span class="nav-text">Pandas: handler missing data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Adding_a_new_column_to_existing_dataframe"><span class="nav-number">7.2.</span> <span class="nav-text">Adding a new column to existing dataframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#renaming_columns_in_pandas"><span class="nav-number">7.3.</span> <span class="nav-text">renaming columns in pandas</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort_pandas_by_specified_columns"><span class="nav-number">7.4.</span> <span class="nav-text">Sort pandas by specified columns</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Select_dataframe_rows_by_integer_index"><span class="nav-number">7.5.</span> <span class="nav-text">Select dataframe rows by integer index</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iterate_rows_in_dataframe"><span class="nav-number">7.6.</span> <span class="nav-text">Iterate rows in dataframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dataframe_to_dicts"><span class="nav-number">7.7.</span> <span class="nav-text">Dataframe to dicts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dataframe_to_json"><span class="nav-number">7.8.</span> <span class="nav-text">Dataframe to json</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reading_list_3A"><span class="nav-number">1.</span> <span class="nav-text">Reading list:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Default_Setting"><span class="nav-number">2.</span> <span class="nav-text">Default Setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List_2C_Set"><span class="nav-number">3.</span> <span class="nav-text">List, Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Set_u64CD_u4F5C"><span class="nav-number">3.1.</span> <span class="nav-text">Set操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#List_Index"><span class="nav-number">3.2.</span> <span class="nav-text">List Index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sort"><span class="nav-number">4.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary"><span class="nav-number">5.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy"><span class="nav-number">6.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">7.</span> <span class="nav-text">Pandas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pandas_3A_handler_missing_data"><span class="nav-number">7.1.</span> <span class="nav-text">Pandas: handler missing data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Adding_a_new_column_to_existing_dataframe"><span class="nav-number">7.2.</span> <span class="nav-text">Adding a new column to existing dataframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#renaming_columns_in_pandas"><span class="nav-number">7.3.</span> <span class="nav-text">renaming columns in pandas</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort_pandas_by_specified_columns"><span class="nav-number">7.4.</span> <span class="nav-text">Sort pandas by specified columns</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Select_dataframe_rows_by_integer_index"><span class="nav-number">7.5.</span> <span class="nav-text">Select dataframe rows by integer index</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iterate_rows_in_dataframe"><span class="nav-number">7.6.</span> <span class="nav-text">Iterate rows in dataframe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dataframe_to_dicts"><span class="nav-number">7.7.</span> <span class="nav-text">Dataframe to dicts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dataframe_to_json"><span class="nav-number">7.8.</span> <span class="nav-text">Dataframe to json</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
