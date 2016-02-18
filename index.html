@@ -54,6 +54,11 @@
 							<div class="ribbon"></div>
 						</div>
 						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -69,6 +74,8 @@
 						<li>菜单</li>
 						<li>标签</li>
 						
+						<li>友情链接</li>
+						
 						
 						<li>关于我</li>
 						
@@ -83,11 +90,9 @@
 					<nav class="header-menu">
 						<ul>
 						
-							<li><a href="/archives">archives</a></li>
+							<li><a href="/archives">All</a></li>
 				        
 							<li><a href="/tags/Python">Python</a></li>
-				        
-							<li><a href="/categories/Programming-Skills">Programming Skills</a></li>
 				        
 						</ul>
 					</nav>
@@ -109,18 +114,36 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
 					</div>
 				</section>
 				
 				
 				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
 
 				
 				
-				<section class="switch-part switch-part3">
+				<section class="switch-part switch-part4">
 				
-					<div id="js-aboutme">Python, Machine Learning</div>
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
 				</section>
 				
 			</div>
@@ -149,11 +172,9 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/archives">archives</a></li>
+					<li><a href="/archives">All</a></li>
 		        
 					<li><a href="/tags/Python">Python</a></li>
-		        
-					<li><a href="/categories/Programming-Skills">Programming Skills</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -176,6 +197,69 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-MySQL-Syntax" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/03/MySQL-Syntax/" class="article-date">
+  	<time datetime="2016-02-03T10:20:56.000Z" itemprop="datePublished">2016-02-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/03/MySQL-Syntax/">MySQL Syntax</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>Where In</code>    </p>
+<pre><code>Select * From table Where id in (Select id From user);
+Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;);
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Programming-Skills/">Programming Skills</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-python-web" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -260,8 +344,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://kodango.com/variable-arguments-in-python" target="_blank" rel="external">理解 Python 中的 <em>args 和 *</em>kwargs</a></p>
-<h3 id="function_tools"><a href="#function_tools" class="headerlink" title="function tools"></a><a href="http://www.wklken.me/posts/2013/08/18/python-extra-functools.html#functoolwraps" target="_blank" rel="external">function tools</a></h3>
+        <h3 id="u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs"><a href="#u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs" class="headerlink" title="理解 Python 中的 args 和 *kwargs"></a><a href="http://kodango.com/variable-arguments-in-python" target="_blank" rel="external">理解 Python 中的 <em>args 和 *</em>kwargs</a></h3><p><a href="http://www.wklken.me/posts/2013/08/18/python-extra-functools.html#functoolwraps" target="_blank" rel="external">function tools</a></p>
+<h3 id="module_and_package"><a href="#module_and_package" class="headerlink" title="module and package"></a><a href="http://blog.csdn.net/xiliuhu/article/details/4459101" target="_blank" rel="external">module and package</a></h3><ul>
+<li><p>Deal with module</p>
+<ol>
+<li><p>add the path when running the script</p>
+<pre><code>import sys
+sys.path.append(subdirectory)
+import module_from_subdicrectory
+</code></pre></li>
+<li><p>setting path in <code>PYTHONPATH</code>, so adding the path when shell start</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>Deal with package    </p>
+<p>  create <code>__init__.py</code> under all directories, to convert into a python package.</p>
+<pre><code>from subdirectory import model_from_subdicrectory
+</code></pre><p>  or</p>
+<pre><code>from subdicrectory.module
+</code></pre></li>
+</ul>
+<h4 id="Setting_PYTHONPATH_environment_variable"><a href="#Setting_PYTHONPATH_environment_variable" class="headerlink" title="Setting PYTHONPATH environment variable"></a><a href="https://scipher.wordpress.com/2010/05/10/setting-your-pythonpath-environment-variable-linuxunixosx/" target="_blank" rel="external">Setting <code>PYTHONPATH</code> environment variable</a></h4><p>In Linux/Unix, this script is usually located at ‘~/.bashrc’ or ‘~/.bash_profile’, use <code>source</code> to detect right the location.</p>
+<pre><code>source ~/.bashrc
+</code></pre><p>Then, open the file in the editor, add</p>
+<pre><code>PYTHONPATH=&quot;${PYTHONPATH}:/path/to/some/cool/python/package/:/path/to/another/cool/python/package/&quot;
+export PYTHONPATH
+</code></pre>
       
     </div>
     
@@ -439,9 +549,11 @@
         <p><a href="http://www.360doc.com/content/14/0809/13/13101514_400547891.shtml" target="_blank" rel="external">Python time, datatime, string, timestamp 相互转换</a></p>
 <p><code>time.time_struct()</code></p>
 <p><img src="/figures/time.png" alt=""></p>
-<p><a href="http://my.oschina.net/lionets/blog/280855#OSC_h3_3" target="_blank" rel="external">Pandas时间序列操作</a></p>
+<p>###<a href="http://my.oschina.net/lionets/blog/280855#OSC_h3_3" target="_blank" rel="external">Pandas时间序列操作</a></p>
 <p><code>pandas</code> 最基本的时间日期对象是一个从 <code>Series</code> 派生出来的子类 <code>TimeStamp</code>，这个对象与 <code>datetime</code> 对象保有高度兼容性，可通过 <code>pd.to_datetime()</code> 函数转换。（一般是从 <code>datetime</code> 转换为 <code>Timestamp</code>）</p>
-
+<pre><code>t:Timestamp
+hour = t.hour
+</code></pre>
       
     </div>
     
@@ -713,58 +825,6 @@
 	<a class="article-category-link" href="/categories/Developing-Logs/">Developing Logs</a>
 	</div>
 
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-supervisord" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/11/supervisord/" class="article-date">
-  	<time datetime="2015-12-11T08:42:53.000Z" itemprop="datePublished">2015-12-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/11/supervisord/">Supervisord</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
       
       <div class="clearfix"></div>
