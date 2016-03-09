@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++ Syntax | Paprika</title>
+  <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="This article records my C++ learning notes, keeps developing…
+Chinese Version: 这篇文章记录我对C++学习心得和基本使用方法，以便以后手生的时候快速上手。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="C++ Syntax"/>
+  <meta property="og:site_name" content="Paprika"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45019001-1', 'topdna.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Paprika</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
+    
+      <li><a href="/categories/Introduction/">Introduction</a></li>
+    
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
+    
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
+    
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2014-11-08T07:49:47.000Z"><a href="/2014/11/08/syntax-C++/">2014-11-08</a></time>
+      
+      
+  
+    <h1 class="title">C++ Syntax</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>This article records my C++ learning notes, keeps developing…</p>
+<p><em>Chinese Version</em>: 这篇文章记录我对C++学习心得和基本使用方法，以便以后手生的时候快速上手。</p>
+<a id="more"></a>
+<h3 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h3><p>C++用template来实现Java中generic class的功能</p>
+<p><strong>注意问题：</strong></p>
+<p><code>test.h</code>里面声明类<code>Circle</code>，<code>test.cpp</code>中的每一个member function前面都要申明。</p>
+<pre><code>template&lt;class K, class V&gt; class Circle{}；
+</code></pre><h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>C++中<code>Array</code>的长度没有像Java一样封装，一定要自己设置一个变量去约束。常用做法：</p>
+<pre><code>int array[20] = malloc(20*sizeof(int)) --提前分配出空间，不然容易出现指针为NULL的异常
+</code></pre><h3 id="Pointer"><a href="#Pointer" class="headerlink" title="Pointer"></a>Pointer</h3><p><strong>Basic Intuition:</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">3</span>；</span><br><span class="line"></span><br><span class="line">-- p_n stores the address of n; * is declaring pointer; &amp; is reference <span class="keyword">operator</span></span><br><span class="line"><span class="keyword">int</span>* p_n = &amp;n; </span><br><span class="line"></span><br><span class="line">-- m stores value <span class="number">3</span>; * is dereference <span class="keyword">operator</span></span><br><span class="line"><span class="keyword">int</span> m = *p_n;</span><br></pre></td></tr></table></figure>
+<p><strong>Pointer &amp; Array</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p_array = <span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">20</span>];	</span><br><span class="line"><span class="keyword">int</span>* p_array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">Circle** p_array = <span class="keyword">new</span> Circle*[<span class="number">20</span>];</span><br></pre></td></tr></table></figure></p>
+<p>注意！<code>Circle* p_array = new Circle[20]</code> 创建的是一个包含Circle整个实例的数列，需要有Circle里面有default constructor.</p>
+<p><strong>String Comparision</strong><br><figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">char</span> nts1<span class="literal">[]</span> = <span class="string">"Test"</span>;</span><br><span class="line"><span class="built_in">char</span> nts2<span class="literal">[]</span> = <span class="string">"Test”;</span></span><br></pre></td></tr></table></figure></p>
+<p>The value of <code>ptr_hash(nts1)==ptr_hash(nts2)</code> is false. Cause, you are hashing two different string pointers pointing to same string.</p>
+<h3 id="Read_File_by_Word"><a href="#Read_File_by_Word" class="headerlink" title="Read File by Word"></a>Read File by Word</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"> 		ifstream myfile;</span><br><span class="line"> 		myfile.open (<span class="string">"ants-sample-data/antsin"</span>);</span><br><span class="line"> 		<span class="built_in">string</span> line;</span><br><span class="line"> 		<span class="keyword">if</span> (myfile.is_open())&#123;</span><br><span class="line">      		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; myfile &gt;&gt; line; i++) </span><br><span class="line">     			<span class="built_in">cout</span> &lt;&lt; line &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">   		myfile.close();</span><br><span class="line"> 		&#125;</span><br><span class="line"> 		<span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"Unable to open file"</span>; </span><br><span class="line"> 		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Calculate_Funtion_Runtime"><a href="#Calculate_Funtion_Runtime" class="headerlink" title="Calculate Funtion Runtime"></a>Calculate Funtion Runtime</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">clock_t</span> t = clock();</span><br><span class="line"></span><br><span class="line">function_to_measured();</span><br><span class="line"></span><br><span class="line">t = clock() - t;</span><br><span class="line">total_runtime += ((<span class="keyword">float</span>)t)/CLOCKS_PER_SEC;</span><br></pre></td></tr></table></figure>
+<h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Circle&#123;</span><br><span class="line">   	<span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> height = <span class="number">2</span>; </span><br><span class="line">    	-- Wrong! Only <span class="keyword">static</span> <span class="keyword">const</span> integral data members can be initialised within a <span class="keyword">class</span>.</span><br><span class="line">    	<span class="keyword">public</span>:</span><br><span class="line">    	…</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2014/11/12/syntax-matlab/">Matlab Syntax</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/11/08/syntax-C/">C Syntax</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Programming-Skills/">Programming Skills</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/C/">C++</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+    </aside>
+    <div class="clearfix">
+    </div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Lingxi Chen
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>

@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>concept-complex-network | Paprika</title>
+  <title>Complex Network | Paprika</title>
   <meta name="author" content="Lingxi Chen">
   
   <meta name="description" content="Learning notes for course Complex Networks and Web, keeps developing…
 Chinese Version: 本文记载关于复杂网络的学习笔记,持续更新。点击进入中文版。
-###Variaty of Network
-
+Variaty of Network
 professional network
 sexual network
 citation network
@@ -18,7 +17,7 @@ traffic network: motoway, flight">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="concept-complex-network"/>
+  <meta property="og:title" content="Complex Network"/>
   <meta property="og:site_name" content="Paprika"/>
 
   
@@ -49,6 +48,7 @@ traffic network: motoway, flight">
 
 <body>
   <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">Paprika</a></h1>
   <h2><a href="/"></a></h2>
@@ -56,26 +56,33 @@ traffic network: motoway, flight">
 <nav id="main-nav" class="alignright">
   <ul>
     
-      <li><a href="/">首页</a></li>
+      <li><a href="/">Home</a></li>
     
-      <li><a href="http://traceinvest.com">TraceInvest</a></li>
+      <li><a href="/archives">Archives</a></li>
     
-      <li><a href="/categories/essay/">随感</a></li>
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
     
-      <li><a href="/categories/tech/">技术</a></li>
+      <li><a href="/categories/Introduction/">Introduction</a></li>
     
-      <li><a href="/categories/investment/">理财</a></li>
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
     
-      <li><a href="/categories/life/">生活</a></li>
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
     
-      <li><a href="/archives">归档</a></li>
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
     
   </ul>
   <div class="clearfix"></div>
 </nav>
 <div class="clearfix"></div></header>
+
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -96,7 +103,7 @@ traffic network: motoway, flight">
       
       
   
-    <h1 class="title">concept-complex-network</h1>
+    <h1 class="title">Complex Network</h1>
   
 
     </header>
@@ -104,17 +111,14 @@ traffic network: motoway, flight">
       
         <p>Learning notes for course <a href="http://www.cs.ucl.ac.uk/students/syllabus/undergrad/m042_complex_networks_and_web/" target="_blank" rel="external">Complex Networks and Web</a>, keeps developing…</p>
 <p>Chinese Version: 本文记载关于<strong>复杂网络</strong>的学习笔记,持续更新。点击进入<a href="#ch">中文版</a>。</p>
-<p>###Variaty of Network</p>
-<ul>
+<h3 id="Variaty_of_Network"><a href="#Variaty_of_Network" class="headerlink" title="Variaty of Network"></a>Variaty of Network</h3><ul>
 <li>professional network</li>
 <li>sexual network</li>
 <li>citation network</li>
 <li>traffic network: motoway, flight<a id="more"></a>
 </li>
 </ul>
-<p>###Network Types</p>
-<p>####Undirected and Directed Graph</p>
-<p>####Connected and unconnected networks<br><strong>Strongly connected directed graph</strong> has a path from each node to every other node and vice versa.</p>
+<h3 id="Network_Types"><a href="#Network_Types" class="headerlink" title="Network Types"></a>Network Types</h3><h4 id="Undirected_and_Directed_Graph"><a href="#Undirected_and_Directed_Graph" class="headerlink" title="Undirected and Directed Graph"></a>Undirected and Directed Graph</h4><h4 id="Connected_and_unconnected_networks"><a href="#Connected_and_unconnected_networks" class="headerlink" title="Connected and unconnected networks"></a>Connected and unconnected networks</h4><p><strong>Strongly connected directed graph</strong> has a path from each node to every other node and vice versa.</p>
 <p><strong>Weekly connected directed graph</strong> is connected if edges directions are disregard.</p>
 <p><strong>Strongly Connected Component (SSC)</strong> is a set of nodes <em>S</em> so that:</p>
 <ul>
@@ -125,15 +129,14 @@ traffic network: motoway, flight">
 </ul>
 <p><strong>Directed Acyclic Graph (DAG)</strong> has no cycles, if <em>u</em> can reach <em>v</em>, <em>v</em> cannot reach <em>u</em>.</p>
 <p><strong>Property</strong>:</p>
-<p>####Unweighted Graph and Weighted Graph<br>Adajecency matrix filled with 0 or 1. Adajeceny matrix filled with weights.</p>
-<p>####Temporal Networks<br>…</p>
-<p>####Spatial Networks<br>…</p>
-<p>####Signed and Unsigned Networks<br>…</p>
-<p>####Other Graph</p>
-<p>#####Self-edges<br>Diagonal line might filled with 1 in adajeceny matrix.</p>
-<p>#####Multigraph<br>Adajeceny matrix filled with number of edges.</p>
-<p>#####Bipartite Graph<br>A graph whose nodes can be divided into two disjoint sets <em>U</em> and <em>V</em> such that every link conncets a node in <em>U</em> to one in <em>V</em>. eg: authors-to-papers, movies-to-actors.</p>
-<p>#####Tree Graph<br>A tree is an undirected simple graph that satisfy:</p>
+<h4 id="Unweighted_Graph_and_Weighted_Graph"><a href="#Unweighted_Graph_and_Weighted_Graph" class="headerlink" title="Unweighted Graph and Weighted Graph"></a>Unweighted Graph and Weighted Graph</h4><p>Adajecency matrix filled with 0 or 1. Adajeceny matrix filled with weights.</p>
+<h4 id="Temporal_Networks"><a href="#Temporal_Networks" class="headerlink" title="Temporal Networks"></a>Temporal Networks</h4><p>…</p>
+<h4 id="Spatial_Networks"><a href="#Spatial_Networks" class="headerlink" title="Spatial Networks"></a>Spatial Networks</h4><p>…</p>
+<h4 id="Signed_and_Unsigned_Networks"><a href="#Signed_and_Unsigned_Networks" class="headerlink" title="Signed and Unsigned Networks"></a>Signed and Unsigned Networks</h4><p>…</p>
+<h4 id="Other_Graph"><a href="#Other_Graph" class="headerlink" title="Other Graph"></a>Other Graph</h4><h5 id="Self-edges"><a href="#Self-edges" class="headerlink" title="Self-edges"></a>Self-edges</h5><p>Diagonal line might filled with 1 in adajeceny matrix.</p>
+<h5 id="Multigraph"><a href="#Multigraph" class="headerlink" title="Multigraph"></a>Multigraph</h5><p>Adajeceny matrix filled with number of edges.</p>
+<h5 id="Bipartite_Graph"><a href="#Bipartite_Graph" class="headerlink" title="Bipartite Graph"></a>Bipartite Graph</h5><p>A graph whose nodes can be divided into two disjoint sets <em>U</em> and <em>V</em> such that every link conncets a node in <em>U</em> to one in <em>V</em>. eg: authors-to-papers, movies-to-actors.</p>
+<h5 id="Tree_Graph"><a href="#Tree_Graph" class="headerlink" title="Tree Graph"></a>Tree Graph</h5><p>A tree is an undirected simple graph that satisfy:</p>
 <ul>
 <li>G is connected and has no cycles</li>
 <li>A cycle is formed if any edge is added to G.</li>
@@ -141,10 +144,8 @@ traffic network: motoway, flight">
 <li>Any two vertices in G can be connected by a unique simple path.</li>
 <li><strong>3-way Cayley Tree</strong>: leaves with k = 1, non-leaves with k = 3, average degree = 2, clustering coef. = 0.</li>
 </ul>
-<p>#####Regular Lattice</p>
-<p>1D and 2D…</p>
-<p>####Network Terminologies</p>
-<p><strong>Adjacency Matrix</strong> </p>
+<h5 id="Regular_Lattice"><a href="#Regular_Lattice" class="headerlink" title="Regular Lattice"></a>Regular Lattice</h5><p>1D and 2D…</p>
+<h4 id="Network_Terminologies"><a href="#Network_Terminologies" class="headerlink" title="Network Terminologies"></a>Network Terminologies</h4><p><strong>Adjacency Matrix</strong> </p>
 <p>nxn matrix A for n nodes graph. A_ij = 1 if node_i and node_j has a link, A_ij = 0 otherwise. A for undirected graph is symmetric.</p>
 <p><strong>Node Degree</strong> </p>
 <p>the number of links connected to a node.</p>
@@ -155,21 +156,19 @@ traffic network: motoway, flight">
 </ul>
 <p><strong>Complete Graph</strong> </p>
 <p>(clique/mesh) is a graph with the number of edges <em>E = E_max</em>. <em>E_max</em> is the possible maximum number of edges in an undirected graph. Avg. Degree = N-1. Adjacency matrix is filled with 1. Most real world networks are sparse.</p>
-<p>###Network/Topological Properties</p>
-<p>####1st Order Property</p>
-<p>#####Degree Distribution<br><em>P(k)</em> is the probability of a randomly choosen node has degree k. A histogram with x-axis presents k and y-axis presents P(k).</p>
-<p>#####Path Length<br>A path is a sequence of nodes in which each node is adjacent to the next one. Note index starts with 0, and usually we only consider simple paths that do not have any cycles, no repeated nodes or edges.</p>
+<h3 id="Network/Topological_Properties"><a href="#Network/Topological_Properties" class="headerlink" title="Network/Topological Properties"></a>Network/Topological Properties</h3><h4 id="1st_Order_Property"><a href="#1st_Order_Property" class="headerlink" title="1st Order Property"></a>1st Order Property</h4><h5 id="Degree_Distribution"><a href="#Degree_Distribution" class="headerlink" title="Degree Distribution"></a>Degree Distribution</h5><p><em>P(k)</em> is the probability of a randomly choosen node has degree k. A histogram with x-axis presents k and y-axis presents P(k).</p>
+<h5 id="Path_Length"><a href="#Path_Length" class="headerlink" title="Path Length"></a>Path Length</h5><p>A path is a sequence of nodes in which each node is adjacent to the next one. Note index starts with 0, and usually we only consider simple paths that do not have any cycles, no repeated nodes or edges.</p>
 <p><em>P_n = {i_0,i_1,…,i_n}, P_n = {(i_0,i_1),(i_1,i_2),…,(i_n-1,i_n)}</em></p>
 <p><strong>Distances</strong> between a pair of nodes is defined as the number of edges along the shortest path connecting the nodes. If two nodes are disconnected, the distance is infinite. In directed graph, paths need to follow the direction.</p>
 <p><strong>Bread-First Search</strong> is used to finding shortest path.</p>
 <p><strong>Network Diameter</strong> is the maximum (shortest path) distance between any pair of nodes. Avg. distance for a connected graph/component is the average distance over all pairs of nodes.</p>
-<p>####2nd Order Property<br>Properties based on the connectivity information of <strong>two</strong> nodes. <strong>Joint Degree Distribution P(k,k’)</strong> is the probability of k-degree node linking with a k’-degree node.</p>
+<h4 id="2nd_Order_Property"><a href="#2nd_Order_Property" class="headerlink" title="2nd Order Property"></a>2nd Order Property</h4><p>Properties based on the connectivity information of <strong>two</strong> nodes. <strong>Joint Degree Distribution P(k,k’)</strong> is the probability of k-degree node linking with a k’-degree node.</p>
 <p>How many links? who connects with whom? We have two statistic projections: Degree correlation/Mixing pattern and Rich-club.</p>
-<p>#####Degree Correlation/Mixing Pattern<br>Mixing pattern studies relation between degrees of the <strong>two end nodes of a link</strong>. Assortativity（同配性：考察度值相近的节点是否倾向于相互连接）</p>
-<p>######Positive correlation - Assortative mixing<br>Positive assortativity: nodes tend to connect with nodes with similar degrees.</p>
-<p>######Negative correlation - Disassortative mixing<br>Negative assortativity: nodes with high degree tend to connect with low-degree nodes.</p>
-<p>######Intuitive Analysis: Nearest neighbours average degree<br>x-axis with k, y-axis with k_nn(k), observe that the slope of drawing line decides the assortativity.</p>
-<p>######Assortative Coefficient<br>alpha derives from Pearson Coefficient, -1 &lt;= alpha &lt;= 1.</p>
+<h5 id="Degree_Correlation/Mixing_Pattern"><a href="#Degree_Correlation/Mixing_Pattern" class="headerlink" title="Degree Correlation/Mixing Pattern"></a>Degree Correlation/Mixing Pattern</h5><p>Mixing pattern studies relation between degrees of the <strong>two end nodes of a link</strong>. Assortativity（同配性：考察度值相近的节点是否倾向于相互连接）</p>
+<h6 id="Positive_correlation_-_Assortative_mixing"><a href="#Positive_correlation_-_Assortative_mixing" class="headerlink" title="Positive correlation - Assortative mixing"></a>Positive correlation - Assortative mixing</h6><p>Positive assortativity: nodes tend to connect with nodes with similar degrees.</p>
+<h6 id="Negative_correlation_-_Disassortative_mixing"><a href="#Negative_correlation_-_Disassortative_mixing" class="headerlink" title="Negative correlation - Disassortative mixing"></a>Negative correlation - Disassortative mixing</h6><p>Negative assortativity: nodes with high degree tend to connect with low-degree nodes.</p>
+<h6 id="Intuitive_Analysis_3A_Nearest_neighbours_average_degree"><a href="#Intuitive_Analysis_3A_Nearest_neighbours_average_degree" class="headerlink" title="Intuitive Analysis: Nearest neighbours average degree"></a>Intuitive Analysis: Nearest neighbours average degree</h6><p>x-axis with k, y-axis with k_nn(k), observe that the slope of drawing line decides the assortativity.</p>
+<h6 id="Assortative_Coefficient"><a href="#Assortative_Coefficient" class="headerlink" title="Assortative Coefficient"></a>Assortative Coefficient</h6><p>alpha derives from Pearson Coefficient, -1 &lt;= alpha &lt;= 1.</p>
 <table>
 <thead>
 <tr>
@@ -201,14 +200,13 @@ traffic network: motoway, flight">
 </tr>
 </tbody>
 </table>
-<p>#####Rich-club connectivity<br>Scale-free network contains a small number of nodes with very high degree, plays dominant role in network, we call them “Rich Nodes”. If rich nodes tightly interconnected with each other, the formed core group is called “Rich Club”.</p>
-<p>######Rich-club Coef.<br>Rich club coef. is a measure of the <strong>density</strong> interconnectivity among a group of rich nodes.</p>
+<h5 id="Rich-club_connectivity"><a href="#Rich-club_connectivity" class="headerlink" title="Rich-club connectivity"></a>Rich-club connectivity</h5><p>Scale-free network contains a small number of nodes with very high degree, plays dominant role in network, we call them “Rich Nodes”. If rich nodes tightly interconnected with each other, the formed core group is called “Rich Club”.</p>
+<h6 id="Rich-club_Coef"><a href="#Rich-club_Coef" class="headerlink" title="Rich-club Coef."></a>Rich-club Coef.</h6><p>Rich club coef. is a measure of the <strong>density</strong> interconnectivity among a group of rich nodes.</p>
 <p>Analysis…</p>
-<p>#####Second-order Mixing<br>Optional…</p>
-<p>####3rd Order Property</p>
-<p>#####Clustering Coefficient<br>Clustering Coefficient C_i for node i ranges from 0 to 1. If the number edges between the neighbors e_i equals to 0, then C_i is 0; if all neighbors of node i are linked to each other, C_i is 1.</p>
-<p>#####Triangle<br>…</p>
-<p>####Structure Constraints<br>For each metric, what is the possible range of value? Are these properties independent or correlated? Which are the key ones?</p>
+<h5 id="Second-order_Mixing"><a href="#Second-order_Mixing" class="headerlink" title="Second-order Mixing"></a>Second-order Mixing</h5><p>Optional…</p>
+<h4 id="3rd_Order_Property"><a href="#3rd_Order_Property" class="headerlink" title="3rd Order Property"></a>3rd Order Property</h4><h5 id="Clustering_Coefficient"><a href="#Clustering_Coefficient" class="headerlink" title="Clustering Coefficient"></a>Clustering Coefficient</h5><p>Clustering Coefficient C_i for node i ranges from 0 to 1. If the number edges between the neighbors e_i equals to 0, then C_i is 0; if all neighbors of node i are linked to each other, C_i is 1.</p>
+<h5 id="Triangle"><a href="#Triangle" class="headerlink" title="Triangle"></a>Triangle</h5><p>…</p>
+<h4 id="Structure_Constraints"><a href="#Structure_Constraints" class="headerlink" title="Structure Constraints"></a>Structure Constraints</h4><p>For each metric, what is the possible range of value? Are these properties independent or correlated? Which are the key ones?</p>
 <p>Here we focus on the following properites:</p>
 <ul>
 <li>Degree Distribution (1st)</li>
@@ -216,35 +214,29 @@ traffic network: motoway, flight">
 <li>Rich-club Connectivity (2nd)</li>
 </ul>
 <p>To study wheather degree distribution determine the other two properties. We use two link-rewriting algorithm to infer the constraints among them.</p>
-<p>#####Link-rewriting I<br>…</p>
-<p>#####Link-rewriting II<br>…</p>
-<p>#####Discussion<br>…</p>
-<p>####Centrality</p>
-<p>#####Degree Centrality<br>A local measurement, interpreted in terms of the immediate risk of a node for catching whatever is flowing through the network (virus/information).</p>
+<h5 id="Link-rewriting_I"><a href="#Link-rewriting_I" class="headerlink" title="Link-rewriting I"></a>Link-rewriting I</h5><p>…</p>
+<h5 id="Link-rewriting_II"><a href="#Link-rewriting_II" class="headerlink" title="Link-rewriting II"></a>Link-rewriting II</h5><p>…</p>
+<h5 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h5><p>…</p>
+<h4 id="Centrality"><a href="#Centrality" class="headerlink" title="Centrality"></a>Centrality</h4><h5 id="Degree_Centrality"><a href="#Degree_Centrality" class="headerlink" title="Degree Centrality"></a>Degree Centrality</h5><p>A local measurement, interpreted in terms of the immediate risk of a node for catching whatever is flowing through the network (virus/information).</p>
 <p><strong>Mormalised degree Centrality</strong> = k/(N-1). N-1 is the max possible degree.<br><strong>Freeman’s Network Centrality</strong></p>
-<p>#####Betweeness Centrality<br>Betweenness centrality is an indicator of a node’s in a network. It is equal to the number of shortest paths from all vertices to all others that pass through that node. A node with high betweenness has a large influence on the <strong>transfer of items</strong> through the network, under the assumption that item transfer follows the shortest paths.</p>
+<h5 id="Betweeness_Centrality"><a href="#Betweeness_Centrality" class="headerlink" title="Betweeness Centrality"></a>Betweeness Centrality</h5><p>Betweenness centrality is an indicator of a node’s in a network. It is equal to the number of shortest paths from all vertices to all others that pass through that node. A node with high betweenness has a large influence on the <strong>transfer of items</strong> through the network, under the assumption that item transfer follows the shortest paths.</p>
 <p>Nodes of high betweenness centrality are important for transport. If they are blocked, transport becomes less efficient; if their capacity is improved transport becomes more efficient.</p>
-<p>#####Closeness Centrality<br>n connected graphs there is a natural distance metric between all pairs of nodes, defined by the length of their shortest paths. The farness of a node s is defined as the sum of its distances to all other nodes, and its closeness is defined as the reciprocal of the farness. Thus, the more central a node is the lower its total distance to all other nodes. Closeness can be regarded as a measure of how long it will take to spread information from s to all other nodes sequentially.</p>
-<p>#####Eigenvector Centrality (PageRank)<br>Eigenvetor centrality is ameasure of the influence of a node in a network. It assigns relative scores to all nodes in the network based on the concept that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes. <strong>Page Rank</strong> and <strong>Katz Centrality</strong> are eigenvector measure.</p>
-<p>####K-Core<br>The k-core of network can be obtained by recursively removing nofrd of degrees &lt; k, until all remianing nodes have degrees &gt;=k.</p>
+<h5 id="Closeness_Centrality"><a href="#Closeness_Centrality" class="headerlink" title="Closeness Centrality"></a>Closeness Centrality</h5><p>n connected graphs there is a natural distance metric between all pairs of nodes, defined by the length of their shortest paths. The farness of a node s is defined as the sum of its distances to all other nodes, and its closeness is defined as the reciprocal of the farness. Thus, the more central a node is the lower its total distance to all other nodes. Closeness can be regarded as a measure of how long it will take to spread information from s to all other nodes sequentially.</p>
+<h5 id="Eigenvector_Centrality__28PageRank_29"><a href="#Eigenvector_Centrality__28PageRank_29" class="headerlink" title="Eigenvector Centrality (PageRank)"></a>Eigenvector Centrality (PageRank)</h5><p>Eigenvetor centrality is ameasure of the influence of a node in a network. It assigns relative scores to all nodes in the network based on the concept that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes. <strong>Page Rank</strong> and <strong>Katz Centrality</strong> are eigenvector measure.</p>
+<h4 id="K-Core"><a href="#K-Core" class="headerlink" title="K-Core"></a>K-Core</h4><p>The k-core of network can be obtained by recursively removing nofrd of degrees &lt; k, until all remianing nodes have degrees &gt;=k.</p>
 <p>A node has the coreness value of c if it belogns the c-core but not to the (c+1)-core.</p>
 <p>Nodes with the same coreness value of c form the c-shell of the network.</p>
 <p><strong>k-core Decomposition</strong>: Recursively prune the least connected nodes, reveals the hierarchical structure of a network, progressively focus on network’s central cores.</p>
-<p>###Complex Network Model</p>
-<p>####Stastic Model</p>
-<p>#####Random Graph Model</p>
-<p>Degree distribution: Binomial (normal distribution)</p>
+<h3 id="Complex_Network_Model"><a href="#Complex_Network_Model" class="headerlink" title="Complex Network Model"></a>Complex Network Model</h3><h4 id="Stastic_Model"><a href="#Stastic_Model" class="headerlink" title="Stastic Model"></a>Stastic Model</h4><h5 id="Random_Graph_Model"><a href="#Random_Graph_Model" class="headerlink" title="Random Graph Model"></a>Random Graph Model</h5><p>Degree distribution: Binomial (normal distribution)</p>
 <p>Path Length: Small</p>
 <p>Clustering Coef. : small</p>
 <p>Mo real network is random graph, random graph is a reference study model for real network.</p>
-<p>#####Small World<br><strong>Six Degrees</strong> -&gt; Small Diameter</p>
+<h5 id="Small_World"><a href="#Small_World" class="headerlink" title="Small World"></a>Small World</h5><p><strong>Six Degrees</strong> -&gt; Small Diameter</p>
 <p>Small world model has two main features: <strong>High Clustering</strong> and <strong>Small Diameter</strong></p>
 <p>How to build? Increasingly random connectivity</p>
 <p>Regualr (High L, High C) -&gt; Small World (Low L, High C) -&gt; Random (Low L, Low C)</p>
-<p>#####Configuration Model<br>…</p>
-<p>####Generative Model</p>
-<p>#####Power-law/Scale-free Network</p>
-<p>The degree distribution is power-law after processing data.</p>
+<h5 id="Configuration_Model"><a href="#Configuration_Model" class="headerlink" title="Configuration Model"></a>Configuration Model</h5><p>…</p>
+<h4 id="Generative_Model"><a href="#Generative_Model" class="headerlink" title="Generative Model"></a>Generative Model</h4><h5 id="Power-law/Scale-free_Network"><a href="#Power-law/Scale-free_Network" class="headerlink" title="Power-law/Scale-free Network"></a>Power-law/Scale-free Network</h5><p>The degree distribution is power-law after processing data.</p>
 <p><strong>Power-law degree exponents</strong> <em>alpha</em>. Typically <em>2 &lt; alpha &lt; 3</em></p>
 <p>estimating alpha; bad for lit aline on log-log axis using least square method; good for ploting complimentary CDF, P(X&gt;=x), on log-log axis. CDF is cumulative distribution function, much less noise, fit aline to obtain the slope alpha’ of P(X&gt;=x), then alpha = alpha’ + 1</p>
 <p>exponential: P(x) ~ f(x)=c^(-x)</p>
@@ -266,41 +258,8 @@ traffic network: motoway, flight">
 <p>Walking on a network</p>
 <p>Attaching to edges</p>
 <p>Node duplication</p>
-<p>#####PFP Internet AS Model</p>
-<p>######Internet Topology<br>Internet is enormous in size, it has millions of hosts, millions of routers, thousands of autonomous systems (AS). Internet is a network of networks.</p>
-<p>###Network Structures</p>
-<p>####Strength of weak ties</p>
-<p>#####Local bridge</p>
-<p>####Social captical of a node</p>
-<p>#####Link diversity</p>
-<p>####Communities</p>
-<p>#####Modularity</p>
-<p>####Structure Balance</p>
-<p>#####Local balance</p>
-<p>#####Global faction</p>
-<p>###Network Dynamics</p>
-<p>####Game-based cascades</p>
-<p>#####Monotonic Spreading</p>
-<p>#####Threshold vs Cascade Capacity</p>
-<p>#####Bilingual Behaviour</p>
-<p>####Stochastic Epidemic Spreading</p>
-<p>#####Basic Reproduction Number</p>
-<p>#####SIR Model and SIS Model</p>
-<p>#####Disappearing of the threshold in SF Network</p>
-<p>#####Immunisation</p>
-<p>###Real Network Case Study</p>
-<p>####AS Internet</p>
-<p>#####Unique, “Perfect”</p>
-<p>#####Jellyfish Model, PFP Model</p>
-<p>####The Web</p>
-<p>#####The Bow-Tie Structure</p>
-<p>#####Hubs and Authorities</p>
-<p>#####PageRank</p>
-<p>####Document/Information Networks</p>
-<p>#####Popularity vs similarity</p>
-<p>#####DSP Model</p>
-<p>###Social Networks Case Study</p>
-<p>###Recent Development<br><a href="http://www.hindawi.com/journals/tswj/si/659734/cfp/" target="_blank" rel="external">http://www.hindawi.com/journals/tswj/si/659734/cfp/</a><br><a href="http://discovery.ucl.ac.uk/1420490/" target="_blank" rel="external">http://discovery.ucl.ac.uk/1420490/</a><br><a href="http://phys.org/news/2013-06-approach-large-complex-networks-cells.html" target="_blank" rel="external">http://phys.org/news/2013-06-approach-large-complex-networks-cells.html</a><br><a href="http://home.deib.polimi.it/piccardi/netcon/" target="_blank" rel="external">http://home.deib.polimi.it/piccardi/netcon/</a></p>
+<h5 id="PFP_Internet_AS_Model"><a href="#PFP_Internet_AS_Model" class="headerlink" title="PFP Internet AS Model"></a>PFP Internet AS Model</h5><h6 id="Internet_Topology"><a href="#Internet_Topology" class="headerlink" title="Internet Topology"></a>Internet Topology</h6><p>Internet is enormous in size, it has millions of hosts, millions of routers, thousands of autonomous systems (AS). Internet is a network of networks.</p>
+<h3 id="Network_Structures"><a href="#Network_Structures" class="headerlink" title="Network Structures"></a>Network Structures</h3><h4 id="Strength_of_weak_ties"><a href="#Strength_of_weak_ties" class="headerlink" title="Strength of weak ties"></a>Strength of weak ties</h4><h5 id="Local_bridge"><a href="#Local_bridge" class="headerlink" title="Local bridge"></a>Local bridge</h5><h4 id="Social_captical_of_a_node"><a href="#Social_captical_of_a_node" class="headerlink" title="Social captical of a node"></a>Social captical of a node</h4><h5 id="Link_diversity"><a href="#Link_diversity" class="headerlink" title="Link diversity"></a>Link diversity</h5><h4 id="Communities"><a href="#Communities" class="headerlink" title="Communities"></a>Communities</h4><h5 id="Modularity"><a href="#Modularity" class="headerlink" title="Modularity"></a>Modularity</h5><h4 id="Structure_Balance"><a href="#Structure_Balance" class="headerlink" title="Structure Balance"></a>Structure Balance</h4><h5 id="Local_balance"><a href="#Local_balance" class="headerlink" title="Local balance"></a>Local balance</h5><h5 id="Global_faction"><a href="#Global_faction" class="headerlink" title="Global faction"></a>Global faction</h5><h3 id="Network_Dynamics"><a href="#Network_Dynamics" class="headerlink" title="Network Dynamics"></a>Network Dynamics</h3><h4 id="Game-based_cascades"><a href="#Game-based_cascades" class="headerlink" title="Game-based cascades"></a>Game-based cascades</h4><h5 id="Monotonic_Spreading"><a href="#Monotonic_Spreading" class="headerlink" title="Monotonic Spreading"></a>Monotonic Spreading</h5><h5 id="Threshold_vs_Cascade_Capacity"><a href="#Threshold_vs_Cascade_Capacity" class="headerlink" title="Threshold vs Cascade Capacity"></a>Threshold vs Cascade Capacity</h5><h5 id="Bilingual_Behaviour"><a href="#Bilingual_Behaviour" class="headerlink" title="Bilingual Behaviour"></a>Bilingual Behaviour</h5><h4 id="Stochastic_Epidemic_Spreading"><a href="#Stochastic_Epidemic_Spreading" class="headerlink" title="Stochastic Epidemic Spreading"></a>Stochastic Epidemic Spreading</h4><h5 id="Basic_Reproduction_Number"><a href="#Basic_Reproduction_Number" class="headerlink" title="Basic Reproduction Number"></a>Basic Reproduction Number</h5><h5 id="SIR_Model_and_SIS_Model"><a href="#SIR_Model_and_SIS_Model" class="headerlink" title="SIR Model and SIS Model"></a>SIR Model and SIS Model</h5><h5 id="Disappearing_of_the_threshold_in_SF_Network"><a href="#Disappearing_of_the_threshold_in_SF_Network" class="headerlink" title="Disappearing of the threshold in SF Network"></a>Disappearing of the threshold in SF Network</h5><h5 id="Immunisation"><a href="#Immunisation" class="headerlink" title="Immunisation"></a>Immunisation</h5><h3 id="Real_Network_Case_Study"><a href="#Real_Network_Case_Study" class="headerlink" title="Real Network Case Study"></a>Real Network Case Study</h3><h4 id="AS_Internet"><a href="#AS_Internet" class="headerlink" title="AS Internet"></a>AS Internet</h4><h5 id="Unique_2C__u201CPerfect_u201D"><a href="#Unique_2C__u201CPerfect_u201D" class="headerlink" title="Unique, “Perfect”"></a>Unique, “Perfect”</h5><h5 id="Jellyfish_Model_2C_PFP_Model"><a href="#Jellyfish_Model_2C_PFP_Model" class="headerlink" title="Jellyfish Model, PFP Model"></a>Jellyfish Model, PFP Model</h5><h4 id="The_Web"><a href="#The_Web" class="headerlink" title="The Web"></a>The Web</h4><h5 id="The_Bow-Tie_Structure"><a href="#The_Bow-Tie_Structure" class="headerlink" title="The Bow-Tie Structure"></a>The Bow-Tie Structure</h5><h5 id="Hubs_and_Authorities"><a href="#Hubs_and_Authorities" class="headerlink" title="Hubs and Authorities"></a>Hubs and Authorities</h5><h5 id="PageRank"><a href="#PageRank" class="headerlink" title="PageRank"></a>PageRank</h5><h4 id="Document/Information_Networks"><a href="#Document/Information_Networks" class="headerlink" title="Document/Information Networks"></a>Document/Information Networks</h4><h5 id="Popularity_vs_similarity"><a href="#Popularity_vs_similarity" class="headerlink" title="Popularity vs similarity"></a>Popularity vs similarity</h5><h5 id="DSP_Model"><a href="#DSP_Model" class="headerlink" title="DSP Model"></a>DSP Model</h5><h3 id="Social_Networks_Case_Study"><a href="#Social_Networks_Case_Study" class="headerlink" title="Social Networks Case Study"></a>Social Networks Case Study</h3><h3 id="Recent_Development"><a href="#Recent_Development" class="headerlink" title="Recent Development"></a>Recent Development</h3><p><a href="http://www.hindawi.com/journals/tswj/si/659734/cfp/" target="_blank" rel="external">http://www.hindawi.com/journals/tswj/si/659734/cfp/</a><br><a href="http://discovery.ucl.ac.uk/1420490/" target="_blank" rel="external">http://discovery.ucl.ac.uk/1420490/</a><br><a href="http://phys.org/news/2013-06-approach-large-complex-networks-cells.html" target="_blank" rel="external">http://phys.org/news/2013-06-approach-large-complex-networks-cells.html</a><br><a href="http://home.deib.polimi.it/piccardi/netcon/" target="_blank" rel="external">http://home.deib.polimi.it/piccardi/netcon/</a></p>
 <h3 id="Resources_3A_datasets_2C_APIs_and_tools_for_network_analysis"><a href="#Resources_3A_datasets_2C_APIs_and_tools_for_network_analysis" class="headerlink" title="Resources: datasets, APIs and tools for network analysis"></a>Resources: datasets, APIs and tools for network analysis</h3><p>60+ Free Books on Big Data, Data Science, Data Mining, Machine Learning, Python, R, and more</p>
 <ul>
 <li>()[<a href="http://www.kdnuggets.com/2015/09/free-data-science-books.html" target="_blank" rel="external">http://www.kdnuggets.com/2015/09/free-data-science-books.html</a>]</li>
@@ -361,11 +320,12 @@ traffic network: motoway, flight">
 <li>Visualising data at the Oxford Internet Institute <a href="http://www.oii.ox.ac.uk/vis/" target="_blank" rel="external">http://www.oii.ox.ac.uk/vis/</a></li>
 </ul>
 <p>…<br><a id="ch"></a></p>
-<h2 id="23_23_u4E2D_u6587_u7248"><a href="#23_23_u4E2D_u6587_u7248" class="headerlink" title="##中文版"></a>##中文版</h2><p>复杂网络是由数量巨大的节点和节点构成的错综复杂的网络结构，是一个具有拓扑结构特性的图。</p>
+<h2 id="u4E2D_u6587_u7248"><a href="#u4E2D_u6587_u7248" class="headerlink" title="中文版"></a>中文版</h2><hr>
+<p>复杂网络是由数量巨大的节点和节点构成的错综复杂的网络结构，是一个具有拓扑结构特性的图。</p>
 <p>下面介绍几种种经典复杂网络模型。</p>
-<p>###小世界网络<br>特征：短特征路径长度，高集聚系数。</p>
-<p>####无尺度网络<br>特征：度分度的幂定律递减。</p>
-<p>####AS模型<br>在互联网中，一个自治系统（英文：Autonomous system, AS）是指在一个（有时是多个）实体管辖下的所有IP网络和路由器的全体，它们对互联网执行共同的路由策略。</p>
+<h3 id="u5C0F_u4E16_u754C_u7F51_u7EDC"><a href="#u5C0F_u4E16_u754C_u7F51_u7EDC" class="headerlink" title="小世界网络"></a>小世界网络</h3><p>特征：短特征路径长度，高集聚系数。</p>
+<h4 id="u65E0_u5C3A_u5EA6_u7F51_u7EDC"><a href="#u65E0_u5C3A_u5EA6_u7F51_u7EDC" class="headerlink" title="无尺度网络"></a>无尺度网络</h4><p>特征：度分度的幂定律递减。</p>
+<h4 id="AS_u6A21_u578B"><a href="#AS_u6A21_u578B" class="headerlink" title="AS模型"></a>AS模型</h4><p>在互联网中，一个自治系统（英文：Autonomous system, AS）是指在一个（有时是多个）实体管辖下的所有IP网络和路由器的全体，它们对互联网执行共同的路由策略。</p>
 <hr>
 <p>度分布中的肥尾现象，高集聚系数，边与边之间的相称性或非相称性，社团结构与分级结构</p>
 <p>有向图网路中，相互性，三角显著性</p>
@@ -377,103 +337,118 @@ traffic network: motoway, flight">
       
 
         
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2014/12/29/dm-recommendation-system/">Recommendation System</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/12/28/ml-principle-component-analysis/">Principle Component Analysis</a>
+          </div>
+          <div class="clearfix"></div>
         
 
-        
-          <div class="copyright">
-            
-              <span class="claim">版权声明：自由转载-非商用-无演绎-保持署名 @ Creative Commons BY-NC-ND 3.0</span>
-            
-            
-              <span class="from-link">
-                <em>本文链接地址:</em>
-                <a href="/2014/12/29/intro-complex-network/">
-                  http://yoursite.com/2014/12/29/intro-complex-network/
-                </a>
-              </span>
-            
-          </div>
         
         
   
   <div class="categories">
-    <a href="/categories/Complex-Network/">Complex Network</a>
+    <a href="/categories/Introduction/">Introduction</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/concept/">concept</a>
+    <a href="/tags/Complex-Network/">Complex-Network</a>
   </div>
 
         
-  <div class="addthis addthis_toolbox addthis_default_style">
-    
-      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    
-    
-      <a class="addthis_button_tweet"></a>
-    
-    
-      <a class="addthis_button_sinaweibo_like"></a>
-    
-    
-      <a class="addthis_button_linkedin"></a>
-    
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
       
       <div class="clearfix"></div>
     </footer>
   </div>
 </article>
 
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="text" name="q" results="0" placeholder="搜尋">
-    <i class="icon-search"></i>
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
 
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
   
 <div class="widget tag">
   <h3 class="title">標籤</h3>
   <ul class="entry">
   
-    <li><a href="/tags/concept/">concept</a><small>1</small></li>
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
   
   </ul>
 </div>
 
 
-  <div class="trace-invest">
-    <span>
-        <a href="http://traceinvest.com" target="_blank">欢迎光临我的美股投资相关网站 :</br>traceinvest.com</a>
-    </span>
-</div>
-
-
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2014/12/29/intro-complex-network/">concept-complex-network</a>
-      </li>
-    
-  </ul>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
+    </aside>
+    <div class="clearfix">
+    </div>
   </div>
   <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
   <footer id="footer" class="inner"><div class="alignleft">

@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python IO | Paprika</title>
+  <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="Reading字符集和编码
+charset &amp;amp; encoding
+阮一峰:ascii uninode and utf-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Python IO"/>
+  <meta property="og:site_name" content="Paprika"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45019001-1', 'topdna.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Paprika</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
+    
+      <li><a href="/categories/Introduction/">Introduction</a></li>
+    
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
+    
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
+    
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-01-01T05:48:41.000Z"><a href="/2015/01/01/python-io/">2015-01-01</a></time>
+      
+      
+  
+    <h1 class="title">Python IO</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="Reading"><a href="#Reading" class="headerlink" title="Reading"></a>Reading</h3><p><a href="http://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html" target="_blank" rel="external">字符集和编码</a></p>
+<p><a href="http://www.cftea.com/c/2008/01/LG3YPDRZSTHTJ2IH.asp" target="_blank" rel="external">charset &amp; encoding</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="external">阮一峰:ascii uninode and utf-8</a></p>
+<a id="more"></a>
+<h3 id="u6587_u4EF6_u7C7B_u4E2D_u6587_u7F16_u7801_u7F16_u8BD1"><a href="#u6587_u4EF6_u7C7B_u4E2D_u6587_u7F16_u7801_u7F16_u8BD1" class="headerlink" title="文件类中文编码编译"></a>文件类中文编码编译</h3><pre><code># coding: utf-8
+</code></pre><p>Example:</p>
+<pre><code># coding:utf-8
+s = u&apos;你好&apos;
+</code></pre><p>编译出现错误:</p>
+<pre><code>UnicodeEncodeError: &apos;ascii&apos; codec can&apos;t encode characters in position 0-15: ordinal not in range(128)
+</code></pre><p>解决方法：设置python的默认编码为utf8格式。</p>
+<pre><code>sys.setdefaultencoding(&apos;utf8&apos;)
+</code></pre><h3 id="u4ECEMySQL_u83B7_u53D6_u4E2D_u6587_u6570_u636E"><a href="#u4ECEMySQL_u83B7_u53D6_u4E2D_u6587_u6570_u636E" class="headerlink" title="从MySQL获取中文数据"></a>从MySQL获取中文数据</h3><pre><code>conn = MySQLdb.connect(user=&apos;root&apos;,charset=&apos;utf8&apos;)
+</code></pre><h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>使用<code>json</code>库。</p>
+<pre><code>&gt;&gt;&gt; import json
+</code></pre><p>Stream存为JSON格式，也就是<code>dictionary</code></p>
+<pre><code> &gt;&gt;&gt; stream = &apos;{&quot;haha&quot;: &quot;哈哈&quot;}&apos;
+ &gt;&gt;&gt; stream
+&apos;{&quot;haha&quot;:&quot;\xe5\x93\x88\xe5\x93\x88&quot;}&apos;
+&gt;&gt;&gt; js = json.loads(stream)  
+&gt;&gt;&gt; js
+{u&apos;haha&apos;: u&apos;\u54c8\u54c8&apos;}
+
+json.load()        # 导入一条JSON数据
+json.loads()    # 导入全部JSON数据
+</code></pre><p>python数据格式转化为JSON: <code>json.dumps()</code></p>
+<pre><code>&gt;&gt;&gt;    print json.dumps(js)  
+&apos;{&quot;haha&quot;: &quot;\\u54c8\\u54c8&quot;}&apos;
+&gt;&gt; print json.dumps(js, ensure_ascii=False)  
+{&quot;haha&quot;: &quot;哈哈&quot;}  
+</code></pre><p><a href="http://www.cnblogs.com/stubborn412/p/3818423.html" target="_blank" rel="external">python中json.dumps使用的坑以及字符编码</a></p>
+<p>注意:在<code>JSON.dumps()</code>中<code>key</code>和<code>value</code>不能以混合普通字符串和unicode字符串的形式同时存在，否则会报错：</p>
+<pre><code>UnicodeDecodeError: &apos;ascii&apos; codec can&apos;t decode byte 0xe6 in position 1: ordinal not in range(128)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">key=<span class="string">u"name"</span></span><br><span class="line">obj=&#123;key:<span class="string">u"测试"</span>&#125;</span><br><span class="line">json.dumps(obj,ensure_ascii=<span class="keyword">False</span>)		</span><br><span class="line"><span class="comment"># u'&#123;"name": "\u6d4b\u8bd5"&#125;'</span></span><br><span class="line">obj=&#123;key.encode(<span class="string">"utf-8"</span>):<span class="string">u"测试"</span>.encode(<span class="string">"utf-8"</span>)&#125;</span><br><span class="line">json.dumps(obj,ensure_ascii=<span class="keyword">False</span>)		</span><br><span class="line"><span class="comment">#'&#123;"name": "\xe6\xb5\x8b\xe8\xaf\x95"&#125;'</span></span><br></pre></td></tr></table></figure>
+<h3 id="Pretty_Printer"><a href="#Pretty_Printer" class="headerlink" title="Pretty Printer"></a>Pretty Printer</h3><p>常用函数</p>
+<pre><code>pprint.pprint -&gt; print
+pprint.pformat -&gt; str
+</code></pre><p>打印中文<br><a href="https://www.quora.com/How-do-you-print-a-python-unicode-data-structure" target="_blank" rel="external">Quora: pprint for unicode data structure</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> pprint</span><br><span class="line">_escape = dict((q, dict((c, unicode(repr(chr(c)))[<span class="number">1</span>:-<span class="number">1</span>])</span><br><span class="line">                        <span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">32</span>) + [ord(<span class="string">'\\'</span>)] +</span><br><span class="line">                        range(<span class="number">128</span>, <span class="number">161</span>),</span><br><span class="line">                        **&#123;ord(q): <span class="string">u'\\'</span> + q&#125;))</span><br><span class="line">               <span class="keyword">for</span> q <span class="keyword">in</span> [<span class="string">"'"</span>, <span class="string">'"'</span>])</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyPrettyPrinter</span><span class="params">(pprint.PrettyPrinter)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">format</span><span class="params">(self, object, context, maxlevels, level)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> type(object) <span class="keyword">is</span> unicode:</span><br><span class="line">            q = <span class="string">"'"</span> <span class="keyword">if</span> <span class="string">"'"</span> <span class="keyword">not</span> <span class="keyword">in</span> object <span class="keyword">or</span> <span class="string">'"'</span> <span class="keyword">in</span> object \</span><br><span class="line">                <span class="keyword">else</span> <span class="string">'"'</span></span><br><span class="line">            <span class="keyword">return</span> (<span class="string">"u"</span> + q + object.translate(_escape[q]) +</span><br><span class="line">                    q, <span class="keyword">True</span>, <span class="keyword">False</span>)</span><br><span class="line">        <span class="keyword">return</span> pprint.PrettyPrinter.format(</span><br><span class="line">            self, object, context, maxlevels, level)</span><br><span class="line">pp = MyPrettyPrinter()</span><br><span class="line">pp.pprint([<span class="string">u"您好"</span>, <span class="string">'world'</span>])</span><br><span class="line"><span class="comment"># [u"您好", 'world']</span></span><br></pre></td></tr></table></figure>
+<p>如果不想要前缀<code>u</code>则在第13行代码里去掉<code>&quot;u&quot;+</code></p>
+<h3 id="u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><a href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse" class="headerlink" title="使用urllib发送HTTP request,获得含有原始数据的reponse"></a>使用urllib发送HTTP request,获得含有原始数据的reponse</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json, urllib</span><br><span class="line"><span class="comment"># 如果获得的response是JSON格式，可直接用json.load()储存成Python的JSON格式</span></span><br><span class="line">response = json.loads(urllib.urlopen(url).read())</span><br></pre></td></tr></table></figure>
+<h3 id="u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><a href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6" class="headerlink" title="“Unicode”数据导入文件"></a>“Unicode”数据导入文件</h3><p>导入文件类型首选为csv文件，因为csv文件可以通过Excel进行方便的数据微调。Python2的csv库目前还不支持读写“Unicode”数据。所以目前的办法是：</p>
+<p><code>把“ASCII”数据条导入csv文件，“Unicode”数据条导入txt文件。</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> codecs, csv</span><br><span class="line"><span class="comment"># 使用csv库创建csv格式的文件</span></span><br><span class="line">csvfile = open(<span class="string">"data.csv"</span>, <span class="string">"w"</span>)</span><br><span class="line">spamwriter = csv.writer(csvfile)</span><br><span class="line"><span class="comment"># 使用codecs创建支持unicode的文件</span></span><br><span class="line">txtfile = codecs.open(<span class="string">"data.txt"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>)</span><br><span class="line"><span class="comment"># 使用Exception</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  spamwriter.writerow([col_str1,col_str2,...])</span><br><span class="line"><span class="keyword">except</span> UnicodeEncodeError:</span><br><span class="line">  file.write(cols_str)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  i=<span class="number">1</span></span><br><span class="line">csvfile.close()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+<h4 id="u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E"><a href="#u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E" class="headerlink" title="读csv文件中含有”Unicode”的数据"></a>读csv文件中含有”Unicode”的数据</h4><p>csv文件中的部分数据：<br><img src="/pictures/oscar.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding="utf-8" cannot decode character like :</span></span><br><span class="line">file = codecs.open(<span class="string">"data.csv"</span>, <span class="string">"r"</span>, encoding=<span class="string">"ISO-8859-1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">   <span class="comment">#line.replace() not work, convert line to string</span></span><br><span class="line">   line = str(line)</span><br><span class="line">   </span><br><span class="line">   <span class="comment">#csv文件为了escape字符串里面的逗号，在字符串的前后加了引号</span></span><br><span class="line">   <span class="comment">#print line:</span></span><br><span class="line">   <span class="comment">#25th,Academy Award for Best Film Editing,"\\ Come Back, Little Sheba",\\ Warren Low\r</span></span><br><span class="line">   </span><br><span class="line">   line = line.replace(<span class="string">'\"\\'</span>,<span class="string">'\\'</span>).replace(<span class="string">'\r'</span>,<span class="string">''</span>)</span><br><span class="line">   features = line.split(<span class="string">',\\ '</span>)</span><br><span class="line">   film = features[<span class="number">1</span>]</span><br><span class="line">   artist_str = features[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> len(artist_str) == <span class="number">1</span>:</span><br><span class="line">      <span class="comment">#注意：artist_str本身就是一个含着character的list</span></span><br><span class="line">      artists = [artist_str]</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      artists = artist_str.split(<span class="string">'\\ '</span>)</span><br><span class="line">   <span class="keyword">for</span> artist <span class="keyword">in</span> artists:</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2015/01/01/python-data-analysis/">Python for Data Analysis</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/12/31/stats-corelation/">相关性</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Programming-Skills/">Programming Skills</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Python/">Python</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+    </aside>
+    <div class="clearfix">
+    </div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Lingxi Chen
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>

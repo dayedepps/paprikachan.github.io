@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Information Retrive Data Mining | Paprika</title>
+  <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="IntroductionInformation retrieval: obtained relevant information by searching through large scale unstructured data; Data mining: extract knowledge, insights and useful information by mining the obtained relevant information.
+IR (data -&amp;gt; relevant information), DM (relevant information -&amp;gt; patterns and knowledge)
+Data Mining tasks (machine learning):
+
+Classification
+Clustering
+Regression
+
+Unique data mining tasks:
+
+Association Rule Discovery
+Outlier (Anomaly) Detection
+User intersts Mining">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Information Retrive Data Mining"/>
+  <meta property="og:site_name" content="Paprika"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45019001-1', 'topdna.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Paprika</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
+    
+      <li><a href="/categories/Introduction/">Introduction</a></li>
+    
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
+    
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
+    
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-02-07T05:05:07.000Z"><a href="/2015/02/07/intro-information-retrive-data-mining/">2015-02-07</a></time>
+      
+      
+  
+    <h1 class="title">Information Retrive Data Mining</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Information retrieval: obtained relevant information by searching through large scale unstructured data; Data mining: extract knowledge, insights and useful information by mining the obtained relevant information.</p>
+<p>IR (data -&gt; relevant information), DM (relevant information -&gt; patterns and knowledge)</p>
+<p>Data Mining tasks (machine learning):</p>
+<ul>
+<li>Classification</li>
+<li>Clustering</li>
+<li>Regression</li>
+</ul>
+<p>Unique data mining tasks:</p>
+<ul>
+<li>Association Rule Discovery</li>
+<li>Outlier (Anomaly) Detection</li>
+<li>User intersts Mining</li>
+</ul>
+<a id="more"></a>
+<h4 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h4><p>Precision and Recall are two widely used measures for evaluating the quality of retrieval results.</p>
+<p>Precision is the number of relevant documents retrieved divided by the total number of documents retrieved.</p>
+<p>Recall is the number of relevant documents retrieved divided by the total number of existing relevant documents.</p>
+<h4 id="Retrieval_Models"><a href="#Retrieval_Models" class="headerlink" title="Retrieval Models"></a>Retrieval Models</h4><p>A retrieval model abstracts away from the real world, it is a mathematical representation of the essentil aspects of a retrieval system, it aims at computing the relevance and retrieving relevant documents. Thus, either explicitly or implicitly, defines relevance.</p>
+<h5 id="Exact_Matching_3A_data_retrieval"><a href="#Exact_Matching_3A_data_retrieval" class="headerlink" title="Exact Matching: data retrieval"></a>Exact Matching: data retrieval</h5><p>Query specifies precise retrieval criteria, every document either matches or fails to match query. The result is relevance or non-relevance.</p>
+<p>Pros: offer user great control. Cons: too many or too few results and unordered output.</p>
+<h5 id="Best_Match/Rank_Retrieval"><a href="#Best_Match/Rank_Retrieval" class="headerlink" title="Best Match/Rank Retrieval"></a>Best Match/Rank Retrieval</h5><p>Query describes retrieval criteria for desired documents, every document matches a query to some degree. Result is a ranked list of documents on the basis of either probability of relevance or degraded relevance. Web search is ranked retrieval.</p>
+<p>Pros: easy to use. Cons: query less precise.</p>
+<h5 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h5><h5 id="Extended_Boolean"><a href="#Extended_Boolean" class="headerlink" title="Extended Boolean"></a>Extended Boolean</h5><h5 id="TF_IDF_Term_weighting"><a href="#TF_IDF_Term_weighting" class="headerlink" title="TF IDF Term weighting"></a>TF IDF Term weighting</h5><h5 id="Vector_Space_Model"><a href="#Vector_Space_Model" class="headerlink" title="Vector Space Model"></a>Vector Space Model</h5><h5 id="Basic_Probabilistic_Model"><a href="#Basic_Probabilistic_Model" class="headerlink" title="Basic Probabilistic Model"></a>Basic Probabilistic Model</h5><h5 id="Two_Poisson_Mode_-_BM25"><a href="#Two_Poisson_Mode_-_BM25" class="headerlink" title="Two Poisson Mode - BM25"></a>Two Poisson Mode - BM25</h5><h5 id="Bayesian_Inference_Networks"><a href="#Bayesian_Inference_Networks" class="headerlink" title="Bayesian Inference Networks"></a>Bayesian Inference Networks</h5><h5 id="Statistical_Language_Models"><a href="#Statistical_Language_Models" class="headerlink" title="Statistical Language Models"></a>Statistical Language Models</h5><h5 id="Portfolio_Retrieval"><a href="#Portfolio_Retrieval" class="headerlink" title="Portfolio Retrieval"></a>Portfolio Retrieval</h5><h5 id="Citation_Analysis_Models"><a href="#Citation_Analysis_Models" class="headerlink" title="Citation Analysis Models"></a>Citation Analysis Models</h5><p>Hubs &amp; authorities</p>
+<p>PageRank</p>
+<h3 id="Web_Serach_via_Link_Analysis"><a href="#Web_Serach_via_Link_Analysis" class="headerlink" title="Web Serach via Link Analysis"></a>Web Serach via Link Analysis</h3><h4 id="Relevance_Rank"><a href="#Relevance_Rank" class="headerlink" title="Relevance Rank"></a>Relevance Rank</h4><p>look at the hyperlinks between URLs to infer their relevancies, applications areas: web, email, social networks.</p>
+<p>The web is a directed graph, two assumptions:</p>
+<ul>
+<li>A hyperlink between pages denotes a conferral of authority (quality signal)</li>
+<li>The text in the anchor of the hyperlink describes the target page (textual context)</li>
+</ul>
+<p>document text + anchor text is often more effective than searching on document test only. like search for IBM homepage.</p>
+<ul>
+<li>Anchor text can be weighted more highly than document text; or can score anchor text with weight depending on the authority of the anchor page’s website.</li>
+<li>Side effects: google bombs. maliciously manipulated anchor text.<br>look at the content/texts of documents to infer their relevancies</li>
+</ul>
+<h4 id="PageRank"><a href="#PageRank" class="headerlink" title="PageRank"></a>PageRank</h4><p>Co-citation similarity: measure the similarity of two articles by the overlap of other articles citing them.</p>
+<h4 id="HITS"><a href="#HITS" class="headerlink" title="HITS"></a>HITS</h4><p>Hyperlink-Induced Topic Search Model: best suited for “board topic” queries rather than for page-finding queries.</p>
+<p>Intersting documents fall into two classes:</p>
+<ul>
+<li>Authorities: pages containing useful information (home page)</li>
+<li>Hubs: pages that link to authorities.</li>
+</ul>
+<p>Good hub links to many good authorities, good authorities is linked from many good hubs. This circular definition will turn into an iterative computation.</p>
+<p>In response to a query, instead of an ordered list of pages each meeting the query, find two sets of inter-related pages: hub pages and authority pages.</p>
+<p>How to form a base case?</p>
+<p>Given text query use a text index to get all pages contining that text query, called root set. Add in any page that either points to a page in the root set or is pointed to by a page in the root set.</p>
+<h3 id="Text_Procesing_and_Indexing"><a href="#Text_Procesing_and_Indexing" class="headerlink" title="Text Procesing and Indexing"></a>Text Procesing and Indexing</h3><h4 id="Text_Acquisition_3A_Web_Crawler"><a href="#Text_Acquisition_3A_Web_Crawler" class="headerlink" title="Text Acquisition: Web Crawler"></a>Text Acquisition: Web Crawler</h4><p>Finds and downloads web pages automatically, provides the collection for searching.</p>
+<p>Web is huge and constantly grouwing.</p>
+<p>Web is not under the control of search engine providers, web pages are constantly changing.</p>
+<p>Need to re-crawl regularly.</p>
+<p>How web crawler work?</p>
+<p>Starts with a set of seeds, which are a set of URLs given to it as parameters. Seeds are added to a URL request queue. Crawler starts fetching pages from the request queue. Downloaded pages are parsed to find link tags that might contain other useful URLs to fetch. New URLs added to the crawler’s request queue/frontier, Continue until no more new URLs or disk full.</p>
+<p>Web crawlers spend a lot of time waiting for responses to requests, to reduce this inefficiency, web crawlers use threads and fetch hundreads of pages at once. Crawlers could pontentially flood sites with requests for pages, to avoid this, politeness policies are adopted. For instance, delay between requests to same web server.</p>
+<h4 id="Text_Transformation_3AProcessing_Text"><a href="#Text_Transformation_3AProcessing_Text" class="headerlink" title="Text Transformation:Processing Text"></a>Text Transformation:Processing Text</h4><p>This process converts documents to index terms. Why?</p>
+<ul>
+<li>mathcing the exact string of chars tuped by user is too restricitve.</li>
+<li>not all words are of equal value in a search</li>
+<li>sometimes not clear where words begin and end (Chinese)</li>
+</ul>
+<p>Parser: processing the sequnce of text tokens in the document to recognize structural elements. (titles, links, headings)</p>
+<p>Tokeniser recognizes “words” in the text must consider issues like capitalization, hyphens (the mark - to join two words into one), apostrophes (eg: what’s), non-alpha characters, separators.</p>
+<p>Document parder uses syntax of markup language (or other formatting) to identify structure.</p>
+<p><strong>Tokenizing</strong> Forming words from sequence of characters</p>
+<h5 id="Stopping"><a href="#Stopping" class="headerlink" title="Stopping"></a>Stopping</h5><p>Stopping is to remove common words like “and”, “or”, “then”, “in”. Some impact on efficiency and effectiveness. Can be a problem for some queries.</p>
+<h5 id="Stemming"><a href="#Stemming" class="headerlink" title="Stemming"></a>Stemming</h5><p>Group words derived from a common stem, “computers”, “computing”. Usually effective, but not for all queries. Benefits vary for different languages.</p>
+<p>Stemming has two basic types:</p>
+<ul>
+<li>dictionary-based: uses lists of related words</li>
+<li>algorithmic: uses program to determine related words. eg: suffix-s: remove ‘s’ ending assuming plural. cats -&gt; cat, ups -&gt; up (wrong)</li>
+</ul>
+<p>Porter Stemmer</p>
+<ul>
+<li>consists of a series of rules designed to the longest possible suffix at each step</li>
+<li>effective in TREC</li>
+<li>drawback: makes a number of errors and difficult to modify</li>
+</ul>
+<h5 id="Link_Analysis"><a href="#Link_Analysis" class="headerlink" title="Link Analysis"></a>Link Analysis</h5><p>makes use of links and anchor text in web pages, identifies popularity and community information (PageRank)</p>
+<h4 id="Index_Creation"><a href="#Index_Creation" class="headerlink" title="Index Creation"></a>Index Creation</h4><p>Indexes are data structure designed to make search faster. Text search has unique requirements, which leads to unique data structres. Most common data structure is <em>inverted index</em>, “inverted” cause documents are associated with words, rather than words with documents.</p>
+<p>Inverted Index: each index item is associated with an inverted list, contains lists of documents, or lists of word occurrences in documents, and other information. Each entry is called a posting. The part of the posting that refers to a specific document or location is called a pointer. Each document in the collection is given a unique number. Lists are usually document-orderedd (sort by document number).</p>
+<p>Example: four sentences from the Wikipedia entry for tropical fish.</p>
+<pre><code>$S_1$: Tropical fish include fish found in tropical environmnets around the world, in cluding both freshwater and salt water species.
+$S_2$: Fishkeepers often use the term tropical fish to refer only those requiring fresh water, with saltwater tropical fish referred to as marine fish.
+$S_3$: Tropical fish are popular aquarium fish, due to their often bright coloration.
+$S_4$: In freshwater fish, this coloraion typically derives from iridescence, while salt water fish are generally pigmented.
+</code></pre><p><img src="/pictures/inverted_index.png" alt=""></p>
+<p><img src="/pictures/inverted_index_count.png" alt=""></p>
+<p><img src="/pictures/inverted_index_position.png" alt=""></p>
+<h4 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a>Compression</h4><h5 id="Entropy"><a href="#Entropy" class="headerlink" title="Entropy"></a>Entropy</h5><p>inverted lists are very large, (bigrams used most even larger). Lossless compression algorithm vs. lossy compression (suitable for text, in vedio not that good)</p>
+<p>Text Compression: used to compress vocabulary, document names, original document text. Based on assumptions about language.</p>
+<p>Data Compression: Used to compress inverted lists. Not generally based on assumptions, but on obervations about the data.</p>
+<p>Shannon studied theoretical limits for compression and transimission rates for recovering data.<br>Shannon Game:</p>
+<pre><code>The Present of the United States is Barack ...
+
+The best web search engine is ...
+
+Mary was ...
+</code></pre><p>Information content of a message is a function of how predictable it is.</p>
+<p>Let $p_i$ be the probability of message $i$. The number of bits needed to encode $i$ is $-log_2 p_i$.</p>
+<p>Information Entropy: the entropy of a message is the expected(minimum) number of bits needed to encode it.</p>
+<p>$Entropy = H(p) = -\sum{i=1}{n} p_i log_2 p_i$</p>
+<ul>
+<li>unknown $p_i$</li>
+<li>algorithm to compute</li>
+</ul>
+<h5 id="Huffman_Codes"><a href="#Huffman_Codes" class="headerlink" title="Huffman Codes"></a>Huffman Codes</h5><ul>
+<li>gather probabilities for symbols (characters, words, or a mix)</li>
+<li>build a tree</li>
+<li><ul>
+<li>get 2 least frequent symbols/nodes, join with a parent node.</li>
+</ul>
+</li>
+<li><ul>
+<li>lable least probable branch 0; label other branch 1.</li>
+</ul>
+</li>
+<li><ul>
+<li>continue until the tree contains all nodes and symbols/labels.</li>
+</ul>
+</li>
+<li>the path to a leaf indicates its code. (binary code)</li>
+<li>frequent symbols are near the root, giving them short codes.</li>
+<li>less frequent symbols are deeper, giving them longer codes.</li>
+</ul>
+<p>p(01) &gt; p(00)</p>
+<p><strong>Drawback</strong></p>
+<ul>
+<li>many codes are not assigned to any symbol, limiting the amount of compression possible.</li>
+<li>looking up codes is somewhat inefficient. the decoder must store the entire tree.</li>
+</ul>
+<h5 id="Lempel-Ziv"><a href="#Lempel-Ziv" class="headerlink" title="Lempel-Ziv"></a>Lempel-Ziv</h5><p>use the text already encountered to build the dictionary.no need to store dictionary, encoder and decoder automatically build the dictionary on the fly.</p>
+<p><strong>Lempel-Ziv</strong>:<br>Assume, there are n bins, for each bin, the encoded bit is $log(n)+1$.</p>
+<p><strong>Improved Lempel-Ziv</strong>:</p>
+<p>Change prefix bin number to the offset between prefix bin and current bin. Therefore, for bin n, the encoded bit is ceiling(log(n))+1.</p>
+<h4 id="Text_Stastics"><a href="#Text_Stastics" class="headerlink" title="Text Stastics"></a>Text Stastics</h4><p>Retrieval models and ranking algorithms heavily depend on statistical properties of words, like important words occur often in documents but are not high frequency in collection. And many stastical characteristics of word occurrences are predictable, so text stastics are neccessary to take into account.</p>
+<h5 id="Zipf_u2019s_Law"><a href="#Zipf_u2019s_Law" class="headerlink" title="Zipf’s Law"></a>Zipf’s Law</h5><p>Zipf’s law is actually a power law, it describes the relationship between word frequency and its frequency rank.</p>
+<p>Assume words in corpus are ranked in order of decreasing frequency. rank(r) of a word times its frequency (f) is approximately a constant (k). i.e. $r.f ~= k, r.P_r ~= c$ where $P_r$ is probability of word occurrence and $c ~= 0.1$ for English.</p>
+<p>Q: What is the proportion of words with a given frequency?</p>
+<p>A: Proportion with frequency n is 1/n(n+1)</p>
+<p>$R_n = k/n$</p>
+<p>Number of words with frequency n is $r_n - r_n+1 = l/n - k/(n+1) = k/n(n+1)$</p>
+<h5 id="Heap_u2019s_Law"><a href="#Heap_u2019s_Law" class="headerlink" title="Heap’s Law"></a>Heap’s Law</h5><p>How does the size of the overall vocabulary (V) grow with the size of corpus (N)?<br>$V = K N^{\beta} (0&lt;\beta&lt;1)$ where $K \in (10,100), \beta \in (0.4,0.6)$</p>
+<p>This can be derived from Zipf’s law by assuming documents are generated by randomly sampling words from a Zipfian distribution。</p>
+<h3 id="Retrieval_Models-1"><a href="#Retrieval_Models-1" class="headerlink" title="Retrieval Models"></a>Retrieval Models</h3><p><strong>Retrieval Models</strong>:</p>
+<ul>
+<li>Boolean</li>
+<li><ul>
+<li>Basic Boolean</li>
+</ul>
+</li>
+<li><ul>
+<li>Extended Boolean Model</li>
+</ul>
+</li>
+<li>Vector Space Model</li>
+<li>Probabilistic Models</li>
+<li><ul>
+<li>Basic Probabilistic model</li>
+</ul>
+</li>
+<li><ul>
+<li>Two Poisson model - BM25    Okapi</li>
+</ul>
+</li>
+<li><ul>
+<li>Bayesian inference networks        Indri</li>
+</ul>
+</li>
+<li><ul>
+<li>Statistical Language Models        Lemur</li>
+</ul>
+</li>
+<li><ul>
+<li>Portfolio Retrieval</li>
+</ul>
+</li>
+<li>Citation Analysis Models</li>
+<li><ul>
+<li>Hubs &amp; Authorites    CLEVER by IBM</li>
+</ul>
+</li>
+<li><ul>
+<li>PageRank    Google</li>
+</ul>
+</li>
+</ul>
+<h4 id="Boolean_Retrival"><a href="#Boolean_Retrival" class="headerlink" title="Boolean Retrival"></a>Boolean Retrival</h4><p>Boolean model uses boolean expression to do the exact match.</p>
+<ul>
+<li>pros: works great if you know your goal, structured queries, simple to program, complete expressiveness</li>
+<li>cons: unintuitive, often misunderstood, either too precise or too loose, unordered output so have to examine all output</li>
+</ul>
+<h4 id="Ranked_Boolean_Retrieval"><a href="#Ranked_Boolean_Retrieval" class="headerlink" title="Ranked Boolean Retrieval"></a>Ranked Boolean Retrieval</h4><p>Matching documents are ranked by frequency of query terms. A document term weight is how often a term occurs in a document - may be normalized. </p>
+<ul>
+<li>AND weight: minimum of argument weights</li>
+<li>OR weight: maximum of argument weights</li>
+<li>and, sum of all argument weights</li>
+</ul>
+<h3 id="Cloud_Computing"><a href="#Cloud_Computing" class="headerlink" title="Cloud Computing"></a>Cloud Computing</h3><h4 id="GFS"><a href="#GFS" class="headerlink" title="GFS"></a>GFS</h4><p>Google File System, using TCP. </p>
+<h4 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h4><p>pioneer in C++ by Google.</p>
+<p>Hadoop -&gt; Java version</p>
+<p>MapReduce Programming Model, the data structure is key-value dictionary. The map function is:</p>
+<p> $(K_in,V_in) \rightarrow list(K_inter,V_inter)$</p>
+<p> reduce function:</p>
+<p> $(K_inter, list(V_inter)) \rightarrow list(K_out,V_out)$</p>
+<p>Each word has a hashcode, the task for different reducer can be set to some hashcode boundtry.</p>
+<p>Optimisation, in mapper, there is a combiner works as a reducer to summary duplicate words in a mapper.</p>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2015/02/07/algo-compression-algorithm/">Compression Algorithm</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2015/01/17/math-caculus/">Calculus</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Introduction/">Introduction</a>, <a href="/categories/Introduction/Data-Mining/">Data Mining</a>
+  </div>
+
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+    </aside>
+    <div class="clearfix">
+    </div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Lingxi Chen
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>

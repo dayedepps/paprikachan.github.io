@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>彙整：2014/12 | Paprika</title>
+  <title>Python Time | Paprika</title>
   <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="Python time, datatime, string, timestamp 相互转换
+time.time_struct()
+
+Pandas时间序列操作pandas 最基本的时间日期对象是一个从 Series 派生出来的子类 TimeStamp，这个对象与 datetime 对象保有高度兼容性，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Python Time"/>
   <meta property="og:site_name" content="Paprika"/>
 
   
@@ -74,101 +79,77 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft">
       <div id="wrapper">
-        
-<h2 class="archive-title">2014/12</h2>
-
-
-  <div class="archive">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T07:31:11.000Z"><a href="/2014/12/31/stats-corelation/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/stats-corelation/">相关性</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T06:37:42.000Z"><a href="/2014/12/31/cc-hadoop/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/cc-hadoop/">Hadoop</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T06:37:42.000Z"><a href="/2014/12/31/cloud-computing-hadoop/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/cloud-computing-hadoop/">cloud-computing-hadoop</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T03:16:41.000Z"><a href="/2014/12/31/ml-kernel-methord/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/ml-kernel-methord/">Kernel Methord</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-29T05:57:46.000Z"><a href="/2014/12/29/dm-recommendation-system/">2014-12-29</a></time>
-            
-              <h1 class="title"><a href="/2014/12/29/dm-recommendation-system/">Recommendation System</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-29T04:40:07.000Z"><a href="/2014/12/29/intro-complex-network/">2014-12-29</a></time>
-            
-              <h1 class="title"><a href="/2014/12/29/intro-complex-network/">Complex Network</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-28T05:27:38.000Z"><a href="/2014/12/28/ml-principle-component-analysis/">2014-12-28</a></time>
-            
-              <h1 class="title"><a href="/2014/12/28/ml-principle-component-analysis/">Principle Component Analysis</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-25T09:24:46.000Z"><a href="/2014/12/25/syntax-Octave/">2014-12-25</a></time>
-            
-              <h1 class="title"><a href="/2014/12/25/syntax-Octave/">Octave Syntax</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-01-11T05:26:48.000Z"><a href="/2016/01/11/python-time/">2016-01-11</a></time>
+      
+      
+  
+    <h1 class="title">Python Time</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="http://www.360doc.com/content/14/0809/13/13101514_400547891.shtml" target="_blank" rel="external">Python time, datatime, string, timestamp 相互转换</a></p>
+<p><code>time.time_struct()</code></p>
+<p><img src="/figures/time.png" alt=""></p>
+<h3 id="Pandas_u65F6_u95F4_u5E8F_u5217_u64CD_u4F5C"><a href="#Pandas_u65F6_u95F4_u5E8F_u5217_u64CD_u4F5C" class="headerlink" title="Pandas时间序列操作"></a><a href="http://my.oschina.net/lionets/blog/280855#OSC_h3_3" target="_blank" rel="external">Pandas时间序列操作</a></h3><p><code>pandas</code> 最基本的时间日期对象是一个从 <code>Series</code> 派生出来的子类 <code>TimeStamp</code>，这个对象与 <code>datetime</code> 对象保有高度兼容性，可通过 <code>pd.to_datetime()</code> 函数转换。（一般是从 <code>datetime</code> 转换为 <code>Timestamp</code>）</p>
+<pre><code>t:Timestamp
+hour = t.hour
+</code></pre>
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2016/01/15/log-Python/">Python Log</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2015/12/14/syntax-Linux-command/">Linux Commands Syntax</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Programming-Skills/">Programming Skills</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Python/">Python</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
 
       </div>
     </div>

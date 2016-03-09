@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>相关性 | Paprika</title>
+  <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="自相关在统计学中的定义，自相关函数就是将一个有序的随机变量系列与其自身作比较。每个不存在相位差的系列，都与其都与其自身相似，即在此情况下，自相关函数值最大。在信号分析当中通常将自相关函数称之为自协方差方程。 用来描述信息在不同时间的，信息函数值的相关性。
+互相关在统计学中，互相关有时用来表示两个随机矢量 X 和 Y 之间的协方差 cov(X, Y)，以与矢量 X 的“协方差”概念相区分，矢量 X 的“协方差”是 X 的各标量成分之间的协方差矩阵。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="相关性"/>
+  <meta property="og:site_name" content="Paprika"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45019001-1', 'topdna.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Paprika</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
+    
+      <li><a href="/categories/Introduction/">Introduction</a></li>
+    
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
+    
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
+    
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2014-12-31T07:31:11.000Z"><a href="/2014/12/31/stats-corelation/">2014-12-31</a></time>
+      
+      
+  
+    <h1 class="title">相关性</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="u81EA_u76F8_u5173"><a href="#u81EA_u76F8_u5173" class="headerlink" title="自相关"></a>自相关</h3><p>在统计学中的定义，自相关函数就是将一个有序的随机变量系列与其自身作比较。每个不存在相位差的系列，都与其都与其自身相似，即在此情况下，自相关函数值最大。<br>在信号分析当中通常将自相关函数称之为自协方差方程。 用来描述信息在不同时间的，信息函数值的相关性。</p>
+<h3 id="u4E92_u76F8_u5173"><a href="#u4E92_u76F8_u5173" class="headerlink" title="互相关"></a>互相关</h3><p>在统计学中，互相关有时用来表示两个随机矢量 X 和 Y 之间的协方差 cov(X, Y)，以与矢量 X 的“协方差”概念相区分，矢量 X 的“协方差”是 X 的各标量成分之间的协方差矩阵。</p>
+<a id="more"></a>
+<p>在信号处理领域中，互相关（有时也称为“互协方差”）是用来表示两个信号之间相似性的一个度量，通常通过与已知信号比较用于寻找未知信号中的特性。互相关实质上类似于两个函数的卷积。<br>对于离散函数 fi 和 gi 来说，互相关定义为<br>【总结】matlab求两个序列的相关性</p>
+<p>其中和在整个可能的整数 j  区域取和，星号表示复共轭。<br>对于连续信号 f (x) 和 g (x) 来说，互相关定义为<br>【总结】matlab求两个序列的相关性<br>其中积分是在整个可能的 t 区域积分。</p>
+<p>即互相关函数是描述随机信号x(t),y(t)在任意两个不同时刻t1，t2的取值之间的相关程度，自相关函数是描述随机信号x(t)在任意两个不同时刻t1，t2的取值之间的相关程度。</p>
+<p>自相关函数是描述随机信号X(t)在任意两个不同时刻t1，t2的取值之间的相关程度；互相关函数给出了在频域内两个信号是否相关的一个判断指标，把两测点之间信号的互谱与各自的自谱联系了起来。</p>
+<p>在matlab当中可以使用xcorr函数来求序列的自相关和互相关。<br>使用方法：<br>c = xcorr(x,y)  返回矢量长度为2*N-1互相关函数序列，其中x和y的矢量长度均为N，如果x和y的长度不一样，则在短的序列后补零直到两者长度相等。<br>c = xcorr(x) 为矢量x的自相关估计。<br>c = xcorr(x,y,’option’) 为有正规化选项的互相关计算；其中选项为”biased”为有偏的互相关函数估计；”unbiased”为无偏的互相关函数估计；”coeff”为0延时的正规化序列的自相关计算；”none”为原始的互相关计算。<br>在Matalb中，求解xcorr的过程事实上是利用Fourier变换中的卷积定理进行的。</p>
+<p>可以查阅这篇博客了解xcorr函数的实现过程：自相关和互相关在matlab中的实现<br>也可以查阅matlab论坛中教学直接用FFt变换求两个序列互相关的方法：matlab求两个序列的互相关函</p>
+<p>相关程度与相关函数的之间的联系<br>在概率论和统计学中，相关（Correlation，或称相关系数或关联系数），显示两个随机变量之间线性关系的强度和方向。在统计学中，相关的意义是用来衡量两个变量相对于其相互独立的距离。最常用的是皮尔逊积矩相关系数。其定义是两个变量协方差除以两个变量的标准差（方差的平方根）。</p>
+<p>相关系数只是一个比率，不是等单位量度，无什么单位名称，也不是相关的百分数，一般取小数点后两位来表示。相关系数的正负号只表示相关的方向，绝对值表示相关的程度。因为不是等单位的度量，因而不能说相关系数0.7是0.35两倍，只能说相关系数为0.7的二列变量相关程度比相关系数为0.35的二列变量相关程度更为密切和更高。也不能说相关系数从0.70到0.80与相关系数从0.30到0.40增加的程度一样大。</p>
+<p>对于相关系数的大小所表示的意义目前在统计学界尚不一致，但通常按下是这样认为的：<br>||<br>|-|-<br>|相关系数      |相关程度<br>|0.00-±0.30   |微相关<br>|±0.30-±0.50  |实相关<br>|±0.50-±0.80  |显著相关<br>|±0.80-±1.00  |高度相关</p>
+<p>在matlab中使用corrcoef函数可以求两个序列的相关度<br>corrcoef（x，y）表示序列x和序列y的相关系数，得到的结果是一个2*2矩阵，其中对角线上的元素分别表示x和y的自相关，非对角线上的元素分别表示x与y的相关系数和y与x的相关系数，两个是相等的。 </p>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2015/01/01/python-io/">Python IO</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/12/31/cc-hadoop/">Hadoop</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Statistic/">Statistic</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Correlation/">Correlation</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+    </aside>
+    <div class="clearfix">
+    </div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Lingxi Chen
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>

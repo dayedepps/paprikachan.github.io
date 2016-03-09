@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Matlab Syntax | Paprika</title>
+  <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="This article records my Matlab learning notes, keeps developing…
+BasicSimilarities and differences between Matlab and Mathematica: Matlab Vs Mathematica">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Matlab Syntax"/>
+  <meta property="og:site_name" content="Paprika"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45019001-1', 'topdna.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Paprika</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/categories/Algorithm/">Algorithm</a></li>
+    
+      <li><a href="/categories/Introduction/">Introduction</a></li>
+    
+      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
+    
+      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
+    
+      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
+    
+      <li><a href="/categories/Math/">Math</a></li>
+    
+      <li><a href="/categories/Statistic/">Statistic</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+      <div id="wrapper">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2014-11-12T02:55:11.000Z"><a href="/2014/11/12/syntax-matlab/">2014-11-12</a></time>
+      
+      
+  
+    <h1 class="title">Matlab Syntax</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>This article records my Matlab learning notes, keeps developing…</p>
+<h3 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h3><p>Similarities and differences between Matlab and Mathematica: <a href="/2015/01/05/matlab-vs-mathematica/">Matlab Vs Mathematica</a></p>
+<a id="more"></a>
+<ul>
+<li><p>A matrix times its inverse returns the identity matrix.</p>
+</li>
+<li><p>complex numbers have both real and imaginary parts, where the imaginary units is the square root of -1<br>sqrt(-1) = 0 + 1.0000i</p>
+<p>To present the imaginary part of complex numbers, use either i or j<br>c = [3+4i, 4+3j, -i, 10j]<br>c = 3.0000 + 4.0000i     4.0000 + 3.0000i     0 - 1.0000i     0 + 10.0000i</p>
+</li>
+<li><p>A = magic(4)</p>
+</li>
+</ul>
+<h3 id="Plot"><a href="#Plot" class="headerlink" title="Plot"></a>Plot</h3><h4 id="2D_Plot"><a href="#2D_Plot" class="headerlink" title="2D Plot"></a>2D Plot</h4><h4 id="3D_Plot"><a href="#3D_Plot" class="headerlink" title="3D Plot"></a>3D Plot</h4><pre><code>meshgrid
+mesh
+</code></pre><h3 id="Data_Structure"><a href="#Data_Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="CellArray"><a href="#CellArray" class="headerlink" title="CellArray"></a>CellArray</h4><p>CellArray is a list of different size array. Initialise cell array and access cell element using <code>{}</code>.</p>
+<figure class="highlight matlab"><figcaption><span>Initilise and Access CellArray</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; mycell = <span class="cell">&#123;[];[]&#125;</span></span><br><span class="line">mycell =</span><br><span class="line">    <span class="matrix">[]</span></span><br><span class="line">    <span class="matrix">[]</span></span><br><span class="line">&gt;&gt; mycell = cell(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">mycell =</span><br><span class="line">     <span class="matrix">[]</span>    <span class="matrix">[]</span>    <span class="matrix">[]</span></span><br><span class="line">     <span class="matrix">[]</span>    <span class="matrix">[]</span>    <span class="matrix">[]</span></span><br><span class="line">&gt;&gt; mycell<span class="cell">&#123;<span class="number">2</span>&#125;</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="matrix">[]</span></span><br><span class="line">&gt;&gt; mycell<span class="cell">&#123;<span class="number">2</span>&#125;</span> = <span class="cell">&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span> <span class="comment">% store a cell array</span></span><br><span class="line">mycell =</span><br><span class="line">            <span class="matrix">[]</span>    <span class="matrix">[]</span>    <span class="matrix">[]</span></span><br><span class="line">    <span class="cell">&#123;<span class="number">1</span>x3 cell&#125;</span>    <span class="matrix">[]</span>    <span class="matrix">[]</span></span><br><span class="line">&gt;&gt; mycell<span class="cell">&#123;<span class="number">2</span>&#125;</span> <span class="comment">% one index, the order follows column</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">    <span class="matrix">[<span class="number">1</span>]</span>    <span class="matrix">[<span class="number">2</span>]</span>    <span class="matrix">[<span class="number">3</span>]</span></span><br><span class="line">&gt;&gt; mycell<span class="cell">&#123;<span class="number">2</span>,<span class="number">1</span>&#125;</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">    <span class="matrix">[<span class="number">1</span>]</span>    <span class="matrix">[<span class="number">2</span>]</span>    <span class="matrix">[<span class="number">3</span>]</span></span><br><span class="line">&gt;&gt; mycell<span class="cell">&#123;<span class="number">2</span>&#125;</span><span class="cell">&#123;<span class="number">2</span>&#125;</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p><code>cell2mat[cell]</code></p>
+<h3 id="Control_Flow"><a href="#Control_Flow" class="headerlink" title="Control Flow"></a>Control Flow</h3><figure class="highlight matlab"><figcaption><span>If Conditions</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> false</span><br><span class="line">    <span class="comment">% then...</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment">% else...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><figcaption><span>For Loop</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">100</span></span><br><span class="line">    <span class="comment">% body</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><figcaption><span>While Loop</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> true</span><br><span class="line">    <span class="comment">% execute forever</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><h4 id="Define_Function"><a href="#Define_Function" class="headerlink" title="Define Function"></a>Define Function</h4><figure class="highlight matlab"><figcaption><span>Define Function, file called myfun.m</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% file must start at function prototype</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[rt1,t2,...]</span> = <span class="title">myfun</span><span class="params">(arg1,arg2,...)</span></span></span><br><span class="line">    <span class="comment">% body...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="Function_Handler"><a href="#Function_Handler" class="headerlink" title="Function Handler"></a>Function Handler</h4><p>Function can be defined using function hanlder <code>@</code>, function handler can be used to pass function as argument.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add = @(x,y) x + y</span><br><span class="line">myfun(add)</span><br></pre></td></tr></table></figure>
+<h3 id="Sample_Codes"><a href="#Sample_Codes" class="headerlink" title="Sample Codes"></a>Sample Codes</h3><h4 id="Find_Minimum/Maximum"><a href="#Find_Minimum/Maximum" class="headerlink" title="Find Minimum/Maximum"></a>Find Minimum/Maximum</h4><p><code>[value, index] = min(min(matrix))</code></p>
+<h4 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h4><figure class="highlight matlab"><figcaption><span>generate uniformly random number &#123;-1,1&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">data</span> = <span class="title">genRand</span><span class="params">(m,n)</span></span></span><br><span class="line">    <span class="comment">% raw data</span></span><br><span class="line">    data = <span class="built_in">ones</span>(m,n);</span><br><span class="line">    <span class="comment">% rand01</span></span><br><span class="line">    rand01 = randi(<span class="matrix">[<span class="number">0</span>,<span class="number">1</span>]</span>,m,n);</span><br><span class="line">    <span class="comment">% replace all 0s in data to -1</span></span><br><span class="line">    data(rand01==<span class="number">0</span>)=-<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="Randomly_Sample_Data"><a href="#Randomly_Sample_Data" class="headerlink" title="Randomly Sample Data"></a>Randomly Sample Data</h4><p><code>datasample</code> Randomly sample from data, with or without replacement， with specified weights (a vector).</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">y = datasample(<span class="number">1</span>:<span class="number">10</span>,<span class="number">5</span>,<span class="string">'Replace'</span>,false)</span><br><span class="line">   y =</span><br><span class="line">   	<span class="number">6</span> <span class="number">3</span> <span class="number">7</span> <span class="number">8</span> <span class="number">5</span></span><br><span class="line">   <span class="comment">% Generate a random sequence of the characters ACGT, with replacement, according to specified probabilities.</span></span><br><span class="line">seq = datasample(<span class="string">'ACGT'</span>,<span class="number">48</span>,<span class="string">'Weights'</span>,<span class="matrix">[<span class="number">0.15</span> <span class="number">0.35</span> <span class="number">0.35</span> <span class="number">0.15</span>]</span>)</span><br><span class="line">A = <span class="matrix">[<span class="number">1</span>:<span class="number">10</span>;<span class="number">11</span>:<span class="number">20</span>]</span><span class="operator">'</span></span><br><span class="line">   y = datasample(A,<span class="number">4</span>,<span class="number">1</span>)</span><br><span class="line">  	</span><br><span class="line">   <span class="comment">% dim = 1; selection working on rows; this default setting</span></span><br><span class="line">   <span class="comment">% dim = 2; selection working on columns</span></span><br></pre></td></tr></table></figure>
+<h4 id="Compute_Time"><a href="#Compute_Time" class="headerlink" title="Compute Time"></a>Compute Time</h4><p><code>tic</code> and <code>toc</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tic;</span><br><span class="line">codes...</span><br><span class="line">t = toc; <span class="comment">% t is execution time for codes...</span></span><br></pre></td></tr></table></figure>
+<p><code>timeit[fhandle]</code></p>
+<h4 id="Import/Export_Data"><a href="#Import/Export_Data" class="headerlink" title="Import/Export Data"></a>Import/Export Data</h4><p><code>importdata[filename]</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train = importdata(<span class="string">'train.dat'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Cross_Validation"><a href="#Cross_Validation" class="headerlink" title="Cross Validation"></a>Cross Validation</h4><p><code>CVO = cvpartition(size(train,1),&#39;k&#39;,10);</code></p>
+<figure class="highlight matlab"><figcaption><span>Structure of CVO</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CVO =</span><br><span class="line">K-fold <span class="built_in">cross</span> validation partition</span><br><span class="line">   NumObservations: <span class="number">329</span></span><br><span class="line">       NumTestSets: <span class="number">10</span></span><br><span class="line">         TrainSize: <span class="number">297</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span>  <span class="number">296</span></span><br><span class="line">          TestSize: <span class="number">32</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span>  <span class="number">33</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><figcaption><span>K-fold Cross Validation Example</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:CVO.NumTestSets</span><br><span class="line">    <span class="comment">% train and test index for i-th partition</span></span><br><span class="line">    trIdx = CVO.training(<span class="built_in">i</span>);</span><br><span class="line">    teIdx = CVO.test(<span class="built_in">i</span>);</span><br><span class="line">    <span class="comment">% train and test data for i-th partition</span></span><br><span class="line">    tdat = train123(trIdx,:);</span><br><span class="line">    vdat = train123(trIdx,:);</span><br><span class="line"></span><br><span class="line">    <span class="comment">% train...</span></span><br><span class="line">    <span class="comment">% validation...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Confusion_Matrix"><a href="#Confusion_Matrix" class="headerlink" title="Confusion Matrix"></a>Confusion Matrix</h3><p>For confusion matrix, the column stands for actual class, the row stands for predict class, it can be generated using:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% Note: check the class label for y and predy first!!!</span></span><br><span class="line"><span class="matrix">[C, ordering]</span> = confusionmat(y,predy)</span><br></pre></td></tr></table></figure>
+<p>To analysis confusion matrix:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% confusion matrix analysis</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">analysis</span><span class="params">(cm)</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">% predict error rate for each class</span></span><br><span class="line">s = sum(cm,<span class="number">2</span>);</span><br><span class="line">E = (s-<span class="built_in">diag</span>(cm))./s</span><br><span class="line"><span class="matrix">[~,I]</span> = sort(E);</span><br><span class="line"></span><br><span class="line"><span class="built_in">disp</span>(<span class="matrix">[<span class="string">'The easist digits to recognise is '</span>, int2str(I(<span class="number">1</span>)-<span class="number">1</span>), <span class="string">', with predict error rate '</span>, num2str(E(I(<span class="number">1</span>)))]</span>);</span><br><span class="line"><span class="built_in">disp</span>(<span class="string">'The five most difficult digits to recognise is :'</span>);</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">5</span></span><br><span class="line">       <span class="built_in">disp</span>(<span class="matrix">[int2str(I(<span class="number">10</span>-i+<span class="number">1</span>)), <span class="string">', predict error rate '</span>, num2str(E(I(<span class="number">10</span>-i+<span class="number">1</span>)))]</span>);</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% most confused pair</span></span><br><span class="line">cols = <span class="built_in">size</span>(cm,<span class="number">1</span>);</span><br><span class="line">confusions = <span class="built_in">zeros</span>(cols,cols);</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:cols</span><br><span class="line">       confusions(:,<span class="built_in">i</span>)=cm(:,<span class="built_in">i</span>)+ cm(<span class="built_in">i</span>,:)<span class="operator">'</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">confusions = <span class="built_in">tril</span>(confusions,-<span class="number">1</span>);</span><br><span class="line"><span class="matrix">[maxC, ind]</span> = max(confusions(:));</span><br><span class="line"><span class="matrix">[m,n]</span> = <span class="built_in">ind2sub</span>(<span class="built_in">size</span>(confusions),ind);</span><br><span class="line"><span class="built_in">disp</span>(<span class="matrix">[<span class="string">'The most often confused two digits are '</span>, int2str(m-<span class="number">1</span>), <span class="string">' and '</span>, int2str(n-<span class="number">1</span>)]</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2014/11/22/math-linear-algebra/">Linear Algebra</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/11/08/syntax-C++/">C++ Syntax</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Programming-Skills/">Programming Skills</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Matlab/">Matlab</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+      </div>
+    </div>
+    <aside id="sidebar" class="alignright">
+      
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C/">C</a><small>1</small></li>
+  
+    <li><a href="/tags/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
+  
+    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
+  
+    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
+  
+    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
+  
+    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
+  
+    <li><a href="/tags/DB/">DB</a><small>0</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
+  
+    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
+  
+    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/IR/">IR</a><small>0</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
+  
+    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
+  
+    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
+  
+    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
+  
+    <li><a href="/tags/Python/">Python</a><small>10</small></li>
+  
+    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
+  
+    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
+  
+    <li><a href="/tags/concept/">concept</a><small>0</small></li>
+  
+    <li><a href="/tags/f/">f</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+    </aside>
+    <div class="clearfix">
+    </div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Lingxi Chen
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>

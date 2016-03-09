@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>彙整：2014/12 | Paprika</title>
+  <title>Principle Component Analysis | Paprika</title>
   <meta name="author" content="Lingxi Chen">
+  
+  <meta name="description" content="In book Pattern Recognition and Machine Learning, two definitions of PCA that give rise to the same algorithm: PCA is the orthogonal projection of data onto a lower dimensional linear space, known as the principle subspace such that:
+
+Maximum variance formulation: the variance of the projected data is maximized (Hotelling, 1993).
+Minimum error formulatoin: the linear projection minimizes the average projection cost, which is the mean squared distance between the data points and their projections (Pearson, 1901).">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Principle Component Analysis"/>
   <meta property="og:site_name" content="Paprika"/>
 
   
@@ -74,101 +79,79 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft">
       <div id="wrapper">
-        
-<h2 class="archive-title">2014/12</h2>
-
-
-  <div class="archive">
+        <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T07:31:11.000Z"><a href="/2014/12/31/stats-corelation/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/stats-corelation/">相关性</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T06:37:42.000Z"><a href="/2014/12/31/cc-hadoop/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/cc-hadoop/">Hadoop</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T06:37:42.000Z"><a href="/2014/12/31/cloud-computing-hadoop/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/cloud-computing-hadoop/">cloud-computing-hadoop</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-31T03:16:41.000Z"><a href="/2014/12/31/ml-kernel-methord/">2014-12-31</a></time>
-            
-              <h1 class="title"><a href="/2014/12/31/ml-kernel-methord/">Kernel Methord</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-29T05:57:46.000Z"><a href="/2014/12/29/dm-recommendation-system/">2014-12-29</a></time>
-            
-              <h1 class="title"><a href="/2014/12/29/dm-recommendation-system/">Recommendation System</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-29T04:40:07.000Z"><a href="/2014/12/29/intro-complex-network/">2014-12-29</a></time>
-            
-              <h1 class="title"><a href="/2014/12/29/intro-complex-network/">Complex Network</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-28T05:27:38.000Z"><a href="/2014/12/28/ml-principle-component-analysis/">2014-12-28</a></time>
-            
-              <h1 class="title"><a href="/2014/12/28/ml-principle-component-analysis/">Principle Component Analysis</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <time datetime="2014-12-25T09:24:46.000Z"><a href="/2014/12/25/syntax-Octave/">2014-12-25</a></time>
-            
-              <h1 class="title"><a href="/2014/12/25/syntax-Octave/">Octave Syntax</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2014-12-28T05:27:38.000Z"><a href="/2014/12/28/ml-principle-component-analysis/">2014-12-28</a></time>
+      
+      
+  
+    <h1 class="title">Principle Component Analysis</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>In book <em>Pattern Recognition and Machine Learning</em>, two definitions of PCA that give rise to the same algorithm: PCA is the orthogonal projection of data onto a lower dimensional linear space, known as the <em>principle subspace</em> such that:</p>
+<ol>
+<li><strong>Maximum variance formulation</strong>: the variance of the projected data is maximized (Hotelling, 1993).</li>
+<li><strong>Minimum error formulatoin</strong>: the linear projection minimizes the average projection cost, which is the mean squared distance between the data points and their projections (Pearson, 1901).</li>
+</ol>
+<a id="more"></a>
+<h3 id="Maximum_Variance_Formulation"><a href="#Maximum_Variance_Formulation" class="headerlink" title="Maximum Variance Formulation"></a>Maximum Variance Formulation</h3><h3 id="Minimum_Error_Formulation"><a href="#Minimum_Error_Formulation" class="headerlink" title="Minimum Error Formulation"></a>Minimum Error Formulation</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>link[<a href="http://blog.codinglabs.org/articles/pca-tutorial.html]PCA的数学原理" target="_blank" rel="external">http://blog.codinglabs.org/articles/pca-tutorial.html]PCA的数学原理</a></p>
+<p>線性判別分析（Linear Discriminant Analysis）</p>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2014/12/29/intro-complex-network/">Complex Network</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2014/12/25/syntax-Octave/">Octave Syntax</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+        
+  
+  <div class="categories">
+    <a href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/PCA/">PCA</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
 
       </div>
     </div>
