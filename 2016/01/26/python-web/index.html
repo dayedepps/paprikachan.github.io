@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/26/python-web/index.html">
 <meta property="og:site_name" content="Paprika">
 <meta property="og:description" content="Flask - Ajax with jQueryPython Flask and jQuery Ajax POST">
-<meta property="og:updated_time" content="2016-03-09T09:20:07.000Z">
+<meta property="og:updated_time" content="2016-03-11T04:18:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Web Programming">
 <meta name="twitter:description" content="Flask - Ajax with jQueryPython Flask and jQuery Ajax POST">
@@ -73,13 +73,13 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: '博主'
+      author: 'Author'
     }
   };
 </script>
@@ -87,7 +87,7 @@
   <title> Python Web Programming | Paprika </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
 
@@ -137,32 +137,66 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/Algorithm/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
+            algorithm
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-introduction">
+          <a href="/categories/Introduction/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
+            introduction
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-developing logs">
+          <a href="/categories/Developing-Logs/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            developing logs
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-programming skills">
+          <a href="/categories/Programming-Skills/" rel="section">
             
-            标签
+            programming skills
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-machine learning">
+          <a href="/categories/Machine-Learning/" rel="section">
+            
+            machine learning
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/categories/Math/" rel="section">
+            
+            math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-statistic">
+          <a href="/categories/Statistic/" rel="section">
+            
+            statistic
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/tags/Python/" rel="section">
+            
+            python
           </a>
         </li>
       
@@ -215,7 +249,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-26T20:36:32+08:00" content="2016-01-26">
               2016-01-26
             </time>
@@ -227,7 +261,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Web-Programming/" itemprop="url" rel="index">
@@ -263,6 +297,8 @@
 
       
         <p><a href="http://flask.pocoo.org/docs/0.10/patterns/jquery/" target="_blank" rel="external">Flask - Ajax with jQuery</a><br><a href="http://codehandbook.org/python-flask-and-jquery-ajax-post/" target="_blank" rel="external">Python Flask and jQuery Ajax POST</a></p>
+<a id="more"></a>
+<h4 id="u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><a href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse" class="headerlink" title="使用urllib发送HTTP request,获得含有原始数据的reponse"></a>使用urllib发送HTTP request,获得含有原始数据的reponse</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json, urllib</span><br><span class="line"><span class="comment"># 如果获得的response是JSON格式，可直接用json.load()储存成Python的JSON格式</span></span><br><span class="line">response = json.loads(urllib.urlopen(url).read())</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -345,10 +381,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Overview
           </li>
         </ul>
       
@@ -363,27 +399,27 @@
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">35</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
           
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">32</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">tags</span>
+              
             </div>
           
 
@@ -414,7 +450,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><span class="nav-number">1.</span> <span class="nav-text">使用urllib发送HTTP request,获得含有原始数据的reponse</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -444,13 +480,13 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -685,6 +721,29 @@
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -72,13 +72,13 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: '博主'
+      author: 'Author'
     }
   };
 </script>
@@ -86,7 +86,7 @@
   <title> Paprika </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
 
@@ -138,32 +138,66 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/Algorithm/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
+            algorithm
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-introduction">
+          <a href="/categories/Introduction/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
+            introduction
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-developing logs">
+          <a href="/categories/Developing-Logs/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            developing logs
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-programming skills">
+          <a href="/categories/Programming-Skills/" rel="section">
             
-            标签
+            programming skills
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-machine learning">
+          <a href="/categories/Machine-Learning/" rel="section">
+            
+            machine learning
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/categories/Math/" rel="section">
+            
+            math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-statistic">
+          <a href="/categories/Statistic/" rel="section">
+            
+            statistic
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/tags/Python/" rel="section">
+            
+            python
           </a>
         </li>
       
@@ -206,6 +240,114 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/11/python-plot/" itemprop="url">
+                  Python Plot
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-11T12:15:38+08:00" content="2016-03-11">
+              2016-03-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="u753B_u590D_u6742_u7F51_u7EDC_u7684_u5EA6_u5206_u5E03_u53CC_u5BF9_u6570_u56FE_u50CF"><a href="#u753B_u590D_u6742_u7F51_u7EDC_u7684_u5EA6_u5206_u5E03_u53CC_u5BF9_u6570_u56FE_u50CF" class="headerlink" title="画复杂网络的度分布双对数图像"></a>画复杂网络的度分布双对数图像</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> networkx <span class="keyword">as</span> nx</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> collections,math</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw</span><span class="params">(ax,G,title,alpha,bias)</span>:</span></span><br><span class="line">    degree_sequence=nx.degree(G) <span class="comment"># degree sequence is a dictionary with same key map to different values.</span></span><br><span class="line">    size = len(degree_sequence) <span class="comment"># total number of nodes</span></span><br><span class="line">    cnt = collections.Counter(degree_sequence.values())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># first, make dict_keys() type to list!!!</span></span><br><span class="line">    x = list(cnt.keys())</span><br><span class="line">    y = [n/size <span class="keyword">for</span> n <span class="keyword">in</span> list(cnt.values())] <span class="comment"># list comprehension</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># in subplot, should use ax.set_XXX, while plt.XXX is okay</span></span><br><span class="line">    ax.set_xscale(<span class="string">'log'</span>)</span><br><span class="line">    ax.set_yscale(<span class="string">'log'</span>)</span><br><span class="line">    ax.set_xlim((<span class="number">1e0</span>,<span class="number">1e3</span>)) <span class="comment"># set the limit of x-axis</span></span><br><span class="line">    ax.set_ylim((<span class="number">1e-4</span>,<span class="number">1e0</span>))</span><br><span class="line">    ax.scatter(x,y,marker=<span class="string">'x'</span>)</span><br><span class="line"></span><br><span class="line">    x.remove(<span class="number">0</span>) <span class="comment"># remove the first encountered 0</span></span><br><span class="line">    <span class="comment"># ajust slope and bias</span></span><br><span class="line">    y = [math.pow(n,-alpha)*math.pow(<span class="number">10</span>,bias) <span class="keyword">for</span> n <span class="keyword">in</span> x]</span><br><span class="line">    line, =ax.plot(x,y,linestyle=<span class="string">'--'</span>,c=<span class="string">'g'</span>)</span><br><span class="line"></span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.set_xlabel(<span class="string">"Degree, k"</span>)</span><br><span class="line">    ax.set_ylabel(<span class="string">"Probability, P(k)"</span>)</span><br><span class="line">    ax.legend([line], [<span class="string">'slope=-'</span>+str(alpha)])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fG1 = nx.read_graphml(<span class="string">"film1.graphml"</span>)</span><br><span class="line">fG2 = nx.read_graphml(<span class="string">"film2.graphml"</span>)</span><br><span class="line"></span><br><span class="line">aG1 = nx.read_graphml(<span class="string">"artist1.graphml"</span>)</span><br><span class="line">aG2 = nx.read_graphml(<span class="string">"artist2.graphml"</span>)</span><br><span class="line"></span><br><span class="line">plt.close(<span class="string">'all'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Two subplots, the axes array is 1-d</span></span><br><span class="line">f, axarr = plt.subplots(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">draw(axarr[<span class="number">0</span>,<span class="number">0</span>],fG1, <span class="string">"Simple Weighting Film Projection Network"</span>,<span class="number">2.2</span>,<span class="number">1.1</span>)</span><br><span class="line">draw(axarr[<span class="number">0</span>,<span class="number">1</span>],fG2, <span class="string">"Hyperbolic Weighting Film Projection Network"</span>,<span class="number">2.2</span>,<span class="number">1.1</span>)</span><br><span class="line">draw(axarr[<span class="number">1</span>,<span class="number">0</span>],aG1, <span class="string">"Simple Weighting Artist Projection Network"</span>,<span class="number">2.1</span>,<span class="number">0.75</span>)</span><br><span class="line">draw(axarr[<span class="number">1</span>,<span class="number">1</span>],aG2, <span class="string">"Hyperbolic Weighting Artist Projection Network"</span>,<span class="number">2.1</span>,<span class="number">0.75</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/07/intro-web-programming/" itemprop="url">
                   Web Programming
                 </a>
@@ -219,7 +361,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-03-07T18:07:02+08:00" content="2016-03-07">
               2016-03-07
             </time>
@@ -231,7 +373,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Introduction/" itemprop="url" rel="index">
@@ -241,7 +383,7 @@
 
                 
                 
-                  ， 
+                  , 
                 
 
               
@@ -282,7 +424,7 @@
           <h3 id="HTTP_vs_TCP"><a href="#HTTP_vs_TCP" class="headerlink" title="HTTP vs TCP"></a>HTTP vs TCP</h3><p>(选择HTTP协议还是基于TCP的自定协议)<br>[<a href="http://segmentfault.com/q/1010000002742070">http://segmentfault.com/q/1010000002742070</a>]</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/07/intro-web-programming/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -341,7 +483,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-02-03T18:20:56+08:00" content="2016-02-03">
               2016-02-03
             </time>
@@ -353,7 +495,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -395,7 +537,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
 </code></pre>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/02/03/syntax-MySQL/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -454,7 +596,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-26T20:36:32+08:00" content="2016-01-26">
               2016-01-26
             </time>
@@ -466,7 +608,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Web-Programming/" itemprop="url" rel="index">
@@ -502,10 +644,12 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
 
       
         
-          
-            <p><a href="http://flask.pocoo.org/docs/0.10/patterns/jquery/" target="_blank" rel="external">Flask - Ajax with jQuery</a><br><a href="http://codehandbook.org/python-flask-and-jquery-ajax-post/" target="_blank" rel="external">Python Flask and jQuery Ajax POST</a></p>
-
-          
+          <p><a href="http://flask.pocoo.org/docs/0.10/patterns/jquery/">Flask - Ajax with jQuery</a><br><a href="http://codehandbook.org/python-flask-and-jquery-ajax-post/">Python Flask and jQuery Ajax POST</a></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/26/python-web/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -562,7 +706,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-26T20:34:59+08:00" content="2016-01-26">
               2016-01-26
             </time>
@@ -574,7 +718,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -613,7 +757,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
           <h3 id="u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs"><a href="#u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs" class="headerlink" title="理解 Python 中的 args 和 *kwargs"></a><a href="http://kodango.com/variable-arguments-in-python">理解 Python 中的 <em>args 和 *</em>kwargs</a></h3><p><a href="http://www.wklken.me/posts/2013/08/18/python-extra-functools.html#functoolwraps">function tools</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/26/syntax-Python/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -672,7 +816,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-26T20:32:55+08:00" content="2016-01-26">
               2016-01-26
             </time>
@@ -684,7 +828,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -782,7 +926,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-15T11:34:20+08:00" content="2016-01-15">
               2016-01-15
             </time>
@@ -794,7 +938,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Developing-Logs/" itemprop="url" rel="index">
@@ -893,7 +1037,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-01-11T13:26:48+08:00" content="2016-01-11">
               2016-01-11
             </time>
@@ -905,7 +1049,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -1006,7 +1150,7 @@ hour = t.hour
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-12-14T20:03:00+08:00" content="2015-12-14">
               2015-12-14
             </time>
@@ -1018,7 +1162,7 @@ hour = t.hour
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -1125,7 +1269,7 @@ hour = t.hour
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-12-14T19:58:44+08:00" content="2015-12-14">
               2015-12-14
             </time>
@@ -1137,7 +1281,7 @@ hour = t.hour
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Developing-Logs/" itemprop="url" rel="index">
@@ -1177,118 +1321,6 @@ hour = t.hour
             <p>MAC host file is located on <code>/etc/hosts</code>.</p>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/14/log-CentOS/" itemprop="url">
-                  CentOS Logs
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-14T12:50:59+08:00" content="2015-12-14">
-              2015-12-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Developing-Logs/" itemprop="url" rel="index">
-                    <span itemprop="name">Developing Logs</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>All developing logs is based on <code>CentOS6.7</code>. </p>
-<p>PS: How to checking Linux version? Try <code>$ lsb_release -a</code>.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsb_release -a&#10;LSB Version:&#9;:base-4.0-amd64:base-4.0-noarch:core-4.0-amd64:core-4.0-noarch&#10;Distributor ID:&#9;CentOS&#10;Description:&#9;CentOS release 6.7 (Final)&#10;Release:&#9;6.7&#10;Codename:&#9;Final</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/14/log-CentOS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
@@ -1355,27 +1387,27 @@ hour = t.hour
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">35</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
           
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">32</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">tags</span>
+              
             </div>
           
 
@@ -1419,13 +1451,13 @@ hour = t.hour
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -1499,6 +1531,29 @@ hour = t.hour
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -68,7 +68,7 @@ charset &amp;amp; encoding
 charset &amp;amp; encoding
 阮一峰:ascii uninode and utf-8">
 <meta property="og:image" content="http://yoursite.com/pictures/oscar.png">
-<meta property="og:updated_time" content="2016-03-09T09:13:11.000Z">
+<meta property="og:updated_time" content="2016-03-11T04:19:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python IO">
 <meta name="twitter:description" content="Reading字符集和编码
@@ -80,13 +80,13 @@ charset &amp;amp; encoding
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: '博主'
+      author: 'Author'
     }
   };
 </script>
@@ -94,7 +94,7 @@ charset &amp;amp; encoding
   <title> Python IO | Paprika </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
 
@@ -144,32 +144,66 @@ charset &amp;amp; encoding
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/Algorithm/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
+            algorithm
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-introduction">
+          <a href="/categories/Introduction/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
+            introduction
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-developing logs">
+          <a href="/categories/Developing-Logs/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            developing logs
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-programming skills">
+          <a href="/categories/Programming-Skills/" rel="section">
             
-            标签
+            programming skills
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-machine learning">
+          <a href="/categories/Machine-Learning/" rel="section">
+            
+            machine learning
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/categories/Math/" rel="section">
+            
+            math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-statistic">
+          <a href="/categories/Statistic/" rel="section">
+            
+            statistic
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/tags/Python/" rel="section">
+            
+            python
           </a>
         </li>
       
@@ -222,7 +256,7 @@ charset &amp;amp; encoding
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-01-01T13:48:41+08:00" content="2015-01-01">
               2015-01-01
             </time>
@@ -234,7 +268,7 @@ charset &amp;amp; encoding
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
@@ -315,6 +349,9 @@ pprint.pformat -&gt; str
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> codecs, csv</span><br><span class="line"><span class="comment"># 使用csv库创建csv格式的文件</span></span><br><span class="line">csvfile = open(<span class="string">"data.csv"</span>, <span class="string">"w"</span>)</span><br><span class="line">spamwriter = csv.writer(csvfile)</span><br><span class="line"><span class="comment"># 使用codecs创建支持unicode的文件</span></span><br><span class="line">txtfile = codecs.open(<span class="string">"data.txt"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>)</span><br><span class="line"><span class="comment"># 使用Exception</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  spamwriter.writerow([col_str1,col_str2,...])</span><br><span class="line"><span class="keyword">except</span> UnicodeEncodeError:</span><br><span class="line">  file.write(cols_str)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  i=<span class="number">1</span></span><br><span class="line">csvfile.close()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
 <h4 id="u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E"><a href="#u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E" class="headerlink" title="读csv文件中含有”Unicode”的数据"></a>读csv文件中含有”Unicode”的数据</h4><p>csv文件中的部分数据：<br><img src="/pictures/oscar.png" alt=""></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding="utf-8" cannot decode character like :</span></span><br><span class="line">file = codecs.open(<span class="string">"data.csv"</span>, <span class="string">"r"</span>, encoding=<span class="string">"ISO-8859-1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">   <span class="comment">#line.replace() not work, convert line to string</span></span><br><span class="line">   line = str(line)</span><br><span class="line">   </span><br><span class="line">   <span class="comment">#csv文件为了escape字符串里面的逗号，在字符串的前后加了引号</span></span><br><span class="line">   <span class="comment">#print line:</span></span><br><span class="line">   <span class="comment">#25th,Academy Award for Best Film Editing,"\\ Come Back, Little Sheba",\\ Warren Low\r</span></span><br><span class="line">   </span><br><span class="line">   line = line.replace(<span class="string">'\"\\'</span>,<span class="string">'\\'</span>).replace(<span class="string">'\r'</span>,<span class="string">''</span>)</span><br><span class="line">   features = line.split(<span class="string">',\\ '</span>)</span><br><span class="line">   film = features[<span class="number">1</span>]</span><br><span class="line">   artist_str = features[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> len(artist_str) == <span class="number">1</span>:</span><br><span class="line">      <span class="comment">#注意：artist_str本身就是一个含着character的list</span></span><br><span class="line">      artists = [artist_str]</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      artists = artist_str.split(<span class="string">'\\ '</span>)</span><br><span class="line">   <span class="keyword">for</span> artist <span class="keyword">in</span> artists:</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
+<h4 id="u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6-1"><a href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6-1" class="headerlink" title="“Unicode”数据导入文件"></a>“Unicode”数据导入文件</h4><p>导入文件类型首选为csv文件，因为csv文件可以通过Excel进行方便的数据微调。Python2的csv库目前还不支持读写“Unicode”数据。所以目前的办法是：</p>
+<p><code>把“ASCII”数据条导入csv文件，“Unicode”数据条导入txt文件。</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> codecs, csv</span><br><span class="line"><span class="comment"># 使用csv库创建csv格式的文件</span></span><br><span class="line">csvfile = open(<span class="string">"data.csv"</span>, <span class="string">"w"</span>)</span><br><span class="line">spamwriter = csv.writer(csvfile)</span><br><span class="line"><span class="comment"># 使用codecs创建支持unicode的文件</span></span><br><span class="line">txtfile = codecs.open(<span class="string">"data.txt"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用Exception</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  spamwriter.writerow([col_str1,col_str2,...])</span><br><span class="line"><span class="keyword">except</span> UnicodeEncodeError:</span><br><span class="line">  file.write(cols_str)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  i=<span class="number">1</span></span><br><span class="line">csvfile.close()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -397,10 +434,10 @@ pprint.pformat -&gt; str
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Overview
           </li>
         </ul>
       
@@ -415,27 +452,27 @@ pprint.pformat -&gt; str
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">35</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
           
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">32</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">tags</span>
+              
             </div>
           
 
@@ -466,7 +503,7 @@ pprint.pformat -&gt; str
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reading"><span class="nav-number">1.</span> <span class="nav-text">Reading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6587_u4EF6_u7C7B_u4E2D_u6587_u7F16_u7801_u7F16_u8BD1"><span class="nav-number">2.</span> <span class="nav-text">文件类中文编码编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECEMySQL_u83B7_u53D6_u4E2D_u6587_u6570_u636E"><span class="nav-number">3.</span> <span class="nav-text">从MySQL获取中文数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON"><span class="nav-number">4.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pretty_Printer"><span class="nav-number">5.</span> <span class="nav-text">Pretty Printer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><span class="nav-number">6.</span> <span class="nav-text">使用urllib发送HTTP request,获得含有原始数据的reponse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><span class="nav-number">7.</span> <span class="nav-text">“Unicode”数据导入文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E"><span class="nav-number">7.1.</span> <span class="nav-text">读csv文件中含有”Unicode”的数据</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reading"><span class="nav-number">1.</span> <span class="nav-text">Reading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6587_u4EF6_u7C7B_u4E2D_u6587_u7F16_u7801_u7F16_u8BD1"><span class="nav-number">2.</span> <span class="nav-text">文件类中文编码编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECEMySQL_u83B7_u53D6_u4E2D_u6587_u6570_u636E"><span class="nav-number">3.</span> <span class="nav-text">从MySQL获取中文数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON"><span class="nav-number">4.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pretty_Printer"><span class="nav-number">5.</span> <span class="nav-text">Pretty Printer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528urllib_u53D1_u9001HTTP_request_2C_u83B7_u5F97_u542B_u6709_u539F_u59CB_u6570_u636E_u7684reponse"><span class="nav-number">6.</span> <span class="nav-text">使用urllib发送HTTP request,获得含有原始数据的reponse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6"><span class="nav-number">7.</span> <span class="nav-text">“Unicode”数据导入文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u8BFBcsv_u6587_u4EF6_u4E2D_u542B_u6709_u201DUnicode_u201D_u7684_u6570_u636E"><span class="nav-number">7.1.</span> <span class="nav-text">读csv文件中含有”Unicode”的数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u201CUnicode_u201D_u6570_u636E_u5BFC_u5165_u6587_u4EF6-1"><span class="nav-number">7.2.</span> <span class="nav-text">“Unicode”数据导入文件</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -496,13 +533,13 @@ pprint.pformat -&gt; str
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -737,6 +774,29 @@ pprint.pformat -&gt; str
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -67,7 +67,7 @@ PS: How to checking Linux version? Try $ lsb_release -a.
 <meta property="og:description" content="All developing logs is based on CentOS6.7. 
 PS: How to checking Linux version? Try $ lsb_release -a.
 1$ lsb_release -a&amp;#10;LSB Version:&amp;#9;:base-4.0-amd64:base-4.0-noarch:core-4.0-amd64:core-4.0-noarc">
-<meta property="og:updated_time" content="2016-03-09T08:04:33.000Z">
+<meta property="og:updated_time" content="2016-03-11T04:32:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS Logs">
 <meta name="twitter:description" content="All developing logs is based on CentOS6.7. 
@@ -79,13 +79,13 @@ PS: How to checking Linux version? Try $ lsb_release -a.
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: '博主'
+      author: 'Author'
     }
   };
 </script>
@@ -93,7 +93,7 @@ PS: How to checking Linux version? Try $ lsb_release -a.
   <title> CentOS Logs | Paprika </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
 
@@ -143,32 +143,66 @@ PS: How to checking Linux version? Try $ lsb_release -a.
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/Algorithm/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
+            algorithm
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-introduction">
+          <a href="/categories/Introduction/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
+            introduction
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-developing logs">
+          <a href="/categories/Developing-Logs/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            developing logs
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-programming skills">
+          <a href="/categories/Programming-Skills/" rel="section">
             
-            标签
+            programming skills
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-machine learning">
+          <a href="/categories/Machine-Learning/" rel="section">
+            
+            machine learning
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/categories/Math/" rel="section">
+            
+            math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-statistic">
+          <a href="/categories/Statistic/" rel="section">
+            
+            statistic
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/tags/Python/" rel="section">
+            
+            python
           </a>
         </li>
       
@@ -221,7 +255,7 @@ PS: How to checking Linux version? Try $ lsb_release -a.
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-12-14T12:50:59+08:00" content="2015-12-14">
               2015-12-14
             </time>
@@ -233,7 +267,7 @@ PS: How to checking Linux version? Try $ lsb_release -a.
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Developing-Logs/" itemprop="url" rel="index">
@@ -274,6 +308,7 @@ PS: How to checking Linux version? Try $ lsb_release -a.
 <a id="more"></a>
 <hr>
 <h2 id="u5728CentOS6-7_u4E0A_u5B89_u88C5MySQL"><a href="#u5728CentOS6-7_u4E0A_u5B89_u88C5MySQL" class="headerlink" title="在CentOS6.7上安装MySQL"></a>在CentOS6.7上安装MySQL</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install MySQL-python</span><br></pre></td></tr></table></figure>
+<p><a href="http://stackoverflow.com/questions/3088548/installing-mysql-python-on-centos" target="_blank" rel="external">pip install</a></p>
 <h2 id="u5728CentOS6-7_u4E0A_u5B89_u88C5NetworkX"><a href="#u5728CentOS6-7_u4E0A_u5B89_u88C5NetworkX" class="headerlink" title="在CentOS6.7上安装NetworkX"></a>在CentOS6.7上安装NetworkX</h2><p>由于<code>CentOS6.7</code>系统内置的Python版本为<code>Python2.6.6</code>,<code>NetworkX</code>支持2.6或者3.2以上的<code>Python</code>版本。所以我们需要安装<code>Python2.7.10</code>，安装参见link</p>
 <p>安装<code>Python2.7</code>完成后,执行<code>sudo pip2.7 install networkx</code>即可。</p>
 <p>错误：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip2.7 install networkx&#10;sudo: pip2.7: command not found</span><br></pre></td></tr></table></figure></p>
@@ -333,8 +368,8 @@ PS: How to checking Linux version? Try $ lsb_release -a.
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/11/python-supervisord/" rel="next" title="Supervisord">
-                <i class="fa fa-chevron-left"></i> Supervisord
+              <a href="/2015/12/11/python-supervisord/" rel="next" title="Python Supervisord">
+                <i class="fa fa-chevron-left"></i> Python Supervisord
               </a>
             
           </div>
@@ -392,10 +427,10 @@ PS: How to checking Linux version? Try $ lsb_release -a.
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Overview
           </li>
         </ul>
       
@@ -410,27 +445,27 @@ PS: How to checking Linux version? Try $ lsb_release -a.
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
+            <a href="/">
               <span class="site-state-item-count">35</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
           
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">32</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">tags</span>
+              
             </div>
           
 
@@ -491,13 +526,13 @@ PS: How to checking Linux version? Try $ lsb_release -a.
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -732,6 +767,29 @@ PS: How to checking Linux version? Try $ lsb_release -a.
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

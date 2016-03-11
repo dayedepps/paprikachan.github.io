@@ -57,16 +57,40 @@
 
 
 
-<meta name="description" content="理解 Python 中的 args 和 *kwargsfunction tools">
+<meta name="description" content="module and package
+Deal with module
+
+add the path when running the script
+import sys
+sys.path.append(subdirectory)
+import module_from_subdicrectory
+
+setting path in PYTHONPATH, so adding the path when">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python Syntax">
-<meta property="og:url" content="http://yoursite.com/2016/01/26/syntax-Python/index.html">
+<meta property="og:title" content="Python Package">
+<meta property="og:url" content="http://yoursite.com/2015/01/01/python-package/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description" content="理解 Python 中的 args 和 *kwargsfunction tools">
-<meta property="og:updated_time" content="2016-03-11T04:19:53.000Z">
+<meta property="og:description" content="module and package
+Deal with module
+
+add the path when running the script
+import sys
+sys.path.append(subdirectory)
+import module_from_subdicrectory
+
+setting path in PYTHONPATH, so adding the path when">
+<meta property="og:updated_time" content="2016-03-11T04:57:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python Syntax">
-<meta name="twitter:description" content="理解 Python 中的 args 和 *kwargsfunction tools">
+<meta name="twitter:title" content="Python Package">
+<meta name="twitter:description" content="module and package
+Deal with module
+
+add the path when running the script
+import sys
+sys.path.append(subdirectory)
+import module_from_subdicrectory
+
+setting path in PYTHONPATH, so adding the path when">
 
 
 
@@ -84,7 +108,7 @@
   };
 </script>
 
-  <title> Python Syntax | Paprika </title>
+  <title> Python Package | Paprika </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -238,7 +262,7 @@
             
             
               
-                Python Syntax
+                Python Package
               
             
           </h1>
@@ -250,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-26T20:34:59+08:00" content="2016-01-26">
-              2016-01-26
+            <time itemprop="dateCreated" datetime="2015-01-01T13:48:41+08:00" content="2015-01-01">
+              2015-01-01
             </time>
           </span>
 
@@ -296,13 +320,49 @@
       
 
       
-        <h3 id="u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs"><a href="#u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs" class="headerlink" title="理解 Python 中的 args 和 *kwargs"></a><a href="http://kodango.com/variable-arguments-in-python" target="_blank" rel="external">理解 Python 中的 <em>args 和 *</em>kwargs</a></h3><p><a href="http://www.wklken.me/posts/2013/08/18/python-extra-functools.html#functoolwraps" target="_blank" rel="external">function tools</a></p>
-<a id="more"></a>
-<h3 id="Using_a_string_to_call_function"><a href="#Using_a_string_to_call_function" class="headerlink" title="Using a string to call function"></a>Using a string to call function</h3><p>Using ‘add’ to call ‘def add(var1,var2)’ defined in same file.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locals()[<span class="string">'add'</span>](var1,var2)</span><br><span class="line">globals()[<span class="string">'add'</span>](var1,var2)</span><br></pre></td></tr></table></figure>
-<p>Using ‘add’ to call <code>def add(var1,var2)</code> defined in math.py module.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getattr(math, <span class="string">'add'</span>)(var1,var2)</span><br></pre></td></tr></table></figure>
-<p><a href="http://stackoverflow.com/questions/3061/calling-a-function-of-a-module-from-a-string-with-the-functions-name-in-python" target="_blank" rel="external">Stackoverflow Link</a></p>
+        <h3 id="module_and_package"><a href="#module_and_package" class="headerlink" title="module and package"></a><a href="http://blog.csdn.net/xiliuhu/article/details/4459101" target="_blank" rel="external">module and package</a></h3><ul>
+<li><p>Deal with module</p>
+<ol>
+<li><p>add the path when running the script</p>
+<pre><code>import sys
+sys.path.append(subdirectory)
+import module_from_subdicrectory
+</code></pre></li>
+<li><p>setting path in <code>PYTHONPATH</code>, so adding the path when shell start</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>Deal with package    </p>
+<p>  create <code>__init__.py</code> under all directories, to convert into a python package.</p>
+<pre><code>from subdirectory import model_from_subdicrectory
+</code></pre><p>  or</p>
+<pre><code>from subdicrectory.module
+</code></pre></li>
+</ul>
+<h4 id="Setting_PYTHONPATH_environment_variable"><a href="#Setting_PYTHONPATH_environment_variable" class="headerlink" title="Setting PYTHONPATH environment variable"></a><a href="https://scipher.wordpress.com/2010/05/10/setting-your-pythonpath-environment-variable-linuxunixosx/" target="_blank" rel="external">Setting <code>PYTHONPATH</code> environment variable</a></h4><p>In Linux/Unix, this script is usually located at ‘~/.bashrc’ or ‘~/.bash_profile’, use <code>source</code> to detect right the location.</p>
+<pre><code>source ~/.bashrc
+</code></pre><p>Then, open the file in the editor, add</p>
+<pre><code>PYTHONPATH=&quot;${PYTHONPATH}:/path/to/some/cool/python/package/:/path/to/another/cool/python/package/&quot;
+export PYTHONPATH
+</code></pre><h3 id="Python_Environment"><a href="#Python_Environment" class="headerlink" title="Python Environment"></a>Python Environment</h3><h4 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a><code>virtualenv</code></h4><h4 id="conda_manager"><a href="#conda_manager" class="headerlink" title="conda manager"></a><code>conda</code> manager</h4><p><a href="http://conda.pydata.org/docs/test-drive.html" target="_blank" rel="external">Conda</a> is a package manager and environment manager.<br>Create an environment:</p>
+<pre><code>conda create --name envname biopython
+</code></pre><p>Activate and deactivate environment</p>
+<pre><code>source activate envname
+source deactivate
+</code></pre><h4 id="virtualenv_Vs-_conda"><a href="#virtualenv_Vs-_conda" class="headerlink" title="virtualenv Vs. conda"></a><code>virtualenv</code> Vs. <code>conda</code></h4><p>Create a virtual environment called “test”.<br>In conda, the package location should be <code>~/anaconda2/envs/test/</code><br>In virtualenv, the packages is located inside the folder “test”    </p>
+<h3 id="os_module"><a href="#os_module" class="headerlink" title="os module"></a><code>os</code> module</h3><h4 id="List_files_and_directories"><a href="#List_files_and_directories" class="headerlink" title="List files and directories"></a>List files and directories</h4><p><a href="http://stackoverflow.com/questions/5137497/find-current-directory-and-files-directory" target="_blank" rel="external">Current working directory name</a></p>
+<pre><code>os.getcwd()
+</code></pre><p><a href="http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python" target="_blank" rel="external">list all files under a directory</a></p>
+<pre><code>from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+</code></pre><p><a href="http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory" target="_blank" rel="external">list all sub directories under a directory</a></p>
+<pre><code>[x[0] for x in os.walk(directory)]
+</code></pre><h3 id="sys_module"><a href="#sys_module" class="headerlink" title="sys module"></a><code>sys</code> module</h3><h4 id="import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><a href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model" class="headerlink" title="import 子文件夹里的model"></a>import 子文件夹里的model</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path.append(<span class="string">"subdir"</span>)</span><br></pre></td></tr></table></figure>
+<p><a href="http://blog.csdn.net/ritsu_/article/details/12003789" target="_blank" rel="external">Python中导入子文件夹中的模块</a></p>
+<h3 id="re_module"><a href="#re_module" class="headerlink" title="re module"></a><code>re</code> module</h3><p><a href="http://zhonghuan.info/2014/09/04/正则表达式和python的re模块/#sub" target="_blank" rel="external">正则表达式和python的re模块</a></p>
 
       
     </div>
@@ -326,16 +386,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/26/python-decorator/" rel="next" title="Python Decorator">
-                <i class="fa fa-chevron-left"></i> Python Decorator
+              <a href="/2015/01/01/python-data-analysis/" rel="next" title="Python for Data Analysis">
+                <i class="fa fa-chevron-left"></i> Python for Data Analysis
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/26/python-web/" rel="prev" title="Python Web Programming">
-                Python Web Programming <i class="fa fa-chevron-right"></i>
+              <a href="/2015/01/01/python-data-structure/" rel="prev" title="Python Data Structure">
+                Python Data Structure <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -454,7 +514,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7406_u89E3_Python__u4E2D_u7684_args__u548C_*kwargs"><span class="nav-number">1.</span> <span class="nav-text">理解 Python 中的 args 和 *kwargs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using_a_string_to_call_function"><span class="nav-number">2.</span> <span class="nav-text">Using a string to call function</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#module_and_package"><span class="nav-number">1.</span> <span class="nav-text">module and package</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Setting_PYTHONPATH_environment_variable"><span class="nav-number">1.1.</span> <span class="nav-text">Setting PYTHONPATH environment variable</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python_Environment"><span class="nav-number">2.</span> <span class="nav-text">Python Environment</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#virtualenv"><span class="nav-number">2.1.</span> <span class="nav-text">virtualenv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#conda_manager"><span class="nav-number">2.2.</span> <span class="nav-text">conda manager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#virtualenv_Vs-_conda"><span class="nav-number">2.3.</span> <span class="nav-text">virtualenv Vs. conda</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os_module"><span class="nav-number">3.</span> <span class="nav-text">os module</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List_files_and_directories"><span class="nav-number">3.1.</span> <span class="nav-text">List files and directories</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sys_module"><span class="nav-number">4.</span> <span class="nav-text">sys module</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#import__u5B50_u6587_u4EF6_u5939_u91CC_u7684model"><span class="nav-number">4.1.</span> <span class="nav-text">import 子文件夹里的model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#re_module"><span class="nav-number">5.</span> <span class="nav-text">re module</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
