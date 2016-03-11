@@ -1,113 +1,284 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Complex Network | Paprika</title>
-  <meta name="author" content="Lingxi Chen">
-  
-  <meta name="description" content="Learning notes for course Complex Networks and Web, keeps developing…
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.useso.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Complex-Network," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="Learning notes for course Complex Networks and Web, keeps developing…
 Chinese Version: 本文记载关于复杂网络的学习笔记,持续更新。点击进入中文版。
 Variaty of Network
 professional network
 sexual network
 citation network
-traffic network: motoway, flight">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+traffic net">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Complex Network">
+<meta property="og:url" content="http://yoursite.com/2014/12/29/intro-complex-network/index.html">
+<meta property="og:site_name" content="Paprika">
+<meta property="og:description" content="Learning notes for course Complex Networks and Web, keeps developing…
+Chinese Version: 本文记载关于复杂网络的学习笔记,持续更新。点击进入中文版。
+Variaty of Network
+professional network
+sexual network
+citation network
+traffic net">
+<meta property="og:updated_time" content="2016-03-09T07:38:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Complex Network">
+<meta name="twitter:description" content="Learning notes for course Complex Networks and Web, keeps developing…
+Chinese Version: 本文记载关于复杂网络的学习笔记,持续更新。点击进入中文版。
+Variaty of Network
+professional network
+sexual network
+citation network
+traffic net">
 
-  <meta property="og:title" content="Complex Network"/>
-  <meta property="og:site_name" content="Paprika"/>
 
-  
-    <meta property="og:image" content="undefined"/>
-  
 
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Paprika" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="/js/jquery.min.js"></script>
-  
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-45019001-1', 'topdna.org');
-  ga('send', 'pageview');
-
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
 </script>
 
-
+  <title> Complex Network | Paprika </title>
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-<body>
-  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+  
 
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Paprika</a></h1>
-  <h2><a href="/"></a></h2>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Paprika</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
 </div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-      <li><a href="/categories/Algorithm/">Algorithm</a></li>
-    
-      <li><a href="/categories/Introduction/">Introduction</a></li>
-    
-      <li><a href="/categories/Developing-Logs/">Developing Logs</a></li>
-    
-      <li><a href="/categories/Programming-Skills/">Programming Skills</a></li>
-    
-      <li><a href="/categories/Machine-Learning/">Machine Learning</a></li>
-    
-      <li><a href="/categories/Math/">Math</a></li>
-    
-      <li><a href="/categories/Statistic/">Statistic</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-<div class="clearfix"></div></header>
 
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft">
-      <div id="wrapper">
-        <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2014-12-29T04:40:07.000Z"><a href="/2014/12/29/intro-complex-network/">2014-12-29</a></time>
-      
-      
-  
-    <h1 class="title">Complex Network</h1>
-  
-
+ </div>
     </header>
-    <div class="entry">
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Complex Network
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-12-29T12:40:07+08:00" content="2014-12-29">
+              2014-12-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Introduction/" itemprop="url" rel="index">
+                    <span itemprop="name">Introduction</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p>Learning notes for course <a href="http://www.cs.ucl.ac.uk/students/syllabus/undergrad/m042_complex_networks_and_web/" target="_blank" rel="external">Complex Networks and Web</a>, keeps developing…</p>
 <p>Chinese Version: 本文记载关于<strong>复杂网络</strong>的学习笔记,持续更新。点击进入<a href="#ch">中文版</a>。</p>
@@ -333,140 +504,428 @@ traffic network: motoway, flight">
 
       
     </div>
-    <footer>
+
+    <div>
       
-
-        
-          <div class="alignleft post-nav">
-            <em>上一篇: </em><a href="/2014/12/29/dm-recommendation-system/">Recommendation System</a>
-          </div>
-        
-        
-          <div class="alignright post-nav">
-            <em>下一篇: </em><a href="/2014/12/28/ml-principle-component-analysis/">Principle Component Analysis</a>
-          </div>
-          <div class="clearfix"></div>
-        
-
-        
-        
-  
-  <div class="categories">
-    <a href="/categories/Introduction/">Introduction</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/Complex-Network/">Complex-Network</a>
-  </div>
-
         
       
-      <div class="clearfix"></div>
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Complex-Network/" rel="tag">#Complex-Network</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/12/28/ml-principle-component-analysis/" rel="next" title="Principle Component Analysis">
+                <i class="fa fa-chevron-left"></i> Principle Component Analysis
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/12/29/dm-recommendation-system/" rel="prev" title="Recommendation System">
+                Recommendation System <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-</article>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/figures/me.png"
+               alt="Lingxi Chen" />
+          <p class="site-author-name" itemprop="name">Lingxi Chen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Variaty_of_Network"><span class="nav-number">1.</span> <span class="nav-text">Variaty of Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network_Types"><span class="nav-number">2.</span> <span class="nav-text">Network Types</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Undirected_and_Directed_Graph"><span class="nav-number">2.1.</span> <span class="nav-text">Undirected and Directed Graph</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Connected_and_unconnected_networks"><span class="nav-number">2.2.</span> <span class="nav-text">Connected and unconnected networks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unweighted_Graph_and_Weighted_Graph"><span class="nav-number">2.3.</span> <span class="nav-text">Unweighted Graph and Weighted Graph</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Temporal_Networks"><span class="nav-number">2.4.</span> <span class="nav-text">Temporal Networks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spatial_Networks"><span class="nav-number">2.5.</span> <span class="nav-text">Spatial Networks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Signed_and_Unsigned_Networks"><span class="nav-number">2.6.</span> <span class="nav-text">Signed and Unsigned Networks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Other_Graph"><span class="nav-number">2.7.</span> <span class="nav-text">Other Graph</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Self-edges"><span class="nav-number">2.7.1.</span> <span class="nav-text">Self-edges</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Multigraph"><span class="nav-number">2.7.2.</span> <span class="nav-text">Multigraph</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Bipartite_Graph"><span class="nav-number">2.7.3.</span> <span class="nav-text">Bipartite Graph</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Tree_Graph"><span class="nav-number">2.7.4.</span> <span class="nav-text">Tree Graph</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Regular_Lattice"><span class="nav-number">2.7.5.</span> <span class="nav-text">Regular Lattice</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Network_Terminologies"><span class="nav-number">2.8.</span> <span class="nav-text">Network Terminologies</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network/Topological_Properties"><span class="nav-number">3.</span> <span class="nav-text">Network/Topological Properties</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st_Order_Property"><span class="nav-number">3.1.</span> <span class="nav-text">1st Order Property</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Degree_Distribution"><span class="nav-number">3.1.1.</span> <span class="nav-text">Degree Distribution</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Path_Length"><span class="nav-number">3.1.2.</span> <span class="nav-text">Path Length</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd_Order_Property"><span class="nav-number">3.2.</span> <span class="nav-text">2nd Order Property</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Degree_Correlation/Mixing_Pattern"><span class="nav-number">3.2.1.</span> <span class="nav-text">Degree Correlation/Mixing Pattern</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Positive_correlation_-_Assortative_mixing"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">Positive correlation - Assortative mixing</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Negative_correlation_-_Disassortative_mixing"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">Negative correlation - Disassortative mixing</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Intuitive_Analysis_3A_Nearest_neighbours_average_degree"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">Intuitive Analysis: Nearest neighbours average degree</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Assortative_Coefficient"><span class="nav-number">3.2.1.4.</span> <span class="nav-text">Assortative Coefficient</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Rich-club_connectivity"><span class="nav-number">3.2.2.</span> <span class="nav-text">Rich-club connectivity</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Rich-club_Coef"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">Rich-club Coef.</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Second-order_Mixing"><span class="nav-number">3.2.3.</span> <span class="nav-text">Second-order Mixing</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3rd_Order_Property"><span class="nav-number">3.3.</span> <span class="nav-text">3rd Order Property</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Clustering_Coefficient"><span class="nav-number">3.3.1.</span> <span class="nav-text">Clustering Coefficient</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Triangle"><span class="nav-number">3.3.2.</span> <span class="nav-text">Triangle</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Structure_Constraints"><span class="nav-number">3.4.</span> <span class="nav-text">Structure Constraints</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Link-rewriting_I"><span class="nav-number">3.4.1.</span> <span class="nav-text">Link-rewriting I</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Link-rewriting_II"><span class="nav-number">3.4.2.</span> <span class="nav-text">Link-rewriting II</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Discussion"><span class="nav-number">3.4.3.</span> <span class="nav-text">Discussion</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Centrality"><span class="nav-number">3.5.</span> <span class="nav-text">Centrality</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Degree_Centrality"><span class="nav-number">3.5.1.</span> <span class="nav-text">Degree Centrality</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Betweeness_Centrality"><span class="nav-number">3.5.2.</span> <span class="nav-text">Betweeness Centrality</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Closeness_Centrality"><span class="nav-number">3.5.3.</span> <span class="nav-text">Closeness Centrality</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Eigenvector_Centrality__28PageRank_29"><span class="nav-number">3.5.4.</span> <span class="nav-text">Eigenvector Centrality (PageRank)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Core"><span class="nav-number">3.6.</span> <span class="nav-text">K-Core</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex_Network_Model"><span class="nav-number">4.</span> <span class="nav-text">Complex Network Model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Stastic_Model"><span class="nav-number">4.1.</span> <span class="nav-text">Stastic Model</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Random_Graph_Model"><span class="nav-number">4.1.1.</span> <span class="nav-text">Random Graph Model</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Small_World"><span class="nav-number">4.1.2.</span> <span class="nav-text">Small World</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Configuration_Model"><span class="nav-number">4.1.3.</span> <span class="nav-text">Configuration Model</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Generative_Model"><span class="nav-number">4.2.</span> <span class="nav-text">Generative Model</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Power-law/Scale-free_Network"><span class="nav-number">4.2.1.</span> <span class="nav-text">Power-law/Scale-free Network</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PFP_Internet_AS_Model"><span class="nav-number">4.2.2.</span> <span class="nav-text">PFP Internet AS Model</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Internet_Topology"><span class="nav-number">4.2.2.1.</span> <span class="nav-text">Internet Topology</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network_Structures"><span class="nav-number">5.</span> <span class="nav-text">Network Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Strength_of_weak_ties"><span class="nav-number">5.1.</span> <span class="nav-text">Strength of weak ties</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Local_bridge"><span class="nav-number">5.1.1.</span> <span class="nav-text">Local bridge</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Social_captical_of_a_node"><span class="nav-number">5.2.</span> <span class="nav-text">Social captical of a node</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Link_diversity"><span class="nav-number">5.2.1.</span> <span class="nav-text">Link diversity</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Communities"><span class="nav-number">5.3.</span> <span class="nav-text">Communities</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Modularity"><span class="nav-number">5.3.1.</span> <span class="nav-text">Modularity</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Structure_Balance"><span class="nav-number">5.4.</span> <span class="nav-text">Structure Balance</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Local_balance"><span class="nav-number">5.4.1.</span> <span class="nav-text">Local balance</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Global_faction"><span class="nav-number">5.4.2.</span> <span class="nav-text">Global faction</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network_Dynamics"><span class="nav-number">6.</span> <span class="nav-text">Network Dynamics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Game-based_cascades"><span class="nav-number">6.1.</span> <span class="nav-text">Game-based cascades</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Monotonic_Spreading"><span class="nav-number">6.1.1.</span> <span class="nav-text">Monotonic Spreading</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Threshold_vs_Cascade_Capacity"><span class="nav-number">6.1.2.</span> <span class="nav-text">Threshold vs Cascade Capacity</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Bilingual_Behaviour"><span class="nav-number">6.1.3.</span> <span class="nav-text">Bilingual Behaviour</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stochastic_Epidemic_Spreading"><span class="nav-number">6.2.</span> <span class="nav-text">Stochastic Epidemic Spreading</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic_Reproduction_Number"><span class="nav-number">6.2.1.</span> <span class="nav-text">Basic Reproduction Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SIR_Model_and_SIS_Model"><span class="nav-number">6.2.2.</span> <span class="nav-text">SIR Model and SIS Model</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Disappearing_of_the_threshold_in_SF_Network"><span class="nav-number">6.2.3.</span> <span class="nav-text">Disappearing of the threshold in SF Network</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Immunisation"><span class="nav-number">6.2.4.</span> <span class="nav-text">Immunisation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Real_Network_Case_Study"><span class="nav-number">7.</span> <span class="nav-text">Real Network Case Study</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AS_Internet"><span class="nav-number">7.1.</span> <span class="nav-text">AS Internet</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Unique_2C__u201CPerfect_u201D"><span class="nav-number">7.1.1.</span> <span class="nav-text">Unique, “Perfect”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Jellyfish_Model_2C_PFP_Model"><span class="nav-number">7.1.2.</span> <span class="nav-text">Jellyfish Model, PFP Model</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The_Web"><span class="nav-number">7.2.</span> <span class="nav-text">The Web</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The_Bow-Tie_Structure"><span class="nav-number">7.2.1.</span> <span class="nav-text">The Bow-Tie Structure</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hubs_and_Authorities"><span class="nav-number">7.2.2.</span> <span class="nav-text">Hubs and Authorities</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PageRank"><span class="nav-number">7.2.3.</span> <span class="nav-text">PageRank</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Document/Information_Networks"><span class="nav-number">7.3.</span> <span class="nav-text">Document/Information Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Popularity_vs_similarity"><span class="nav-number">7.3.1.</span> <span class="nav-text">Popularity vs similarity</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DSP_Model"><span class="nav-number">7.3.2.</span> <span class="nav-text">DSP Model</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Social_Networks_Case_Study"><span class="nav-number">8.</span> <span class="nav-text">Social Networks Case Study</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Recent_Development"><span class="nav-number">9.</span> <span class="nav-text">Recent Development</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Resources_3A_datasets_2C_APIs_and_tools_for_network_analysis"><span class="nav-number">10.</span> <span class="nav-text">Resources: datasets, APIs and tools for network analysis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E2D_u6587_u7248"><span class="nav-number"></span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C0F_u4E16_u754C_u7F51_u7EDC"><span class="nav-number">1.</span> <span class="nav-text">小世界网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u65E0_u5C3A_u5EA6_u7F51_u7EDC"><span class="nav-number">1.1.</span> <span class="nav-text">无尺度网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AS_u6A21_u578B"><span class="nav-number">1.2.</span> <span class="nav-text">AS模型</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lingxi Chen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
 
 
       </div>
-    </div>
-    <aside id="sidebar" class="alignright">
-      
-  
-<div class="widget tag">
-  <h3 class="title">標籤</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/C/">C</a><small>1</small></li>
-  
-    <li><a href="/tags/C/">C++</a><small>1</small></li>
-  
-    <li><a href="/tags/Calculus/">Calculus</a><small>1</small></li>
-  
-    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
-  
-    <li><a href="/tags/Cloud-Computing/">Cloud Computing</a><small>0</small></li>
-  
-    <li><a href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a><small>0</small></li>
-  
-    <li><a href="/tags/Complex-Network/">Complex Network</a><small>0</small></li>
-  
-    <li><a href="/tags/Complex-Network/">Complex-Network</a><small>1</small></li>
-  
-    <li><a href="/tags/Compression/">Compression</a><small>0</small></li>
-  
-    <li><a href="/tags/Compression-Algorithm/">Compression Algorithm</a><small>1</small></li>
-  
-    <li><a href="/tags/Correlation/">Correlation</a><small>1</small></li>
-  
-    <li><a href="/tags/DB/">DB</a><small>0</small></li>
-  
-    <li><a href="/tags/Front-End/">Front End</a><small>1</small></li>
-  
-    <li><a href="/tags/Game-Theory/">Game Theory</a><small>0</small></li>
-  
-    <li><a href="/tags/Hadoop/">Hadoop</a><small>1</small></li>
-  
-    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
-  
-    <li><a href="/tags/IR/">IR</a><small>0</small></li>
-  
-    <li><a href="/tags/Java/">Java</a><small>1</small></li>
-  
-    <li><a href="/tags/Linear-Algebra/">Linear Algebra</a><small>1</small></li>
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/ML-Kernel/">ML Kernel</a><small>1</small></li>
-  
-    <li><a href="/tags/ML-Perceptron/">ML Perceptron</a><small>0</small></li>
-  
-    <li><a href="/tags/ML-Perceptron/">ML-Perceptron</a><small>0</small></li>
-  
-    <li><a href="/tags/Mathematica/">Mathematica</a><small>0</small></li>
-  
-    <li><a href="/tags/Matlab/">Matlab</a><small>2</small></li>
-  
-    <li><a href="/tags/OSX/">OSX</a><small>1</small></li>
-  
-    <li><a href="/tags/PCA/">PCA</a><small>1</small></li>
-  
-    <li><a href="/tags/Python/">Python</a><small>10</small></li>
-  
-    <li><a href="/tags/Recommendation-System/">Recommendation System</a><small>1</small></li>
-  
-    <li><a href="/tags/SQL/">SQL</a><small>1</small></li>
-  
-    <li><a href="/tags/concept/">concept</a><small>0</small></li>
-  
-    <li><a href="/tags/f/">f</a><small>0</small></li>
-  
-  </ul>
-</div>
+    </footer>
 
-
-    </aside>
-    <div class="clearfix">
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
   </div>
-  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
-  <footer id="footer" class="inner"><div class="alignleft">
+
   
-  &copy; 2016 Lingxi Chen
+
+
   
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
 
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
 
 </body>
-
 </html>
