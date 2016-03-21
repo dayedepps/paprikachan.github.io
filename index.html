@@ -240,6 +240,156 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/21/python-scheduler/" itemprop="url">
+                  Python Scheduler
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-21T17:21:32+08:00" content="2016-03-21">
+              2016-03-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Reading:</p>
+<ul>
+<li><a href="http://www.cnblogs.com/fendou-999/p/3929138.html" target="_blank" rel="external">apscheduler.triggers.cron</a></li>
+<li><a href="http://debugo.com/apscheduler/" target="_blank" rel="external">Python任务调度模块 – APScheduler</a></li>
+</ul>
+<h3 id="APScheduler"><a href="#APScheduler" class="headerlink" title="APScheduler"></a>APScheduler</h3><p>Trigger can be <code>date</code>, <code>interval</code>, and <code>cron</code>.</p>
+<h4 id="Cron_Trigger_Time_Parameter"><a href="#Cron_Trigger_Time_Parameter" class="headerlink" title="Cron Trigger Time Parameter"></a>Cron Trigger Time Parameter</h4><ul>
+<li><code>year: int|str</code>                     4-digit year</li>
+<li><code>month: int|str</code>                     month 1-12</li>
+<li><code>day: int|str</code>                     day of the 1-31</li>
+<li><code>week: int|str</code>                     ISO week 1-53</li>
+<li><code>day_of_week: int|str</code>             number or name of weekday 0-6 or mon,tue,wed,thu,fri,sat,sun</li>
+<li>Note that the first weekday is Monday.</li>
+<li><code>hour: int|str</code>                     0-23</li>
+<li><code>minute: int|str</code>                 0-59</li>
+<li><code>second: int|str</code>                 and0-59</li>
+<li><code>start_date: datetime|str</code>         earliest possible date/time to trigger on (inclusive)</li>
+<li><code>end_date: datetime|str</code>         latest possible date/time to trigger on (inclusive)</li>
+<li><code>timezone: datetime.tzinfo|str</code> time zone to use for the date/time caculations (defaults to scheduler timezone)</li>
+</ul>
+<p>Expressions</p>
+<ul>
+<li><code>*</code>        Fire on every value</li>
+<li><code>*/a</code>     Fire every a values, starting from the minimum</li>
+<li><code>a-b</code>     Fire on any value within the a-b range (a must be smaller than b)</li>
+<li><code>a-b/c</code>     Fire every c values within the a-b range</li>
+<li><code>xth y</code>    Fire on the x-th occurrence of weekday y within the month</li>
+<li><code>last x</code>     Fire on the last occurrence of weekday x within the month</li>
+<li><code>last</code>     Fire on the last day within the month</li>
+<li><code>x,y,z</code>     Fire on any matching expression; can combine any number of any of the above expressions<h4 id="Interval_Trigger_Time_Parameter"><a href="#Interval_Trigger_Time_Parameter" class="headerlink" title="Interval Trigger Time Parameter"></a>Interval Trigger Time Parameter</h4></li>
+<li><code>weeks: int</code>    number of weeks to wait</li>
+<li><code>days: int</code>     number of days to wait</li>
+<li><code>hours: int</code>     number of hours to wait</li>
+<li><code>minutes: int</code>    number of minutes to wait  </li>
+<li><code>seconds: int</code>    number of seconds to wait</li>
+<li><code>start_date: datetime|str</code>    starting point for the interval calculation</li>
+<li><code>end_date: datetime|str</code>        latest possible date/time to trigger on</li>
+<li><code>timezone: datetime.tzinfo|str</code>    time zone to use for the date/time calculations</li>
+</ul>
+<h4 id="Date_Trigger_Time_Parameter"><a href="#Date_Trigger_Time_Parameter" class="headerlink" title="Date Trigger Time Parameter"></a>Date Trigger Time Parameter</h4><ul>
+<li><code>run_date: datetime|str</code> the date/time to run the job at</li>
+<li><code>timezone: datetime.tzinfo|str</code> time zone for run_date if it dosen’t have on already</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/14/intro-OS/" itemprop="url">
                   intro-OS
                 </a>
@@ -313,7 +463,10 @@
 </code></pre><p>添加系统工作路径，编辑以上文件，添加：</p>
 <pre><code>export PATH=/path/bin:$PATH
 </code></pre><h3 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h3><p>MAC host file is located on <code>/etc/hosts</code>.</p>
-
+<h3 id="Linux_u6587_u4EF6_u7CFB_u7EDF_u76EE_u5F55_u7ED3_u6784"><a href="#Linux_u6587_u4EF6_u7CFB_u7EDF_u76EE_u5F55_u7ED3_u6784" class="headerlink" title="Linux文件系统目录结构"></a>Linux文件系统目录结构</h3><p><a href="http://blog.sina.com.cn/s/blog_662234020101ebfd.html" target="_blank" rel="external">Reading</a><br><a href="http://linux-wiki.cn/wiki/Linux目录结构" target="_blank" rel="external">Linux目录结构</a></p>
+<pre><code>/    最高一级目录
+/bin    一般的二进制可执行文件，e.g. ls, cp, mkdir
+</code></pre>
           
         
       
@@ -1234,125 +1387,6 @@ hour = t.hour
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/14/syntax-Linux-command/" itemprop="url">
-                  Linux Commands Syntax
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2015-12-14T20:03:00+08:00" content="2015-12-14">
-              2015-12-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
-                    <span itemprop="name">Programming Skills</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="u6587_u4EF6_u6743_u9650"><a href="#u6587_u4EF6_u6743_u9650" class="headerlink" title="文件权限"></a>文件权限</h3><p>检查当前文件夹下文件权限</p>
-<pre><code>ll
-</code></pre><p>In Mac:</p>
-<pre><code>sudo chown -R $USER /usr/local/include
-</code></pre><p>In Linux:</p>
-<pre><code>sudo chown clx:clx *
-</code></pre><p>检查版本centos</p>
-<pre><code>cat /etc/issue    
-</code></pre><h3 id="u5B89_u5168_u9000_u51FA"><a href="#u5B89_u5168_u9000_u51FA" class="headerlink" title="安全退出"></a>安全退出</h3><p>安全退出一定要用<code>exit</code></p>
-<p><img src="/figures/exit.png" alt=""></p>
-<h3 id="u67E5_u770B_u7248_u672C"><a href="#u67E5_u770B_u7248_u672C" class="headerlink" title="查看版本"></a>查看版本</h3><p><code>lsb_release -a</code></p>
-<h3 id="IP_u5730_u5740"><a href="#IP_u5730_u5740" class="headerlink" title="IP地址"></a>IP地址</h3><p><code>ifconfig | grep inet</code><br>检测你的IP地址</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1398,7 +1432,7 @@ hour = t.hour
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

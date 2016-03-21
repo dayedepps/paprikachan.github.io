@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="C," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -57,19 +57,40 @@
 
 
 
-<meta name="description" content="This article records my C learning notes, keeps developing…
-Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用方法，以便以后手生的时候快速上手。">
+<meta name="description" content="Reading:
+
+apscheduler.triggers.cron
+Python任务调度模块 – APScheduler
+
+APSchedulerTrigger can be date, interval, and cron.
+Cron Trigger Time Parameter
+year: int|str                     4-digit year
+month: in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C Syntax">
-<meta property="og:url" content="http://yoursite.com/2014/11/08/syntax-C/index.html">
+<meta property="og:title" content="Python Scheduler">
+<meta property="og:url" content="http://yoursite.com/2016/03/21/python-scheduler/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description" content="This article records my C learning notes, keeps developing…
-Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用方法，以便以后手生的时候快速上手。">
-<meta property="og:updated_time" content="2016-03-09T09:05:53.000Z">
+<meta property="og:description" content="Reading:
+
+apscheduler.triggers.cron
+Python任务调度模块 – APScheduler
+
+APSchedulerTrigger can be date, interval, and cron.
+Cron Trigger Time Parameter
+year: int|str                     4-digit year
+month: in">
+<meta property="og:updated_time" content="2016-03-21T09:46:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C Syntax">
-<meta name="twitter:description" content="This article records my C learning notes, keeps developing…
-Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用方法，以便以后手生的时候快速上手。">
+<meta name="twitter:title" content="Python Scheduler">
+<meta name="twitter:description" content="Reading:
+
+apscheduler.triggers.cron
+Python任务调度模块 – APScheduler
+
+APSchedulerTrigger can be date, interval, and cron.
+Cron Trigger Time Parameter
+year: int|str                     4-digit year
+month: in">
 
 
 
@@ -87,7 +108,7 @@ Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用�
   };
 </script>
 
-  <title> C Syntax | Paprika </title>
+  <title> Python Scheduler | Paprika </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -241,7 +262,7 @@ Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用�
             
             
               
-                C Syntax
+                Python Scheduler
               
             
           </h1>
@@ -253,8 +274,8 @@ Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2014-11-08T15:49:43+08:00" content="2014-11-08">
-              2014-11-08
+            <time itemprop="dateCreated" datetime="2016-03-21T17:21:32+08:00" content="2016-03-21">
+              2016-03-21
             </time>
           </span>
 
@@ -299,27 +320,50 @@ Chinese Version: 这篇文章记录我对C语言的学习心得和基本使用�
       
 
       
-        <p>This article records my C learning notes, keeps developing…</p>
-<p><em>Chinese Version</em>: 这篇文章记录我对C语言的学习心得和基本使用方法，以便以后手生的时候快速上手。</p>
-<a id="more"></a>
-<h4 id="Pointer"><a href="#Pointer" class="headerlink" title="Pointer"></a>Pointer</h4><p>If you want to store value in memory via pointer, then you have to ensure the pointer is already allocated memory before you assign any value to it. In following example, you implicitly allocate memory to pointer <code>p_int</code>.</p>
-<pre><code>int a = 1;
-int *p_int = a;
-</code></pre><p>While, when dealing with data structures (string, array of objects) you keep adding elements from time to time. Always declare it using <code>NULL</code>, and allocate memory before assigning value. Otherwise, <code>Segmentation Fault</code> happens when you try to access a null pointer.</p>
-<h4 id="List/Array_Traversal"><a href="#List/Array_Traversal" class="headerlink" title="List/Array Traversal"></a>List/Array Traversal</h4><p>Pointers can be manipulated to do array/list traversal. To reach that, KEEP IN MIND decare a <strong>constant variable</strong> to store the head pointer.</p>
-<pre><code>int size = 10;
-int *array = malloc(size*sizeof(int));
+        <p>Reading:</p>
+<ul>
+<li><a href="http://www.cnblogs.com/fendou-999/p/3929138.html" target="_blank" rel="external">apscheduler.triggers.cron</a></li>
+<li><a href="http://debugo.com/apscheduler/" target="_blank" rel="external">Python任务调度模块 – APScheduler</a></li>
+</ul>
+<h3 id="APScheduler"><a href="#APScheduler" class="headerlink" title="APScheduler"></a>APScheduler</h3><p>Trigger can be <code>date</code>, <code>interval</code>, and <code>cron</code>.</p>
+<h4 id="Cron_Trigger_Time_Parameter"><a href="#Cron_Trigger_Time_Parameter" class="headerlink" title="Cron Trigger Time Parameter"></a>Cron Trigger Time Parameter</h4><ul>
+<li><code>year: int|str</code>                     4-digit year</li>
+<li><code>month: int|str</code>                     month 1-12</li>
+<li><code>day: int|str</code>                     day of the 1-31</li>
+<li><code>week: int|str</code>                     ISO week 1-53</li>
+<li><code>day_of_week: int|str</code>             number or name of weekday 0-6 or mon,tue,wed,thu,fri,sat,sun</li>
+<li>Note that the first weekday is Monday.</li>
+<li><code>hour: int|str</code>                     0-23</li>
+<li><code>minute: int|str</code>                 0-59</li>
+<li><code>second: int|str</code>                 and0-59</li>
+<li><code>start_date: datetime|str</code>         earliest possible date/time to trigger on (inclusive)</li>
+<li><code>end_date: datetime|str</code>         latest possible date/time to trigger on (inclusive)</li>
+<li><code>timezone: datetime.tzinfo|str</code> time zone to use for the date/time caculations (defaults to scheduler timezone)</li>
+</ul>
+<p>Expressions</p>
+<ul>
+<li><code>*</code>        Fire on every value</li>
+<li><code>*/a</code>     Fire every a values, starting from the minimum</li>
+<li><code>a-b</code>     Fire on any value within the a-b range (a must be smaller than b)</li>
+<li><code>a-b/c</code>     Fire every c values within the a-b range</li>
+<li><code>xth y</code>    Fire on the x-th occurrence of weekday y within the month</li>
+<li><code>last x</code>     Fire on the last occurrence of weekday x within the month</li>
+<li><code>last</code>     Fire on the last day within the month</li>
+<li><code>x,y,z</code>     Fire on any matching expression; can combine any number of any of the above expressions<h4 id="Interval_Trigger_Time_Parameter"><a href="#Interval_Trigger_Time_Parameter" class="headerlink" title="Interval Trigger Time Parameter"></a>Interval Trigger Time Parameter</h4></li>
+<li><code>weeks: int</code>    number of weeks to wait</li>
+<li><code>days: int</code>     number of days to wait</li>
+<li><code>hours: int</code>     number of hours to wait</li>
+<li><code>minutes: int</code>    number of minutes to wait  </li>
+<li><code>seconds: int</code>    number of seconds to wait</li>
+<li><code>start_date: datetime|str</code>    starting point for the interval calculation</li>
+<li><code>end_date: datetime|str</code>        latest possible date/time to trigger on</li>
+<li><code>timezone: datetime.tzinfo|str</code>    time zone to use for the date/time calculations</li>
+</ul>
+<h4 id="Date_Trigger_Time_Parameter"><a href="#Date_Trigger_Time_Parameter" class="headerlink" title="Date Trigger Time Parameter"></a>Date Trigger Time Parameter</h4><ul>
+<li><code>run_date: datetime|str</code> the date/time to run the job at</li>
+<li><code>timezone: datetime.tzinfo|str</code> time zone for run_date if it dosen’t have on already</li>
+</ul>
 
-// assign the 1st element
-array = ...; 
-
-// store pointer to 1st element
-constant int *head = array; 
-
-// 2nd element
-array++;
-array = ...;        
-</code></pre>
       
     </div>
 
@@ -333,7 +377,7 @@ array = ...;
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag">#C</a>
+            <a href="/tags/Python/" rel="tag">#Python</a>
           
         </div>
       
@@ -342,13 +386,13 @@ array = ...;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/14/intro-OS/" rel="next" title="intro-OS">
+                <i class="fa fa-chevron-left"></i> intro-OS
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/11/08/syntax-C++/" rel="prev" title="C++ Syntax">
-                C++ Syntax <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,7 +510,7 @@ array = ...;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pointer"><span class="nav-number">1.</span> <span class="nav-text">Pointer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#List/Array_Traversal"><span class="nav-number">2.</span> <span class="nav-text">List/Array Traversal</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#APScheduler"><span class="nav-number">1.</span> <span class="nav-text">APScheduler</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cron_Trigger_Time_Parameter"><span class="nav-number">1.1.</span> <span class="nav-text">Cron Trigger Time Parameter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Interval_Trigger_Time_Parameter"><span class="nav-number">1.2.</span> <span class="nav-text">Interval Trigger Time Parameter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date_Trigger_Time_Parameter"><span class="nav-number">1.3.</span> <span class="nav-text">Date Trigger Time Parameter</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
