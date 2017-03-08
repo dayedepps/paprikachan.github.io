@@ -57,22 +57,28 @@
 
 
 
-<meta name="description" content="Where In    
-Select * From table Where id in (Select id From user);
-Select * From table WHere id in (&amp;apos;1&amp;apos;,&amp;apos;2&amp;apos;,&amp;apos;3&amp;apos;,&amp;apos;4&amp;apos;);">
+<meta name="description" content="adminshow user
+select user, host from mysql.user;
+create new user
+grant select, insert, update, delete, alter on test.* to appadmin@&amp;quot;localhost&amp;quot; identified by &amp;quot;password&amp;quot;;
+condition">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL Syntax">
 <meta property="og:url" content="http://yoursite.com/2016/02/03/syntax-MySQL/index.html">
 <meta property="og:site_name" content="Paprika">
-<meta property="og:description" content="Where In    
-Select * From table Where id in (Select id From user);
-Select * From table WHere id in (&amp;apos;1&amp;apos;,&amp;apos;2&amp;apos;,&amp;apos;3&amp;apos;,&amp;apos;4&amp;apos;);">
-<meta property="og:updated_time" content="2016-03-09T09:06:19.000Z">
+<meta property="og:description" content="adminshow user
+select user, host from mysql.user;
+create new user
+grant select, insert, update, delete, alter on test.* to appadmin@&amp;quot;localhost&amp;quot; identified by &amp;quot;password&amp;quot;;
+condition">
+<meta property="og:updated_time" content="2016-06-14T06:25:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL Syntax">
-<meta name="twitter:description" content="Where In    
-Select * From table Where id in (Select id From user);
-Select * From table WHere id in (&amp;apos;1&amp;apos;,&amp;apos;2&amp;apos;,&amp;apos;3&amp;apos;,&amp;apos;4&amp;apos;);">
+<meta name="twitter:description" content="adminshow user
+select user, host from mysql.user;
+create new user
+grant select, insert, update, delete, alter on test.* to appadmin@&amp;quot;localhost&amp;quot; identified by &amp;quot;password&amp;quot;;
+condition">
 
 
 
@@ -302,7 +308,11 @@ Select * From table WHere id in (&amp;apos;1&amp;apos;,&amp;apos;2&amp;apos;,&am
       
 
       
-        <p><code>Where In</code>    </p>
+        <h3 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h3><p>show user</p>
+<pre><code>select user, host from mysql.user;
+</code></pre><p>create new user</p>
+<pre><code>grant select, insert, update, delete, alter on test.* to appadmin@&quot;localhost&quot; identified by &quot;password&quot;;
+</code></pre><h3 id="condition_clause"><a href="#condition_clause" class="headerlink" title="condition clause"></a>condition clause</h3><p><code>Where In</code>    </p>
 <pre><code>Select * From table Where id in (Select id From user);
 Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;);
 </code></pre><a id="more"></a>
@@ -406,7 +416,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">39</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -456,7 +466,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#admin"><span class="nav-number">1.</span> <span class="nav-text">admin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#condition_clause"><span class="nav-number">2.</span> <span class="nav-text">condition clause</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -478,7 +488,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
