@@ -248,6 +248,112 @@
             
               
                 
+                <a class="post-title-link" href="/2017/04/13/bioinfo-bwa/" itemprop="url">
+                  bioinfo-bwa
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-04-13T16:08:47+08:00" content="2017-04-13">
+              2017-04-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="BWA-MEM_Workflow"><a href="#BWA-MEM_Workflow" class="headerlink" title="BWA-MEM Workflow"></a>BWA-MEM Workflow</h3><p><img src="./memsimple.png" alt=""></p>
+<p><code>worker1</code> is responsible to accomplish the alignments<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker1 -&gt; mem_align1_core -&gt; mem_chain</span><br></pre></td></tr></table></figure></p>
+<p><code>worker2</code> is responsible to transfer alignments to BAM/SAM format<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker2 -&gt; mem_reg2sam -&gt; mem_aln2sam</span><br></pre></td></tr></table></figure></p>
+<h3 id="mem_align1_core"><a href="#mem_align1_core" class="headerlink" title="mem_align1_core"></a><code>mem_align1_core</code></h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mem_alnreg_v mem_align1_core(const mem_opt_t <span class="keyword">*</span>opt, const bwt_t <span class="keyword">*</span>bwt, const bntseq_t <span class="keyword">*</span>bns, const uint8_t <span class="keyword">*</span>pac, int l_seq, char <span class="keyword">*</span>seq, void <span class="keyword">*</span>buf)</span><br><span class="line"></span><br><span class="line">/<span class="keyword">*</span><span class="keyword">*</span> Actually are mem_align1</span><br><span class="line"> <span class="keyword">*</span> Find the aligned regions for one query sequence</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> Note that this routine does not generate CIGAR. CIGAR should be</span><br><span class="line"> <span class="keyword">*</span> generated later by mem_reg2aln() below.</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param opt    alignment parameters</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param bwt    FM-index of the reference sequence</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param bns    Information of the reference ???</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param pac    2-bit encoded reference ???</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param l_seq  length of query sequence</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param seq    query sequence</span></span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@return       list of aligned regions.</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<p>Steps:</p>
+<ol>
+<li>convert to 2-bit encoding if we have not done so ???<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">seq[i] = seq[i] &lt; <span class="number">4</span>? seq[i] : nst_nt4_table[(<span class="keyword">int</span>)seq[i]];</span><br><span class="line">where in bntseq.c</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> nst_nt4_table[<span class="number">256</span>] = &#123;</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">5</span> <span class="comment">/*'-'*/</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">2</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">2</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>Chaining <code>bwamem.c/mem_chain</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="keyword">int</span> n, m, first, rid;</span><br><span class="line">	<span class="keyword">uint32_t</span> w:<span class="number">29</span>, kept:<span class="number">2</span>, is_alt:<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">float</span> frac_rep;</span><br><span class="line">	<span class="keyword">int64_t</span> pos;</span><br><span class="line">	<span class="keyword">mem_seed_t</span> *seeds;</span><br><span class="line">&#125; <span class="keyword">mem_chain_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123; <span class="keyword">size_t</span> n, m; <span class="keyword">mem_chain_t</span> *a;  &#125; mem_chain_v;</span><br><span class="line"></span><br><span class="line"><span class="function">mem_chain_v <span class="title">mem_chain</span><span class="params">(<span class="keyword">const</span> mem_opt_t *opt, <span class="keyword">const</span> bwt_t *bwt, <span class="keyword">const</span> bntseq_t *bns, <span class="keyword">int</span> len, <span class="keyword">const</span> uint8_t *seq, <span class="keyword">void</span> *buf)</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Filtering chain <code>bwamem.c/mem_chain_flt</code></p>
+</li>
+<li>Filtering seeds in chain <code>bwamem.c/mem_flt_chained_seeds</code></li>
+</ul>
+<h3 id="BWA-MEM_Data_Structure"><a href="#BWA-MEM_Data_Structure" class="headerlink" title="BWA-MEM Data Structure"></a>BWA-MEM Data Structure</h3><p><code>bwamem.h/mem_opt_t</code> BWA-MEM’s input options<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="keyword">int</span> a, b;               <span class="comment">// match score and mismatch penalty</span></span><br><span class="line">	<span class="keyword">int</span> o_del, e_del;       <span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> o_ins, e_ins;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> pen_unpaired;       <span class="comment">// ?? phred-scaled penalty for unpaired reads</span></span><br><span class="line">	<span class="keyword">int</span> pen_clip5,pen_clip3;<span class="comment">// ?? clipping penalty. This score is not deducted from the DP score.</span></span><br><span class="line">	<span class="keyword">int</span> w;                  <span class="comment">// ?? band width</span></span><br><span class="line">	<span class="keyword">int</span> zdrop;              <span class="comment">// ? Z-dropoff</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">uint64_t</span> max_mem_intv;	<span class="comment">// ??</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> T;                  <span class="comment">// ?? output score threshold; only affecting output</span></span><br><span class="line">	<span class="keyword">int</span> flag;               <span class="comment">// ?? see MEM_F_* macros</span></span><br><span class="line">	<span class="keyword">int</span> min_seed_len;       <span class="comment">// ? minimum seed length</span></span><br><span class="line">	<span class="keyword">int</span> min_chain_weight;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> max_chain_extend;	<span class="comment">// ?</span></span><br><span class="line">	<span class="keyword">float</span> split_factor;     <span class="comment">// ? split into a seed if MEM is longer than min_seed_len*split_factor</span></span><br><span class="line">	<span class="keyword">int</span> split_width;        <span class="comment">// ? split into a seed if its occurence is smaller than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_occ;            <span class="comment">// ? skip a seed if its occurence is larger than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_chain_gap;      <span class="comment">// do not chain seed if it is max_chain_gap-bp away from the closest seed</span></span><br><span class="line">	<span class="keyword">int</span> n_threads;          <span class="comment">// number of threads</span></span><br><span class="line">	<span class="keyword">int</span> chunk_size;         <span class="comment">// ? process chunk_size-bp sequences in a batch</span></span><br><span class="line">	<span class="keyword">float</span> mask_level;       <span class="comment">// ? regard a hit as redundant if the overlap with another better hit is over mask_level times the min length of the two hits</span></span><br><span class="line">	<span class="keyword">float</span> drop_ratio;       <span class="comment">// ? drop a chain if its seed coverage is below drop_ratio times the seed coverage of a better chain overlapping with the small chain</span></span><br><span class="line">	<span class="keyword">float</span> XA_drop_ratio;    <span class="comment">// ? when counting hits for the XA tag, ignore alignments with score &lt; XA_drop_ratio * max_score; only effective for the XA tag</span></span><br><span class="line">	<span class="keyword">float</span> mask_level_redun;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">float</span> mapQ_coef_len;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> mapQ_coef_fac;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> max_ins;            <span class="comment">// when estimating insert size distribution, skip pairs with insert longer than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_matesw;         <span class="comment">// perform maximally max_matesw rounds of mate-SW for each end</span></span><br><span class="line">	<span class="keyword">int</span> max_XA_hits, max_XA_hits_alt; <span class="comment">// if there are max_hits or fewer, output them all</span></span><br><span class="line">	<span class="keyword">int8_t</span> mat[<span class="number">25</span>];         <span class="comment">// ? scoring matrix; mat[0] == 0 if unset</span></span><br><span class="line">&#125; <span class="keyword">mem_opt_t</span>;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/07/intro-10x/" itemprop="url">
                   Notes on 10x Longranger
                 </a>
@@ -1300,116 +1406,6 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/26/python-decorator/" itemprop="url">
-                  Python Decorator
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-26T20:32:55+08:00" content="2016-01-26">
-              2016-01-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Programming-Skills/" itemprop="url" rel="index">
-                    <span itemprop="name">Programming Skills</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://coolshell.cn/articles/11265.html" target="_blank" rel="external">酷壳</a></p>
-<p><a href="http://book42qu.readthedocs.org/en/latest/python/python-closures-and-decorators.html" target="_blank" rel="external">,,</a></p>
-<p><a href="http://www.cnblogs.com/Alexander-Lee/archive/2010/09/04/python_decreator.html" target="_blank" rel="external">2</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1455,7 +1451,7 @@ Select * From table WHere id in (&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

@@ -1,0 +1,753 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.useso.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="BWA-MEM Workflow
+worker1 is responsible to accomplish the alignments1worker1 -&amp;gt; mem_align1_core -&amp;gt; mem_chain
+worker2 is responsible to transfer alignments to BAM/SAM format1worker2 -&amp;gt; mem_reg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bioinfo-bwa">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/bioinfo-bwa/index.html">
+<meta property="og:site_name" content="Paprika">
+<meta property="og:description" content="BWA-MEM Workflow
+worker1 is responsible to accomplish the alignments1worker1 -&amp;gt; mem_align1_core -&amp;gt; mem_chain
+worker2 is responsible to transfer alignments to BAM/SAM format1worker2 -&amp;gt; mem_reg">
+<meta property="og:image" content="http://yoursite.com/./memsimple.png">
+<meta property="og:updated_time" content="2017-04-13T10:05:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bioinfo-bwa">
+<meta name="twitter:description" content="BWA-MEM Workflow
+worker1 is responsible to accomplish the alignments1worker1 -&amp;gt; mem_align1_core -&amp;gt; mem_chain
+worker2 is responsible to transfer alignments to BAM/SAM format1worker2 -&amp;gt; mem_reg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> bioinfo-bwa | Paprika </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Paprika</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-10x genomics">
+          <a href="/2017/03/07/intro-10x/" rel="section">
+            
+            10x genomics
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/Algorithm/" rel="section">
+            
+            algorithm
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-introduction">
+          <a href="/categories/Introduction/" rel="section">
+            
+            introduction
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-developing logs">
+          <a href="/categories/Developing-Logs/" rel="section">
+            
+            developing logs
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-programming skills">
+          <a href="/categories/Programming-Skills/" rel="section">
+            
+            programming skills
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-machine learning">
+          <a href="/categories/Machine-Learning/" rel="section">
+            
+            machine learning
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-math">
+          <a href="/categories/Math/" rel="section">
+            
+            math
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-statistic">
+          <a href="/categories/Statistic/" rel="section">
+            
+            statistic
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/tags/Python/" rel="section">
+            
+            python
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                bioinfo-bwa
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-04-13T16:08:47+08:00" content="2017-04-13">
+              2017-04-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="BWA-MEM_Workflow"><a href="#BWA-MEM_Workflow" class="headerlink" title="BWA-MEM Workflow"></a>BWA-MEM Workflow</h3><p><img src="./memsimple.png" alt=""></p>
+<p><code>worker1</code> is responsible to accomplish the alignments<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker1 -&gt; mem_align1_core -&gt; mem_chain</span><br></pre></td></tr></table></figure></p>
+<p><code>worker2</code> is responsible to transfer alignments to BAM/SAM format<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker2 -&gt; mem_reg2sam -&gt; mem_aln2sam</span><br></pre></td></tr></table></figure></p>
+<h3 id="mem_align1_core"><a href="#mem_align1_core" class="headerlink" title="mem_align1_core"></a><code>mem_align1_core</code></h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mem_alnreg_v mem_align1_core(const mem_opt_t <span class="keyword">*</span>opt, const bwt_t <span class="keyword">*</span>bwt, const bntseq_t <span class="keyword">*</span>bns, const uint8_t <span class="keyword">*</span>pac, int l_seq, char <span class="keyword">*</span>seq, void <span class="keyword">*</span>buf)</span><br><span class="line"></span><br><span class="line">/<span class="keyword">*</span><span class="keyword">*</span> Actually are mem_align1</span><br><span class="line"> <span class="keyword">*</span> Find the aligned regions for one query sequence</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> Note that this routine does not generate CIGAR. CIGAR should be</span><br><span class="line"> <span class="keyword">*</span> generated later by mem_reg2aln() below.</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param opt    alignment parameters</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param bwt    FM-index of the reference sequence</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param bns    Information of the reference ???</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param pac    2-bit encoded reference ???</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param l_seq  length of query sequence</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param seq    query sequence</span></span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@return       list of aligned regions.</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<p>Steps:</p>
+<ol>
+<li>convert to 2-bit encoding if we have not done so ???<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">seq[i] = seq[i] &lt; <span class="number">4</span>? seq[i] : nst_nt4_table[(<span class="keyword">int</span>)seq[i]];</span><br><span class="line">where in bntseq.c</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> nst_nt4_table[<span class="number">256</span>] = &#123;</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">5</span> <span class="comment">/*'-'*/</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">2</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">2</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>,  <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>Chaining <code>bwamem.c/mem_chain</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="keyword">int</span> n, m, first, rid;</span><br><span class="line">	<span class="keyword">uint32_t</span> w:<span class="number">29</span>, kept:<span class="number">2</span>, is_alt:<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">float</span> frac_rep;</span><br><span class="line">	<span class="keyword">int64_t</span> pos;</span><br><span class="line">	<span class="keyword">mem_seed_t</span> *seeds;</span><br><span class="line">&#125; <span class="keyword">mem_chain_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123; <span class="keyword">size_t</span> n, m; <span class="keyword">mem_chain_t</span> *a;  &#125; mem_chain_v;</span><br><span class="line"></span><br><span class="line"><span class="function">mem_chain_v <span class="title">mem_chain</span><span class="params">(<span class="keyword">const</span> mem_opt_t *opt, <span class="keyword">const</span> bwt_t *bwt, <span class="keyword">const</span> bntseq_t *bns, <span class="keyword">int</span> len, <span class="keyword">const</span> uint8_t *seq, <span class="keyword">void</span> *buf)</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Filtering chain <code>bwamem.c/mem_chain_flt</code></p>
+</li>
+<li>Filtering seeds in chain <code>bwamem.c/mem_flt_chained_seeds</code></li>
+</ul>
+<h3 id="BWA-MEM_Data_Structure"><a href="#BWA-MEM_Data_Structure" class="headerlink" title="BWA-MEM Data Structure"></a>BWA-MEM Data Structure</h3><p><code>bwamem.h/mem_opt_t</code> BWA-MEM’s input options<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="keyword">int</span> a, b;               <span class="comment">// match score and mismatch penalty</span></span><br><span class="line">	<span class="keyword">int</span> o_del, e_del;       <span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> o_ins, e_ins;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> pen_unpaired;       <span class="comment">// ?? phred-scaled penalty for unpaired reads</span></span><br><span class="line">	<span class="keyword">int</span> pen_clip5,pen_clip3;<span class="comment">// ?? clipping penalty. This score is not deducted from the DP score.</span></span><br><span class="line">	<span class="keyword">int</span> w;                  <span class="comment">// ?? band width</span></span><br><span class="line">	<span class="keyword">int</span> zdrop;              <span class="comment">// ? Z-dropoff</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">uint64_t</span> max_mem_intv;	<span class="comment">// ??</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> T;                  <span class="comment">// ?? output score threshold; only affecting output</span></span><br><span class="line">	<span class="keyword">int</span> flag;               <span class="comment">// ?? see MEM_F_* macros</span></span><br><span class="line">	<span class="keyword">int</span> min_seed_len;       <span class="comment">// ? minimum seed length</span></span><br><span class="line">	<span class="keyword">int</span> min_chain_weight;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> max_chain_extend;	<span class="comment">// ?</span></span><br><span class="line">	<span class="keyword">float</span> split_factor;     <span class="comment">// ? split into a seed if MEM is longer than min_seed_len*split_factor</span></span><br><span class="line">	<span class="keyword">int</span> split_width;        <span class="comment">// ? split into a seed if its occurence is smaller than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_occ;            <span class="comment">// ? skip a seed if its occurence is larger than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_chain_gap;      <span class="comment">// do not chain seed if it is max_chain_gap-bp away from the closest seed</span></span><br><span class="line">	<span class="keyword">int</span> n_threads;          <span class="comment">// number of threads</span></span><br><span class="line">	<span class="keyword">int</span> chunk_size;         <span class="comment">// ? process chunk_size-bp sequences in a batch</span></span><br><span class="line">	<span class="keyword">float</span> mask_level;       <span class="comment">// ? regard a hit as redundant if the overlap with another better hit is over mask_level times the min length of the two hits</span></span><br><span class="line">	<span class="keyword">float</span> drop_ratio;       <span class="comment">// ? drop a chain if its seed coverage is below drop_ratio times the seed coverage of a better chain overlapping with the small chain</span></span><br><span class="line">	<span class="keyword">float</span> XA_drop_ratio;    <span class="comment">// ? when counting hits for the XA tag, ignore alignments with score &lt; XA_drop_ratio * max_score; only effective for the XA tag</span></span><br><span class="line">	<span class="keyword">float</span> mask_level_redun;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">float</span> mapQ_coef_len;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> mapQ_coef_fac;	<span class="comment">// ??</span></span><br><span class="line">	<span class="keyword">int</span> max_ins;            <span class="comment">// when estimating insert size distribution, skip pairs with insert longer than this value</span></span><br><span class="line">	<span class="keyword">int</span> max_matesw;         <span class="comment">// perform maximally max_matesw rounds of mate-SW for each end</span></span><br><span class="line">	<span class="keyword">int</span> max_XA_hits, max_XA_hits_alt; <span class="comment">// if there are max_hits or fewer, output them all</span></span><br><span class="line">	<span class="keyword">int8_t</span> mat[<span class="number">25</span>];         <span class="comment">// ? scoring matrix; mat[0] == 0 if unset</span></span><br><span class="line">&#125; <span class="keyword">mem_opt_t</span>;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/07/intro-10x/" rel="next" title="Notes on 10x Longranger">
+                <i class="fa fa-chevron-left"></i> Notes on 10x Longranger
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/figures/me.png"
+               alt="Lingxi Chen" />
+          <p class="site-author-name" itemprop="name">Lingxi Chen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#BWA-MEM_Workflow"><span class="nav-number">1.</span> <span class="nav-text">BWA-MEM Workflow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mem_align1_core"><span class="nav-number">2.</span> <span class="nav-text">mem_align1_core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BWA-MEM_Data_Structure"><span class="nav-number">3.</span> <span class="nav-text">BWA-MEM Data Structure</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lingxi Chen</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+
+</body>
+</html>
